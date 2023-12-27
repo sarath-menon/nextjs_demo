@@ -52,6 +52,47 @@ export const Navigation = () => {
         document.removeEventListener("mouseup", handleMouseUp);
     };
 
+    const resetWidth = () => {
+        if (sidebarRef.current && navbarRef.current) {
+            setIsCollapsed(false);
+            setIsResetting(true);
+
+            sidebarRef.current.style.width = isMobile ? "100%" : "240px";
+            navbarRef.current.style.setProperty(
+                "width",
+                isMobile ? "0" : "calc(100% - 240px)"
+            );
+            navbarRef.current.style.setProperty(
+                "left",
+                isMobile ? "100%" : "240px"
+            );
+            setTimeout(() => setIsResetting(false), 300);
+        }
+    };
+
+    const collapse = () => {
+        if (sidebarRef.current && navbarRef.current) {
+            setIsCollapsed(true);
+            setIsResetting(true);
+
+            sidebarRef.current.style.width = "0";
+            navbarRef.current.style.setProperty("width", "100%");
+            navbarRef.current.style.setProperty("left", "0");
+            setTimeout(() => setIsResetting(false), 300);
+        }
+    }
+
+    const handleCreate = () => {
+        const promise = create({ title: "Untitled" })
+            .then((documentId) => router.push(`/documents/${documentId}`))
+
+        toast.promise(promise, {
+            loading: "Creating a new note...",
+            success: "New note created!",
+            error: "Failed to create a new note."
+        });
+    };
+
     return (
         <>
             {/* Width: width of sidebar */}
@@ -91,7 +132,7 @@ export const Navigation = () => {
                 {/* sidebar dragger*/}
                 <div
                     onMouseDown={handleMouseDown}
-                    onClick={() => { }}
+                    onClick={resetWidth}
                     className="opacity-0 group-hover/sidebar:opacity-100 translate cursor-ew-resize absolute h-full w-1 bg-primary/10 right-0 top-0" />
 
             </aside >
