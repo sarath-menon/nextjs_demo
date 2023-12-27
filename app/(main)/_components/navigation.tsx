@@ -82,17 +82,6 @@ export const Navigation = () => {
         }
     }
 
-    const handleCreate = () => {
-        const promise = create({ title: "Untitled" })
-            .then((documentId) => router.push(`/documents/${documentId}`))
-
-        toast.promise(promise, {
-            loading: "Creating a new note...",
-            success: "New note created!",
-            error: "Failed to create a new note."
-        });
-    };
-
     return (
         <>
             {/* Width: width of sidebar */}
@@ -111,7 +100,9 @@ export const Navigation = () => {
                 )}>
 
                 {/* Show sidebar collapse icon when hovering on navbar */}
-                <div role="button"
+                <div
+                    onClick={collapse}
+                    role="button"
                     className={cn("h-6 w-6 text-muted-foreground rounded-sm hover:bg-neutral-300 dark:hover:bg-neutral-600 absolute top-3 right-2 opacity-0 group-hover/sidebar:opacity-100 transition",
 
                         // always show collapse icon on mobile
@@ -141,6 +132,7 @@ export const Navigation = () => {
             {/*  Make sure tha navbar position is in sync with the sidebar */}
             <div
                 ref={navbarRef}
+                onClick={resetWidth}
                 className={cn("absolute top-0 z-[99999] left-60 w-[calc(100%-240px)]",
 
                     isResetting && "transition-all ease-in-out duration - 300",
