@@ -25,10 +25,32 @@ export const Navigation = () => {
         event.stopPropagation();
 
         isResizingRef.current = true;
-        document.addEventListener("mousemove", handleMouseDown);
-        document.addEventListener("mouseup", handleMouseDown);
+        document.addEventListener("mousemove", handleMouseMove);
+        document.addEventListener("mouseup", handleMouseUp);
 
     }
+
+    const handleMouseMove = (event: MouseEvent) => {
+        if (!isResizingRef.current) return;
+        let newWidth = event.clientX;
+
+        // set max and min width for navbar
+        if (newWidth < 240) newWidth = 240;
+        if (newWidth > 480) newWidth = 480;
+
+        // apply properties
+        if (sidebarRef.current && navbarRef.current) {
+            sidebarRef.current.style.width = `${newWidth}px`;
+            navbarRef.current.style.setProperty("left", `${newWidth}px`);
+            navbarRef.current.style.setProperty("width", `calc(100% - ${newWidth}px)`);
+        }
+    };
+
+    const handleMouseUp = () => {
+        isResizingRef.current = false;
+        document.removeEventListener("mousemove", handleMouseMove);
+        document.removeEventListener("mouseup", handleMouseUp);
+    };
 
     return (
         <>
