@@ -14,12 +14,20 @@ export const Logo = () => {
             <Image src="/logo.svg"
                 height="40"
                 width="40"
-                alt="Logo">
+                alt="Logo"
+                className="dark:hidden">
+            </Image>
+
+            <Image src="/logo-dark.svg"
+                height="40"
+                width="40"
+                alt="Logo"
+                className="hidden dark:block">
             </Image>
 
             <p className={cn("font-semibold", font.className)}>
                 Simplicyti
             </p>
-        </div>
+        </div >
     )
 }
