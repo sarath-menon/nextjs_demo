@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Heading from "./_componets/heading";
-import Heroes from "./_componets/_heroes";
+import Heroes from "./_componets/heroes";
 
 const MarketingPage = () => {
   return (
