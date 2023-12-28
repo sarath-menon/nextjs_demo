@@ -6,6 +6,8 @@ import { redirect } from "next/navigation";
 import { Spinner } from "@/components/spinner";
 
 import { Navigation } from "./_components/navigation";
+import { Sidebar } from "./_components/sidebar";
+import { playlists } from "./data/playlists"
 
 
 const MainLayout = ({
@@ -29,7 +31,17 @@ const MainLayout = ({
 
     return (
         <div className="h-full flex dark:bg-[#1F1F1F]">
-            <Navigation />
+
+            {/* Notion sidebar (complicated) */}
+            {/* <Navigation /> */}
+
+
+            {/* Notion sidebar (complicated) */}
+            <div className="flex bg-background pr-1 w-[240px]">
+                <Sidebar playlists={playlists} className="" />
+            </div>
+
+            {/* Shad-cn sidebar (simple) */}
             <main className="flex-1 h-full overflow-y-auto">
                 {children}
             </main>
