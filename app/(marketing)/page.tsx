@@ -18,8 +18,8 @@ const HomePage = () => {
 
     <>
       {/* Hero */}
-      <section>
-        <div className="overflow-hidden flex flex-col items-center justify-center text-center mt-10 px:4 gap-10 max-w-5xl">
+      <section className="flex justify-center items-center text-center flex-col relative " >
+        <div className="overflow-hidden flex flex-col relative mt-10 px:4 gap-10 max-w-5xl">
 
           <TitleSection pill="Your workspace perfected" title="prod platform" />
 
@@ -136,6 +136,7 @@ const HomePage = () => {
                   className="w-[500px]
                   shrink-0s
                   rounded-xl
+                  bg-brand-primaryPurple/600
                   dark:bg-gradient-to-t
                   dark:from-border dark:to-background
                 "
