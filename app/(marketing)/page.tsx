@@ -20,7 +20,7 @@ const HomePage = () => {
 
       {/* Hero */}
       <section className="flex justify-center items-center text-center flex-col relative " >
-        <div className="overflow-hidden flex flex-col relative mt-10 px:4 gap-10 max-w-5xl">
+        <div className="overflow-hidden flex flex-col relative mt-10 px:4 gap-10 max-w-5xl justify-center items-center text-center ">
 
           <TitleSection pill="Your workspace perfected" title="prod platform" />
 
@@ -29,26 +29,22 @@ const HomePage = () => {
           </div>
 
           {/* Hero Images */}
-          <div className="relative w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] md:h-[400px] md:w-[400px]">
+
+          <div className="w-[400px] h-[200px] sm:w-[350px] sm:h-[350px] md:h-[400px] md:w-[800px]">
             <Image
-              src="/reading.png"
+              src="/appBanner.png"
               fill
               className="object-contain dark:hidden"
               alt="Reading"
             />
             <Image
-              src="/reading-dark.png"
+              src="/appBanner.png"
               fill
               className="object-contain hidden dark:block"
               alt="Reading"
             />
 
           </div>
-
-          {/* Testimonials */}
-
-          {/* <Heading /> */}
-          {/* <Heroes /> */}
         </div >
       </section >
 
