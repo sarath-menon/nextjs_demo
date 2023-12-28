@@ -7,11 +7,15 @@ import { ElementRef, useEffect, useRef, useState } from "react";
 import { useMediaQuery } from "usehooks-ts"
 import { UserItem } from "./user-item";
 import { Item } from "./item";
+import { useMutation } from "convex/react";
+import { api } from "@/convex/_generated/api";
+import { toast } from "sonner";
 
 export const Navigation = () => {
 
     const pathname = usePathname();
     const isMobile = useMediaQuery("(max-width: 768px)");
+    const create = useMutation(api.documents.create);
 
     const isResizingRef = useRef(false);
     const sidebarRef = useRef<ElementRef<"aside">>(null);
@@ -99,6 +103,17 @@ export const Navigation = () => {
         }
     }
 
+    const handleCreate = () => {
+        const promise = create({ title: "Untitled" })
+        // .then((documentId) => router.push(`/documents/${documentId}`))
+
+        toast.promise(promise, {
+            loading: "Creating a new note...",
+            success: "New note created!",
+            error: "Failed to create a new note."
+        });
+    };
+
     return (
         <>
             {/* Width: width of sidebar */}
@@ -143,7 +158,7 @@ export const Navigation = () => {
                         onClick={settings.onOpen}
                     /> */}
                     <Item
-                        onClick={() => { }}
+                        onClick={handleCreate}
                         label="New page"
                         icon={PlusCircle}
                     />
