@@ -81,7 +81,7 @@ const HomePage = () => {
           pill="Features"
         />
 
-        <div className="mt-10 max-w-[450px] flex justify-center items-center relative sm:ml-0 rounded-2xl border-8 border-washed-purple-300 border-opacity-10">
+        <div className="mt-10 max-w-[450px] sm:ml-0 rounded-2xl border-8 border-washed-purple-300 border-opacity-10">
 
           <Image src={"/cal.png"} alt="Banner" className="rounded-2xl" width={400} height={400} />
         </div>
