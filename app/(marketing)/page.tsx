@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import Heading from "./_componets/heading";
+import LoginButton from "./_componets/login-button";
 import Heroes from "./_componets/heroes";
 import Footer from "./_componets/footer";
 import TitleSection from "./_componets/title";
@@ -24,8 +24,9 @@ const HomePage = () => {
 
           <TitleSection pill="Your workspace perfected" title="prod platform" />
 
+          {/* Login button  */}
           <div>
-            <Button variant="secondary"> Click me</Button>
+            <LoginButton />
           </div>
 
           {/* Hero Images */}
@@ -46,11 +47,6 @@ const HomePage = () => {
 
           </div>
         </div >
-      </section >
-
-      {/* Login button  */}
-      < section className="flex justify-center items-center text-center flex-col relative ">
-        <Heading />
       </section >
 
       {/* Institutions using*/}
