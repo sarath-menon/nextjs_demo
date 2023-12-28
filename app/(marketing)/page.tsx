@@ -17,7 +17,6 @@ const HomePage = () => {
   return (
 
     <>
-
       {/* Hero */}
       <section className="flex justify-center items-center text-center flex-col relative " >
         <div className="overflow-hidden flex flex-col relative mt-10 px:4 gap-10 max-w-5xl justify-center items-center text-center ">
@@ -90,7 +89,6 @@ const HomePage = () => {
           <Image src={"/cal.png"} alt="Banner" className="rounded-2xl" width={400} height={400} />
         </div>
       </section>
-
 
       {/* Testimonials */}
       {/* <section className="relative">
