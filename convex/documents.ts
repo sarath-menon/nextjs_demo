@@ -53,6 +53,7 @@ export const archive = mutation({
   }
 })
 
+// load page details for sidebar
 export const getSidebar = query({
   args: {
     parentDocument: v.optional(v.id("documents"))
@@ -83,7 +84,7 @@ export const getSidebar = query({
   },
 });
 
-// to create new document 
+// to create new page
 export const create = mutation({
   args: {
     title: v.string(),
