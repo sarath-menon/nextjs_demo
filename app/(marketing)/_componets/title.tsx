@@ -9,9 +9,6 @@ interface TitleSectionProps {
 
 const TitleSection: React.FC<TitleSectionProps> = ({ title, subheading, pill }) => {
     return (
-        // <div>
-        //     TitleSection
-        // </div>
 
         <React.Fragment>
             <section className="flex flex-col gap-4 justify-center md:items-center">
