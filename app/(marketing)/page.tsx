@@ -17,6 +17,7 @@ const HomePage = () => {
   return (
 
     <>
+
       {/* Hero */}
       <section className="flex justify-center items-center text-center flex-col relative " >
         <div className="overflow-hidden flex flex-col relative mt-10 px:4 gap-10 max-w-5xl">
@@ -49,6 +50,11 @@ const HomePage = () => {
           {/* <Heading /> */}
           {/* <Heroes /> */}
         </div >
+      </section >
+
+      {/* Login button  */}
+      < section className="flex justify-center items-center text-center flex-col relative ">
+        <Heading />
       </section >
 
       {/* Institutions using*/}
