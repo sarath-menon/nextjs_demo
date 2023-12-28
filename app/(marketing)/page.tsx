@@ -5,13 +5,13 @@ import Footer from "./_componets/footer";
 import TitleSection from "./_componets/title";
 import Image from "next/image";
 import { Divide } from "lucide-react";
-import { CLIENTS, USERS } from "@/lib/constants";
+import { CLIENTS, PRICING_CARDS, PRICING_PLANS, USERS } from "@/lib/constants";
 import { randomUUID } from "crypto";
 import { twMerge } from "tailwind-merge";
 import clsx from "clsx";
 import CustomCard from "./_componets/custom-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { CardDescription, CardTitle } from "@/components/ui/card";
+import { CardContent, CardDescription, CardTitle } from "@/components/ui/card";
 
 const HomePage = () => {
   return (
@@ -73,12 +73,12 @@ const HomePage = () => {
 
       {/* Calendar image  */}
       <section
-        className="flex justify-center items-center text-center flex-col relative px-4 py-48 sm:px-6"
+        className="flex flex-col relative justify-center items-center text-center px-4 py-48 sm:px-6"
       >
 
         {/* White gradient above image */}
         <div
-          className="w-[30%] blur-[120px] rounded-full h-32 absolute bg-Primary-Purple/primary-purple-50 -z-10 top-82"
+          className="w-[15%] blur-[160px] rounded-full h-28 absolute bg-Primary-Purple/primary-purple-50 -z-10"
         />
 
         <TitleSection
@@ -95,7 +95,7 @@ const HomePage = () => {
 
 
       {/* Testimonials */}
-      <section className="relative">
+      {/* <section className="relative">
         <div
           className="w-full
           blur-[120px]
@@ -169,6 +169,133 @@ const HomePage = () => {
                 ></CustomCard>
               ))}
             </div>
+          ))}
+        </div>
+      </section> */}
+
+      {/* Pricing cards */}
+      <section className="flex flex-col relative justify-center items-center text-center px-4 sm:px-6">
+
+        {/* White gradient above image */}
+        <div className="w-[10%] blur-[250px] rounded-full h-12 absolute bg-Primary-Purple/primary-purple-50" />
+
+        <TitleSection
+          title="The Perfect Plan For You"
+          subheading="Experience all the benefits of our platform. Select a plan that suits your needs and take your productivity to new heights."
+          pill="Pricing"
+        />
+
+        {/* White gradient above image */}
+        <div
+          className="w-[20%] blur-[160px] rounded-full h-32 absolute bg-Primary-Purple/primary-purple-50 -z-50"
+        />
+
+        <div
+          className="flex 
+        flex-col-reverse
+        sm:flex-row
+        gap-4
+        justify-center
+        sm:items-stretch
+        items-center
+        mt-10
+        "
+        >
+          {PRICING_CARDS.map((card) => (
+            <CustomCard
+              key={card.planType}
+              className={clsx(
+                'w-[300px] rounded-2xl dark:bg-black/40 background-blur-3xl relative',
+                {
+                  'border-brand-primaryPurple/70':
+                    card.planType === PRICING_PLANS.proplan,
+                }
+              )}
+              cardHeader={
+                <CardTitle
+                  className="text-2xl
+                  font-semibold
+              "
+                >
+                  {card.planType === PRICING_PLANS.proplan && (
+                    <>
+                      <div
+                        className="hidden dark:block w-full blur-[120px] rounded-full h-32
+                        absolute
+                        bg-brand-primaryPurple/80
+                        -z-10
+                        top-0
+                      "
+                      />
+                      <Image
+                        src={"/icons/Diamond.svg"}
+                        alt="Pro Plan Icon"
+                        className="absolute top-6 right-6"
+                        width={50} height={50}
+                      />
+                    </>
+                  )}
+                  {card.planType}
+                </CardTitle>
+              }
+              cardContent={
+                <CardContent className="p-0">
+                  <span
+                    className="font-normal 
+                    text-2xl
+                "
+                  >
+                    ${card.price}
+                  </span>
+                  {+card.price > 0 ? (
+                    <span className="dark:text-washed-purple-800 ml-1">
+                      /mo
+                    </span>
+                  ) : (
+                    ''
+                  )}
+                  <p className="dark:text-washed-purple-800">
+                    {card.description}
+                  </p>
+                  <Button
+                    variant="btn-primary"
+                    className="whitespace-nowrap w-full mt-4"
+                  >
+                    {card.planType === PRICING_PLANS.proplan
+                      ? 'Go Pro'
+                      : 'Get Started'}
+                  </Button>
+                </CardContent>
+              }
+              cardFooter={
+                <ul
+                  className="font-normal
+                  flex
+                  mb-2
+                  flex-col
+                  gap-4
+                "
+                >
+                  <small>{card.highlightFeature}</small>
+                  {card.freatures.map((feature) => (
+                    <li
+                      key={feature}
+                      className="flex
+                      items-center
+                      gap-2
+                    "
+                    >
+                      <Image
+                        src={"/icons/check.svg"}
+                        alt="Check Icon"
+                        width={20} height={20}
+                      />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              }
+            />
           ))}
         </div>
       </section>
