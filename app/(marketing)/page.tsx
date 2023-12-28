@@ -65,6 +65,27 @@ const HomePage = () => {
         </div>
       </section >
 
+      {/* Calendar image  */}
+      <section
+        className="flex justify-center items-center flex-col relative px-4 py-48 sm:px-6"
+      >
+
+        {/* White gradient above image */}
+        <div
+          className="w-[30%] blur-[120px] rounded-full h-32 absolute bg-Primary-Purple/primary-purple-50 -z-10 top-82"
+        />
+
+        <TitleSection
+          title="Keep track of your meetings all in one place"
+          subheading="Capture your ideas, thoughts, and meeting notes in a structured and organized manner."
+          pill="Features"
+        />
+
+        <div className="mt-10 max-w-[450px] flex justify-center items-center relative sm:ml-0 rounded-2xl border-8 border-washed-purple-300 border-opacity-10">
+
+          <Image src={"/cal.png"} alt="Banner" className="rounded-2xl" width={400} height={400} />
+        </div>
+      </section>
 
       {/* Footer  */}
       {/* < section >
