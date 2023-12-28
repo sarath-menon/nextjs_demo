@@ -65,6 +65,8 @@ body,
   }
 }
 
+/* Testimoial icon animation */
+
 .animate-slide {
   animation: 15s slide linear infinite;
 }
