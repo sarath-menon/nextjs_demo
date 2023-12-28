@@ -205,7 +205,7 @@ const HomePage = () => {
             <CustomCard
               key={card.planType}
               className={clsx(
-                'w-[300px] rounded-2xl dark:bg-black/40 background-blur-3xl relative',
+                'w-[300px] rounded-2xl dark:bg-black/60 background-blur-3xl relative',
                 {
                   'border-brand-primaryPurple/70':
                     card.planType === PRICING_PLANS.proplan,
@@ -258,7 +258,7 @@ const HomePage = () => {
                     {card.description}
                   </p>
                   <Button
-                    variant="btn-primary"
+                    variant="default"
                     className="whitespace-nowrap w-full mt-4"
                   >
                     {card.planType === PRICING_PLANS.proplan
