@@ -8,6 +8,7 @@ import { Spinner } from "@/components/spinner";
 import { Navigation } from "./_components/notion_clone/navigation";
 import { Sidebar } from "./_components/sidebar";
 import { playlists } from "./data/playlists"
+import { Menu } from "./_components/menu";
 
 
 const MainLayout = ({
@@ -30,21 +31,27 @@ const MainLayout = ({
     }
 
     return (
-        <div className="h-full flex">
+        <div className="h-full bg-background flex">
 
             {/* Notion sidebar (complicated) */}
             {/* <Navigation /> */}
 
 
-            {/* Notion sidebar (complicated) */}
-            <div className="border-r flex bg-background pr-1 w-[240px]">
+            {/* Shad-cn sidebar (simple) */}
+            <div className="border-r flex pr-1 w-[240px]">
                 <Sidebar playlists={playlists} className="" />
             </div>
 
-            {/* Shad-cn sidebar (simple) */}
-            <main className="flex-1 h-full overflow-y-auto">
-                {children}
-            </main>
+            {/* Shad-cn menu */}
+            <Menu />
+            <div className="grid">
+
+
+                <main className="flex-1 h-full overflow-y-auto">
+                    {children}
+                </main>
+
+            </div>
         </div>
     );
 }
