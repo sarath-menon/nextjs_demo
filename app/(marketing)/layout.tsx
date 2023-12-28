@@ -1,19 +1,19 @@
 import { Navbar } from "./_componets/navbar";
 
-const HomeLayout = ({ children }: { children: React.ReactNode }) => {
+const MarketingLayout = ({
+    children
+}: {
+    children: React.ReactNode
+}) => {
     return (
-        // <div className="h-full dark:bg-[#1F1F1F]">
-        //     <Navbar />
+        <div className="h-full">
+            <Navbar />
 
-        //     <main className="h-full pt-40">
-        //         {children}
-        //     </main>
-        // </div>
-
-        <main>
-            {children}
-        </main>
+            <main className="h-full pt-40">
+                {children}
+            </main>
+        </div>
     );
 }
 
-export default HomeLayout;
+export default MarketingLayout;
