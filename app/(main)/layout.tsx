@@ -30,14 +30,14 @@ const MainLayout = ({
     }
 
     return (
-        <div className="h-full flex dark:bg-[#1F1F1F]">
+        <div className="h-full flex">
 
             {/* Notion sidebar (complicated) */}
             {/* <Navigation /> */}
 
 
             {/* Notion sidebar (complicated) */}
-            <div className="flex bg-background pr-1 w-[240px]">
+            <div className="border-r flex bg-background pr-1 w-[240px]">
                 <Sidebar playlists={playlists} className="" />
             </div>
 
