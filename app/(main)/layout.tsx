@@ -42,17 +42,18 @@ const MainLayout = ({
                 <Sidebar playlists={playlists} className="" />
             </div>
 
-            {/* Shad-cn menu */}
-            <Menu />
-            <div className="grid">
+            <div className=" flex flex-col">
 
+                {/* Shad-cn menu */}
+                <Menu />
+                <div className="grid">
+                    <main className="flex-1 h-full overflow-y-auto">
+                        {children}
+                    </main>
 
-                <main className="flex-1 h-full overflow-y-auto">
-                    {children}
-                </main>
-
+                </div>
             </div>
-        </div>
+        </div >
     );
 }
 
