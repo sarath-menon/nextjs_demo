@@ -19,22 +19,27 @@ interface ObjectivesLayoutProps {
 const sidebarItems = [
     {
         title: "Profile",
+        svg_link: "http://www.w3.org/2000/svg",
         href: "/examples/forms",
     },
     {
         title: "Account",
+        svg_link: "http://www.w3.org/2000/svg",
         href: "/examples/forms/account",
     },
     {
         title: "Appearance",
+        svg_link: "http://www.w3.org/2000/svg",
         href: "/examples/forms/appearance",
     },
     {
         title: "Notifications",
+        svg_link: "http://www.w3.org/2000/svg",
         href: "/examples/forms/notifications",
     },
     {
         title: "Display",
+        svg_link: "http://www.w3.org/2000/svg",
         href: "/examples/forms/display",
     },
 ]

@@ -7,6 +7,7 @@ import { UserItem } from "./notion_clone/user-item"
 import { DocumentList } from "./notion_clone/document-list"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import Image from "next/image"
 
 // interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {
 //     playlists: Playlist[]
@@ -15,6 +16,7 @@ import { usePathname } from "next/navigation"
 interface SidebarProps extends React.HTMLAttributes<HTMLElement> {
     items: {
         href: string
+        svg_link: string
         title: string
     }[]
 }
@@ -50,19 +52,15 @@ export function Sidebar({ className, items, ...props }: SidebarProps) {
 
                                 <Button variant="secondary" className="w-full justify-start">
 
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        strokeWidth="2"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        className="mr-2 h-4 w-4"
-                                    >
-                                        <circle cx="12" cy="12" r="10" />
-                                        <polygon points="10 8 16 12 10 16 10 8" />
-                                    </svg>
+                                    {/* <div className="pr-3">
+                                        <Image
+                                            src="/profle-dark.svg"
+                                            height="20"
+                                            width="20"
+                                            alt=""
+                                            className=""
+                                        />
+                                    </div> */}
 
                                     {item.title}
                                 </Button>
