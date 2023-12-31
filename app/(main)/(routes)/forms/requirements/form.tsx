@@ -54,10 +54,10 @@ const profileFormSchema = z.object({
         .optional(),
 })
 
-type ProfileFormValues = z.infer<typeof profileFormSchema>
+type RequirementsValues = z.infer<typeof profileFormSchema>
 
 // This can come from your database or API.
-const defaultValues: Partial<ProfileFormValues> = {
+const defaultValues: Partial<RequirementsValues> = {
     bio: "I own a computer.",
     urls: [
         { value: "https://shadcn.com" },
@@ -65,8 +65,8 @@ const defaultValues: Partial<ProfileFormValues> = {
     ],
 }
 
-export function ProfileForm() {
-    const form = useForm<ProfileFormValues>({
+export function Requirements() {
+    const form = useForm<RequirementsValues>({
         resolver: zodResolver(profileFormSchema),
         defaultValues,
         mode: "onChange",
@@ -77,7 +77,7 @@ export function ProfileForm() {
         control: form.control,
     })
 
-    function onSubmit(data: ProfileFormValues) {
+    function onSubmit(data: RequirementsValues) {
         toast({
             title: "You submitted the following values:",
             description: (

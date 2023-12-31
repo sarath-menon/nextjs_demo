@@ -9,7 +9,7 @@ import { update } from "@/convex/documents";
 import { api } from "@/convex/_generated/api";
 import { toast } from "sonner";
 import { Separator } from "@radix-ui/react-dropdown-menu";
-import { ProfileForm } from "./profile-form";
+import { Requirements } from "./form"
 import React from "react";
 
 
@@ -44,7 +44,7 @@ const DocumentsPage = () => {
             </div>
             <Separator />
 
-            <ProfileForm />
+            <Requirements />
 
         </div>
 

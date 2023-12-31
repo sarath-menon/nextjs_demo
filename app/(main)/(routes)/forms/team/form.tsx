@@ -62,21 +62,21 @@ const accountFormSchema = z.object({
     }),
 })
 
-type AccountFormValues = z.infer<typeof accountFormSchema>
+type TeamValues = z.infer<typeof accountFormSchema>
 
 // This can come from your database or API.
-const defaultValues: Partial<AccountFormValues> = {
+const defaultValues: Partial<TeamValues> = {
     // name: "Your name",
     // dob: new Date("2023-01-23"),
 }
 
-export function AccountForm() {
-    const form = useForm<AccountFormValues>({
+export function Team() {
+    const form = useForm<TeamValues>({
         resolver: zodResolver(accountFormSchema),
         defaultValues,
     })
 
-    function onSubmit(data: AccountFormValues) {
+    function onSubmit(data: TeamValues) {
         toast({
             title: "You submitted the following values:",
             description: (

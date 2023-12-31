@@ -45,7 +45,7 @@ export const Navbar = () => {
                 {isAuthenticated && !isLoading && (
                     <>
                         <Button variant={"ghost"} size="sm" asChild>
-                            <Link href="/forms/profile">
+                            <Link href="/forms/requirements">
                                 Enter Simplicyti
                             </Link>
                         </Button>

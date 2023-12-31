@@ -138,17 +138,25 @@ export const PRICING_CARDS = [
 
 export const SIDEBAR_ITEMS: SidebarItem[] = [
   {
-      title: "Profile",
-      href: '/forms/profile',
+    title: "Summary",
+    href: '/forms/summary',
+},
+  {
+      title: "Requirements",
+      href: '/forms/requirements',
   },
   {
-      title: "Account",
-      href: '/forms/account',
+      title: "Team",
+      href: '/forms/team',
   },
   {
-      title: "Selva",
-      href: '/forms/selva',
-  }
+      title: "Financial",
+      href: '/forms/financial',
+  },
+  {
+    title: "Roadmap",
+    href: '/forms/roadmap',
+}
 ]
 
 export const PRICING_PLANS = { proplan: 'Pro Plan', freeplan: 'Free Plan' };

@@ -44,26 +44,26 @@ const items = [
     },
 ] as const
 
-const displayFormSchema = z.object({
+const SummarySchema = z.object({
     items: z.array(z.string()).refine((value) => value.some((item) => item), {
         message: "You have to select at least one item.",
     }),
 })
 
-type DisplayFormValues = z.infer<typeof displayFormSchema>
+type SummaryValues = z.infer<typeof SummarySchema>
 
 // This can come from your database or API.
-const defaultValues: Partial<DisplayFormValues> = {
+const defaultValues: Partial<SummaryValues> = {
     items: ["recents", "home"],
 }
 
-export function DisplayForm() {
-    const form = useForm<DisplayFormValues>({
-        resolver: zodResolver(displayFormSchema),
+export function Summary() {
+    const form = useForm<SummaryValues>({
+        resolver: zodResolver(SummarySchema),
         defaultValues,
     })
 
-    function onSubmit(data: DisplayFormValues) {
+    function onSubmit(data: SummaryValues) {
         toast({
             title: "You submitted the following values:",
             description: (

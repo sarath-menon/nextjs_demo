@@ -1,5 +1,5 @@
 import { Separator } from "@/components/ui/separator"
-import { DisplayForm } from "./selva-form"
+import { Financial } from "./form"
 
 export default function SettingsDisplayPage() {
     return (
@@ -11,7 +11,7 @@ export default function SettingsDisplayPage() {
                 </p>
             </div>
             <Separator />
-            <DisplayForm />
+            <Financial />
         </div>
     )
 }
