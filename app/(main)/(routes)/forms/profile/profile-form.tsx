@@ -28,6 +28,7 @@ import {
 
 import { Textarea } from "@/components/ui/textarea"
 import { toast } from "@/components/ui/use-toast"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 const profileFormSchema = z.object({
     username: z
@@ -90,6 +91,30 @@ export function ProfileForm() {
     return (
 
         <div>
+
+            {/* Tabs */}
+            <Tabs defaultValue="account" className="w-[400px]">
+                <TabsList className="grid w-full grid-cols-2">
+                    <TabsTrigger value="account">Account</TabsTrigger>
+                    <TabsTrigger value="password">Password</TabsTrigger>
+                </TabsList>
+
+                <TabsContent value="account">
+                    <div>
+                        selva
+                    </div>
+
+
+                </TabsContent>
+
+                <TabsContent value="password">
+                    <div>
+                        selva2
+                    </div>
+                </TabsContent>
+
+            </Tabs>
+
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
                     {/* <FormField
@@ -109,6 +134,7 @@ export function ProfileForm() {
                             </FormItem>
                         )}
                     /> */}
+
                     <FormField
                         control={form.control}
                         name="email"
@@ -191,6 +217,6 @@ export function ProfileForm() {
                     <Button type="submit">Update profile</Button>
                 </form>
             </Form>
-        </div>
+        </div >
     )
 }
