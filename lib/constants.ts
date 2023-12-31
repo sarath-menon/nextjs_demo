@@ -138,12 +138,8 @@ export const PRICING_CARDS = [
 
 export const SIDEBAR_ITEMS: SidebarItem[] = [
   {
-    title: "Summary",
-    href: '/forms/summary',
-},
-  {
-      title: "Requirements",
-      href: '/forms/requirements',
+    title: "Requirements",
+    href: '/forms/requirements',
   },
   {
       title: "Team",
@@ -156,6 +152,10 @@ export const SIDEBAR_ITEMS: SidebarItem[] = [
   {
     title: "Roadmap",
     href: '/forms/roadmap',
+},
+{
+  title: "Summary",
+  href: '/forms/summary',
 }
 ]
 
