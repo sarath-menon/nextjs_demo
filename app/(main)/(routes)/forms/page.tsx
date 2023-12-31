@@ -9,7 +9,7 @@ import { update } from "@/convex/documents";
 import { api } from "@/convex/_generated/api";
 import { toast } from "sonner";
 import { Separator } from "@radix-ui/react-dropdown-menu";
-import { ProfileForm } from "./profile/profile-form";
+import { ProfileForm } from "./profile-form";
 import React from "react";
 
 
