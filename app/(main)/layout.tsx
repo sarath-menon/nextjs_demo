@@ -7,42 +7,15 @@ import { Spinner } from "@/components/spinner";
 
 import { Navigation } from "./_components/notion_clone/navigation";
 import { Sidebar } from "./_components/sidebar";
-import { playlists } from "./data/playlists"
 import { Menu } from "./_components/menu";
 import { Separator } from "@/components/ui/separator";
+import { SIDEBAR_ITEMS } from "@/lib/constants";
 
 
 interface ObjectivesLayoutProps {
     children: React.ReactNode
 }
 
-const sidebarItems = [
-    {
-        title: "Profile",
-        svg_link: "http://www.w3.org/2000/svg",
-        href: "/examples/forms",
-    },
-    {
-        title: "Account",
-        svg_link: "http://www.w3.org/2000/svg",
-        href: "/examples/forms/account",
-    },
-    {
-        title: "Appearance",
-        svg_link: "http://www.w3.org/2000/svg",
-        href: "/examples/forms/appearance",
-    },
-    {
-        title: "Notifications",
-        svg_link: "http://www.w3.org/2000/svg",
-        href: "/examples/forms/notifications",
-    },
-    {
-        title: "Display",
-        svg_link: "http://www.w3.org/2000/svg",
-        href: "/examples/forms/display",
-    },
-]
 
 export default function ObjectivesLayout({ children }: ObjectivesLayoutProps) {
     const { isAuthenticated, isLoading } = useConvexAuth();
@@ -68,7 +41,7 @@ export default function ObjectivesLayout({ children }: ObjectivesLayoutProps) {
 
             {/* Shad-cn sidebar (simple) */}
             <div className="border-r flex pr-1 w-[240px]">
-                <Sidebar items={sidebarItems} />
+                <Sidebar items={SIDEBAR_ITEMS} />
             </div>
 
             <div className=" flex flex-col">
