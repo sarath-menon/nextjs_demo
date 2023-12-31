@@ -51,6 +51,7 @@ import {
 } from "@/components/ui/select"
 import { PROJECTS_LIST } from "@/lib/constants"
 import { TeamMembersList } from "./team-members"
+import Link from "next/link"
 
 
 type Team = (typeof PROJECTS_LIST)[number]["teams"][number]
@@ -212,13 +213,20 @@ export default function TeamSwitcher({ className }: TeamSwitcherProps) {
 
                 {/* Footer */}
                 <DialogFooter>
+
+                    {/* Cancel button */}
                     <Button variant="outline" onClick={() => setShowNewTeamDialog(false)}>
                         Cancel
                     </Button>
-                    <Button type="submit">Continue</Button>
+
+                    {/* Continue button */}
+                    <Button asChild onClick={() => setShowNewTeamDialog(false)}>
+                        <Link href={"/forms/requirements"}>Continue</Link>
+                    </Button>
+
                 </DialogFooter>
 
             </DialogContent>
-        </Dialog>
+        </Dialog >
     )
 }
