@@ -47,32 +47,29 @@ import {
     SelectValue,
 } from "@/components/ui/select"
 
-const groups = [
+const projects_list = [
     {
-        label: "Personal Account",
+        label: "Aerial robots",
         teams: [
             {
-                label: "Alicia Koch",
+                label: "Flying carpet",
                 value: "personal",
             },
         ],
     },
+
     {
-        label: "Teams",
+        label: "Walking robots",
         teams: [
             {
-                label: "Acme Inc.",
+                label: "Anymal.",
                 value: "acme-inc",
-            },
-            {
-                label: "Monsters Inc.",
-                value: "monsters",
             },
         ],
     },
 ]
 
-type Team = (typeof groups)[number]["teams"][number]
+type Team = (typeof projects_list)[number]["teams"][number]
 
 type PopoverTriggerProps = React.ComponentPropsWithoutRef<typeof PopoverTrigger>
 
@@ -82,7 +79,7 @@ export default function TeamSwitcher({ className }: TeamSwitcherProps) {
     const [open, setOpen] = React.useState(false)
     const [showNewTeamDialog, setShowNewTeamDialog] = React.useState(false)
     const [selectedTeam, setSelectedTeam] = React.useState<Team>(
-        groups[0].teams[0]
+        projects_list[0].teams[0]
     )
 
     return (
@@ -113,7 +110,7 @@ export default function TeamSwitcher({ className }: TeamSwitcherProps) {
                         <CommandList>
                             <CommandInput placeholder="Search team..." />
                             <CommandEmpty>No team found.</CommandEmpty>
-                            {groups.map((group) => (
+                            {projects_list.map((group) => (
                                 <CommandGroup key={group.label} heading={group.label}>
                                     {group.teams.map((team) => (
                                         <CommandItem
@@ -157,7 +154,7 @@ export default function TeamSwitcher({ className }: TeamSwitcherProps) {
                                         }}
                                     >
                                         <PlusCircledIcon className="mr-2 h-5 w-5" />
-                                        Create Team
+                                        Create Project
                                     </CommandItem>
                                 </DialogTrigger>
                             </CommandGroup>
@@ -167,7 +164,7 @@ export default function TeamSwitcher({ className }: TeamSwitcherProps) {
             </Popover>
             <DialogContent>
                 <DialogHeader>
-                    <DialogTitle>Create team</DialogTitle>
+                    <DialogTitle>Create Project</DialogTitle>
                     <DialogDescription>
                         Add a new team to manage products and customers.
                     </DialogDescription>
@@ -175,7 +172,7 @@ export default function TeamSwitcher({ className }: TeamSwitcherProps) {
                 <div>
                     <div className="space-y-4 py-2 pb-4">
                         <div className="space-y-2">
-                            <Label htmlFor="name">Team name</Label>
+                            <Label htmlFor="name">Project name</Label>
                             <Input id="name" placeholder="Acme Inc." />
                         </div>
                         <div className="space-y-2">
