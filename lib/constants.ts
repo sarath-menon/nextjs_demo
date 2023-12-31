@@ -139,7 +139,7 @@ export const PRICING_CARDS = [
 export const SIDEBAR_ITEMS: SidebarItem[] = [
   {
       title: "Profile",
-      href: '/forms',
+      href: '/forms/profile',
   },
   {
       title: "Account",

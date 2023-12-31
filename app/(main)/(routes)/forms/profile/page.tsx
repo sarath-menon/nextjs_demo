@@ -13,11 +13,9 @@ import { ProfileForm } from "./profile-form";
 import React from "react";
 
 
-
 const DocumentsPage = () => {
 
     const { user } = useUser();
-
     const create = useMutation(api.documents.create);
 
     const onCreate = () => {
