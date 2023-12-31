@@ -1,7 +1,7 @@
 import { Separator } from "@/components/ui/separator"
 import { Financial } from "./form"
 
-export default function SettingsAccountPage() {
+export default function FinancialPage() {
     return (
         <div className="">
 
@@ -24,6 +24,7 @@ export default function SettingsAccountPage() {
             </div>
             <Separator />
             <Financial />
+
         </div>
     )
 }
