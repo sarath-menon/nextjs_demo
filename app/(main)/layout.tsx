@@ -10,6 +10,7 @@ import { Sidebar } from "./_components/sidebar";
 import { Menu } from "./_components/menu";
 import { Separator } from "@/components/ui/separator";
 import { SIDEBAR_ITEMS } from "@/lib/constants";
+import TeamSwitcher from "./_components/project-switcher";
 
 
 interface ObjectivesLayoutProps {
@@ -44,11 +45,20 @@ export default function ObjectivesLayout({ children }: ObjectivesLayoutProps) {
                 <Sidebar items={SIDEBAR_ITEMS} />
             </div>
 
-            <div className=" flex flex-col">
+            <div className="justify-end flex-grow">
 
                 {/* Shad-cn menu */}
-                <Menu />
+                <div className="flex items-center p-4">
+                    <Menu />
+
+                    <div className="flex  w-full justify-end">
+                        <TeamSwitcher />
+                    </div>
+                </div>
+
+
                 <div className="grid space-y-6 p-10 pb-16">
+
 
                     {/* Top heading */}
                     <div className="space-y-0.5">
@@ -69,6 +79,7 @@ export default function ObjectivesLayout({ children }: ObjectivesLayoutProps) {
         </div >
     );
 }
+
 
 // export default MainLayout;
 

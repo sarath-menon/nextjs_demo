@@ -14,6 +14,7 @@ import {
     MenubarSubTrigger,
     MenubarTrigger,
 } from "@/components/ui/menubar"
+import TeamSwitcher from "./project-switcher"
 
 export function Menu() {
     return (
