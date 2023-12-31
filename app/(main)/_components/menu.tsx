@@ -18,6 +18,8 @@ import {
 export function Menu() {
     return (
         <Menubar className="rounded-none border-b border-none px-2 lg:px-4">
+
+            {/* About */}
             <MenubarMenu>
                 <MenubarTrigger className="font-bold">Music</MenubarTrigger>
                 <MenubarContent>
@@ -39,7 +41,10 @@ export function Menu() {
                     </MenubarItem>
                 </MenubarContent>
             </MenubarMenu>
+
+            {/* File */}
             <MenubarMenu>
+
                 <MenubarTrigger className="relative">File</MenubarTrigger>
                 <MenubarContent>
                     <MenubarSub>
@@ -98,6 +103,8 @@ export function Menu() {
                     </MenubarItem>
                 </MenubarContent>
             </MenubarMenu>
+
+            {/* Edit */}
             <MenubarMenu>
                 <MenubarTrigger>Edit</MenubarTrigger>
                 <MenubarContent>
@@ -163,6 +170,8 @@ export function Menu() {
                     </MenubarItem>
                 </MenubarContent>
             </MenubarMenu>
+
+            {/* View */}
             <MenubarMenu>
                 <MenubarTrigger>View</MenubarTrigger>
                 <MenubarContent>
@@ -179,6 +188,8 @@ export function Menu() {
                     </MenubarItem>
                 </MenubarContent>
             </MenubarMenu>
+
+            {/* Help */}
             <MenubarMenu>
                 <MenubarTrigger className="hidden md:block">Account</MenubarTrigger>
                 <MenubarContent forceMount>
@@ -195,6 +206,7 @@ export function Menu() {
                     <MenubarItem inset>Add Account...</MenubarItem>
                 </MenubarContent>
             </MenubarMenu>
+
         </Menubar>
     )
 }
