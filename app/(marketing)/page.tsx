@@ -24,9 +24,9 @@ const HomePage = () => {
           <TitleSection pill="Your workspace perfected" title="prod platform" />
 
           {/* Login button  */}
-          <div>
+          {/* <div>
             <LoginButton />
-          </div>
+          </div> */}
 
           {/* Hero Images */}
 
