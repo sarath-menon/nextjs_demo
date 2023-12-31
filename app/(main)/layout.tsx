@@ -9,13 +9,37 @@ import { Navigation } from "./_components/notion_clone/navigation";
 import { Sidebar } from "./_components/sidebar";
 import { playlists } from "./data/playlists"
 import { Menu } from "./_components/menu";
+import { Separator } from "@/components/ui/separator";
 
 
-const MainLayout = ({
-    children
-}: {
-    children: React.ReactNode;
-}) => {
+interface ObjectivesLayoutProps {
+    children: React.ReactNode
+}
+
+const sidebarItems = [
+    {
+        title: "Profile",
+        href: "/examples/forms",
+    },
+    {
+        title: "Account",
+        href: "/examples/forms/account",
+    },
+    {
+        title: "Appearance",
+        href: "/examples/forms/appearance",
+    },
+    {
+        title: "Notifications",
+        href: "/examples/forms/notifications",
+    },
+    {
+        title: "Display",
+        href: "/examples/forms/display",
+    },
+]
+
+export default function ObjectivesLayout({ children }: ObjectivesLayoutProps) {
     const { isAuthenticated, isLoading } = useConvexAuth();
 
     if (isLoading) {
@@ -39,7 +63,7 @@ const MainLayout = ({
 
             {/* Shad-cn sidebar (simple) */}
             <div className="border-r flex pr-1 w-[240px]">
-                <Sidebar playlists={playlists} className="" />
+                <Sidebar items={sidebarItems} />
             </div>
 
             <div className=" flex flex-col">
@@ -50,11 +74,12 @@ const MainLayout = ({
 
                     {/* Top heading */}
                     <div className="space-y-0.5">
-                        <h2 className="text-2xl font-bold tracking-tight">Settings</h2>
+                        <h2 className="text-2xl font-bold tracking-tight">Objectives</h2>
                         <p className="text-muted-foreground">
                             Manage your account settings and set e-mail preferences.
                         </p>
                     </div>
+                    <Separator className="my-6" />
 
 
                     <main className="flex-1 h-full overflow-y-auto">
@@ -67,5 +92,5 @@ const MainLayout = ({
     );
 }
 
-export default MainLayout;
+// export default MainLayout;
 
