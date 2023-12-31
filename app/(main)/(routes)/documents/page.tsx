@@ -8,6 +8,8 @@ import { useMutation } from "convex/react";
 import { update } from "@/convex/documents";
 import { api } from "@/convex/_generated/api";
 import { toast } from "sonner";
+import { Separator } from "@radix-ui/react-dropdown-menu";
+import { ProfileForm } from "../../_components/profile-form";
 
 
 const DocumentsPage = () => {
@@ -33,38 +35,15 @@ const DocumentsPage = () => {
 
     return (
 
-
-
-        <div className="h-full flex flex-col items-center justify-center  ">
-
-
-            {/* to create new note */}
-            {/* <section>
-                <Image
-                    src="/empty.png"
-                    height="300"
-                    width="300"
-                    alt="Empty"
-                    className="dark:hidden"
-                />
-                <Image
-                    src="/empty-dark.png"
-                    height="300"
-                    width="300"
-                    alt="Empty"
-                    className="hidden dark:block"
-                />
-                <h2 className="text-lg font-medium">
-                    Welcome to {user?.firstName}&apos;s Jotion
-                </h2>
-
-
-                <Button onClick={onCreate}>
-                    <PlusCircle className="h-4 w-4 mr-2" />
-                    Create a note
-                </Button>
-
-            </section > */}
+        <div className="space-y-6">
+            <div>
+                <h3 className="text-lg font-medium">Profile</h3>
+                <p className="text-sm text-muted-foreground">
+                    This is how others will see you on the site.
+                </p>
+            </div>
+            <Separator />
+            <ProfileForm />
         </div>
 
 
