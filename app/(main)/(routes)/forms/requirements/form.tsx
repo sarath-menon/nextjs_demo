@@ -31,20 +31,18 @@ import { toast } from "@/components/ui/use-toast"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 const profileFormSchema = z.object({
-    username: z
-        .string()
-        .min(2, {
-            message: "Username must be at least 2 characters.",
-        })
-        .max(30, {
-            message: "Username must not be longer than 30 characters.",
-        }),
-    email: z
+    type: z
         .string({
-            required_error: "Please select an email to display.",
+            required_error: "Please select a requirement type.",
         })
         .email(),
-    bio: z.string().max(160).min(4),
+
+    description: z.string().max(160).min(10),
+
+    rationale: z.string().max(160).min(10),
+
+    test_procedure: z.string().max(160).min(10),
+
     urls: z
         .array(
             z.object({
@@ -58,7 +56,7 @@ type RequirementsValues = z.infer<typeof profileFormSchema>
 
 // This can come from your database or API.
 const defaultValues: Partial<RequirementsValues> = {
-    bio: "I own a computer.",
+    description: "Chopsticks as propellers",
     urls: [
         { value: "https://shadcn.com" },
         { value: "http://twitter.com/shadcn" },
@@ -66,6 +64,7 @@ const defaultValues: Partial<RequirementsValues> = {
 }
 
 export function Requirements() {
+
     const form = useForm<RequirementsValues>({
         resolver: zodResolver(profileFormSchema),
         defaultValues,
@@ -93,7 +92,7 @@ export function Requirements() {
         <div>
 
             {/* Tabs */}
-            <Tabs defaultValue="account" className="w-[400px]">
+            {/* <Tabs defaultValue="account" className="w-[400px]">
                 <TabsList className="grid w-full grid-cols-2">
                     <TabsTrigger value="account">Account</TabsTrigger>
                     <TabsTrigger value="password">Password</TabsTrigger>
@@ -113,7 +112,7 @@ export function Requirements() {
                     </div>
                 </TabsContent>
 
-            </Tabs>
+            </Tabs> */}
 
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
@@ -135,22 +134,26 @@ export function Requirements() {
                         )}
                     /> */}
 
+                    {/* Requirement type */}
                     <FormField
                         control={form.control}
-                        name="email"
+                        name="type"
                         render={({ field }) => (
                             <FormItem>
-                                <FormLabel>Email</FormLabel>
+                                <FormLabel>Type</FormLabel>
                                 <Select onValueChange={field.onChange} defaultValue={field.value}>
+
                                     <FormControl>
                                         <SelectTrigger>
-                                            <SelectValue placeholder="Select a verified email to display" />
+                                            <SelectValue placeholder="Select a requirement type" />
                                         </SelectTrigger>
                                     </FormControl>
+
+                                    {/* List of type */}
                                     <SelectContent>
-                                        <SelectItem value="m@example.com">m@example.com</SelectItem>
-                                        <SelectItem value="m@google.com">m@google.com</SelectItem>
-                                        <SelectItem value="m@support.com">m@support.com</SelectItem>
+                                        <SelectItem value="functional">Functional</SelectItem>
+                                        <SelectItem value="budget">Budget</SelectItem>
+                                        <SelectItem value="regulatory">Regulatory</SelectItem>
                                     </SelectContent>
                                 </Select>
                                 <FormDescription>
@@ -161,12 +164,15 @@ export function Requirements() {
                             </FormItem>
                         )}
                     />
+
+                    {/* Description */}
                     <FormField
                         control={form.control}
-                        name="bio"
+                        name="description"
                         render={({ field }) => (
                             <FormItem>
-                                <FormLabel>Bio</FormLabel>
+                                <FormLabel>Description</FormLabel>
+
                                 <FormControl>
                                     <Textarea
                                         placeholder="Tell us a little bit about yourself"
@@ -174,14 +180,71 @@ export function Requirements() {
                                         {...field}
                                     />
                                 </FormControl>
+
                                 <FormDescription>
                                     You can <span>@mention</span> other users and organizations to
                                     link to them.
                                 </FormDescription>
+
                                 <FormMessage />
                             </FormItem>
                         )}
                     />
+
+                    {/* Rationale */}
+                    <FormField
+                        control={form.control}
+                        name="rationale"
+                        render={({ field }) => (
+                            <FormItem>
+                                <FormLabel>Rationale</FormLabel>
+
+                                <FormControl>
+                                    <Textarea
+                                        placeholder="Tell us a little bit about yourself"
+                                        className="resize-none"
+                                        {...field}
+                                    />
+                                </FormControl>
+
+                                <FormDescription>
+                                    You can <span>@mention</span> other users and organizations to
+                                    link to them.
+                                </FormDescription>
+
+                                <FormMessage />
+                            </FormItem>
+                        )}
+                    />
+
+                    {/* Test procedure */}
+                    <FormField
+                        control={form.control}
+                        name="test_procedure"
+                        render={({ field }) => (
+                            <FormItem>
+                                <FormLabel>Test procedure</FormLabel>
+
+                                <FormControl>
+                                    <Textarea
+                                        placeholder="Tell us a little bit about yourself"
+                                        className="resize-none"
+                                        {...field}
+                                    />
+                                </FormControl>
+
+                                <FormDescription>
+                                    You can <span>@mention</span> other users and organizations to
+                                    link to them.
+                                </FormDescription>
+
+                                <FormMessage />
+                            </FormItem>
+                        )}
+                    />
+
+
+
                     <div>
                         {fields.map((field, index) => (
                             <FormField
