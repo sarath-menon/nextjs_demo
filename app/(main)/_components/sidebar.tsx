@@ -2,7 +2,6 @@ import { cn } from "@/lib/utils"
 
 import { Button, buttonVariants } from "@/components/ui/button"
 import { ScrollArea } from "@/components/ui/scroll-area"
-import { Playlist } from "../data/playlists"
 import { UserItem } from "./notion_clone/user-item"
 import { DocumentList } from "./notion_clone/document-list"
 import Link from "next/link"

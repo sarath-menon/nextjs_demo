@@ -59,17 +59,6 @@ export default function ObjectivesLayout({ children }: ObjectivesLayoutProps) {
 
                 <div className="grid space-y-6 p-10 pb-16">
 
-
-                    {/* Top heading */}
-                    <div className="space-y-0.5">
-                        <h2 className="text-2xl font-bold tracking-tight">Objectives</h2>
-                        <p className="text-muted-foreground">
-                            Manage your account settings and set e-mail preferences.
-                        </p>
-                    </div>
-                    <Separator className="my-6" />
-
-
                     <main className="flex-1 h-full overflow-y-auto">
                         {children}
                     </main>

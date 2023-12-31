@@ -34,9 +34,19 @@ const DocumentsPage = () => {
     }
 
     return (
+        <div className="">
 
-        <div className="space-y-6">
-            <div>
+            {/* Top heading */}
+            <div className="space-y-0.5">
+                <h2 className="text-2xl font-bold tracking-tight">Objectives</h2>
+                <p className="text-muted-foreground">
+                    Manage your account settings and set e-mail preferences.
+                </p>
+            </div>
+            <Separator className="my-6" />
+
+
+            <div className="space-y-6">
                 <h3 className="text-lg font-medium">Profile</h3>
                 <p className="text-sm text-muted-foreground">
                     This is how others will see you on the site.
