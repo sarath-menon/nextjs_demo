@@ -7,6 +7,8 @@ import * as z from "zod"
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
+import { CreateReqDialog } from "@/app/(main)/_components/req_creator"
+
 import {
     Form,
     FormControl,
@@ -113,6 +115,11 @@ export function Requirements() {
                 </TabsContent>
 
             </Tabs> */}
+
+            {/* Create new requirement */}
+            <div className="py-6">
+                <CreateReqDialog />
+            </div>
 
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
@@ -277,9 +284,12 @@ export function Requirements() {
                             Add URL
                         </Button>
                     </div>
+
                     <Button type="submit">Update profile</Button>
                 </form>
             </Form>
+
+
         </div >
     )
 }
