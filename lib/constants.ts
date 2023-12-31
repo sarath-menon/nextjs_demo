@@ -1,3 +1,6 @@
+import { SidebarItem } from "./types";
+import { Icon } from '@iconify/react';
+
 export const CLIENTS = [
   { alt: 'client1', logo: "/client1.png" },
   { alt: 'client2', logo: "/client2.png" },
@@ -130,6 +133,31 @@ export const PRICING_CARDS = [
     ],
   },
 ];
+
+// Sidebar items
+
+export const SIDEBAR_ITEMS: SidebarItem[] = [
+  {
+      title: "Profile",
+      path: '/profile',
+  },
+  {
+      title: "Account",
+      path: '/account',
+  },
+  {
+      title: "Selva",
+      path: '/selva',
+  },
+  {
+      title: "Notifications",
+      path: '/',
+  },
+  {
+      title: "Display",
+      path: '/',
+  },
+]
 
 export const PRICING_PLANS = { proplan: 'Pro Plan', freeplan: 'Free Plan' };
 
