@@ -8,22 +8,25 @@ import { DocumentList } from "./notion_clone/document-list"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import Image from "next/image"
+import { useRef } from "react"
 
-// interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {
-//     playlists: Playlist[]
-// }
+import { useCycle } from "framer-motion"
+
 
 interface SidebarProps extends React.HTMLAttributes<HTMLElement> {
     items: {
         href: string
-        svg_link: string
         title: string
     }[]
 }
 
 export function Sidebar({ className, items, ...props }: SidebarProps) {
 
+    // variables  
     const pathname = usePathname()
+    const containerRef = useRef(null);
+    const [isOpen, toggleOpen] = useCycle(false, true)
+
 
     return (
         <div className={cn("pb-12", className)}>
@@ -50,7 +53,9 @@ export function Sidebar({ className, items, ...props }: SidebarProps) {
                         {items.map((item) => (
                             <div className="space-y-1">
 
-                                <Button variant="secondary" className="w-full justify-start hover:bg-transparent">
+                                <Button asChild variant="secondary" className="w-full justify-start hover:bg-transparent">
+
+                                    <Link href={item.href}>{item.title}</Link>
 
                                     {/* <div className="pr-3">
                                         <Image
@@ -62,7 +67,7 @@ export function Sidebar({ className, items, ...props }: SidebarProps) {
                                         />
                                     </div> */}
 
-                                    {item.title}
+                                    {/* {item.title} */}
                                 </Button>
                             </div>
                         ))}
