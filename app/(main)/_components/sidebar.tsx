@@ -50,7 +50,7 @@ export function Sidebar({ className, items, ...props }: SidebarProps) {
                         {items.map((item) => (
                             <div className="space-y-1">
 
-                                <Button variant="secondary" className="w-full justify-start">
+                                <Button variant="secondary" className="w-full justify-start hover:bg-transparent">
 
                                     {/* <div className="pr-3">
                                         <Image
