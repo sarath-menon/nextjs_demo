@@ -1,28 +1,65 @@
-import { Separator } from "@/components/ui/separator"
-import { Summary } from "./form"
+import { promises as fs } from "fs"
+import path from "path"
+import { Metadata } from "next"
+import Image from "next/image"
+import { z } from "zod"
 
-export default function SettingsDisplayPage() {
+import { columns } from "@/app/(main)/_components/req_table/columns"
+import { DataTable } from "@/app/(main)/_components/req_table/data-table"
+import { UserNav } from "@/app/(main)/_components/req_table/user-nav"
+import { taskSchema } from "@/app/(main)/data/schema"
+
+export const metadata: Metadata = {
+    title: "Tasks",
+    description: "A task and issue tracker build using Tanstack Table.",
+}
+
+// Simulate a database read for tasks.
+async function getTasks() {
+    const data = await fs.readFile(
+        path.join(process.cwd(), "app/(main)/data/tasks.json")
+    )
+
+    const tasks = JSON.parse(data.toString())
+
+    return z.array(taskSchema).parse(tasks)
+}
+
+export default async function TaskPage() {
+    const tasks = await getTasks()
+
     return (
-        <div className="">
-
-            {/* Top heading */}
-            <div className="space-y-0.5">
-                <h2 className="text-2xl font-bold tracking-tight">Summary</h2>
-                <p className="text-muted-foreground">
-                    Manage your account settings and set e-mail preferences.
-                </p>
+        <>
+            <div className="md:hidden">
+                <Image
+                    src="/examples/tasks-light.png"
+                    width={1280}
+                    height={998}
+                    alt="Playground"
+                    className="block dark:hidden"
+                />
+                <Image
+                    src="/examples/tasks-dark.png"
+                    width={1280}
+                    height={998}
+                    alt="Playground"
+                    className="hidden dark:block"
+                />
             </div>
-            <Separator className="my-6" />
-
-
-            <div className="space-y-6">
-                <h3 className="text-lg font-medium">Display</h3>
-                <p className="text-sm text-muted-foreground">
-                    Turn items on or off to control what&apos;s displayed in the app.
-                </p>
+            <div className="hidden h-full flex-1 flex-col space-y-8 p-8 md:flex">
+                <div className="flex items-center justify-between space-y-2">
+                    <div>
+                        <h2 className="text-2xl font-bold tracking-tight">Welcome back!</h2>
+                        <p className="text-muted-foreground">
+                            Here&apos;s a list of your tasks for this month!
+                        </p>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                        <UserNav />
+                    </div>
+                </div>
+                <DataTable data={tasks} columns={columns} />
             </div>
-            <Separator />
-            <Summary />
-        </div>
+        </>
     )
 }
