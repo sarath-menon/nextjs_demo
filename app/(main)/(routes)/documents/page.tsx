@@ -9,7 +9,16 @@ import { update } from "@/convex/documents";
 import { api } from "@/convex/_generated/api";
 import { toast } from "sonner";
 import { Separator } from "@radix-ui/react-dropdown-menu";
-import { ProfileForm } from "../../_components/profile-form";
+import { ProfileForm } from "../forms/profile/page";
+import React from "react";
+
+function getSubPage(): any {
+    return (
+        <div>
+            <ProfileForm />
+        </div>
+    );
+}
 
 
 const DocumentsPage = () => {
@@ -43,9 +52,10 @@ const DocumentsPage = () => {
                 </p>
             </div>
             <Separator />
-            <ProfileForm />
-        </div>
 
+            <ProfileForm />
+
+        </div>
 
     );
 }
