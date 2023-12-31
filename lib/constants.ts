@@ -159,6 +159,30 @@ export const SIDEBAR_ITEMS: SidebarItem[] = [
 }
 ]
 
+// Projects list
+
+export const PROJECTS_LIST = [
+  {
+      label: "Aerial robots",
+      teams: [
+          {
+              label: "Flying carpet",
+              value: "personal",
+          },
+      ],
+  },
+
+  {
+      label: "Walking robots",
+      teams: [
+          {
+              label: "Anymal.",
+              value: "acme-inc",
+          },
+      ],
+  },
+]
+
 export const PRICING_PLANS = { proplan: 'Pro Plan', freeplan: 'Free Plan' };
 
 export const MAX_FOLDERS_FREE_PLAN = 3;
