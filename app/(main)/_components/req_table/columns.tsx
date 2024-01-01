@@ -58,11 +58,12 @@ export const columns: ColumnDef<Task>[] = [
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Nature" />
     ),
-    cell: ({ row }) => <div className="w-[50px]">
-      <Badge variant="outline">
-        {row.getValue("label")}
-      </Badge>
-    </div>,
+    cell: ({ row }) =>
+      <div className="w-[50px]">
+        <Badge variant="outline">
+          {row.getValue("label")}
+        </Badge>
+      </div>,
     enableSorting: false,
     enableHiding: false,
   },
@@ -75,20 +76,15 @@ export const columns: ColumnDef<Task>[] = [
       <DataTableColumnHeader column={column} title="Title" />
     ),
 
-    cell: ({ row }) => {
-      const label = labels.find((label) => label.value === row.original.label)
+    cell: ({ row }) =>
+      <div className="flex space-x-2">
 
-      return (
-        <div className="flex space-x-2">
+        {/* Req description */}
+        <span className="w-[800px] truncate font-medium">
+          <ViewReqDialog name={row.getValue("title")} />
+        </span>
 
-          {/* Req description */}
-          <span className="max-w-[500px] truncate font-medium">
-            <ViewReqDialog name={row.getValue("title")} />
-          </span>
-
-        </div>
-      )
-    },
+      </div>
   },
 
   // Req type
