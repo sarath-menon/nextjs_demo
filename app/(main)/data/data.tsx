@@ -24,6 +24,21 @@ export const labels = [
   },
 ]
 
+export const types = [
+  {
+    value: "functional",
+    label: "Functional",
+  },
+  {
+    value: "performance",
+    label: "Performance",
+  },
+  {
+    value: "regulatory",
+    label: "Regulatory",
+  },
+]
+
 export const statuses = [
   {
     value: "backlog",

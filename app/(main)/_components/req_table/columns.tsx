@@ -38,7 +38,7 @@ export const columns: ColumnDef<Task>[] = [
     enableHiding: false,
   },
 
-  // Task name
+  // Req number
   {
     accessorKey: "id",
     header: ({ column }) => (
@@ -49,7 +49,7 @@ export const columns: ColumnDef<Task>[] = [
     enableHiding: false,
   },
 
-  // Title
+  // Req description
   {
     accessorKey: "title",
     header: ({ column }) => (
@@ -67,6 +67,17 @@ export const columns: ColumnDef<Task>[] = [
         </div>
       )
     },
+  },
+
+  // Req type
+  {
+    accessorKey: "type",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="Type" />
+    ),
+    cell: ({ row }) => <div className="w-[60px]">{row.getValue("type")}</div>,
+    enableSorting: false,
+    enableHiding: false,
   },
 
   // Status
@@ -98,34 +109,34 @@ export const columns: ColumnDef<Task>[] = [
     },
   },
 
-  // Priority
-  {
-    accessorKey: "priority",
-    header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Priority" />
-    ),
-    cell: ({ row }) => {
-      const priority = priorities.find(
-        (priority) => priority.value === row.getValue("priority")
-      )
+  // // Priority
+  // {
+  //   accessorKey: "priority",
+  //   header: ({ column }) => (
+  //     <DataTableColumnHeader column={column} title="Priority" />
+  //   ),
+  //   cell: ({ row }) => {
+  //     const priority = priorities.find(
+  //       (priority) => priority.value === row.getValue("priority")
+  //     )
 
-      if (!priority) {
-        return null
-      }
+  //     if (!priority) {
+  //       return null
+  //     }
 
-      return (
-        <div className="flex items-center">
-          {priority.icon && (
-            <priority.icon className="mr-2 h-4 w-4 text-muted-foreground" />
-          )}
-          <span>{priority.label}</span>
-        </div>
-      )
-    },
-    filterFn: (row, id, value) => {
-      return value.includes(row.getValue(id))
-    },
-  },
+  //     return (
+  //       <div className="flex items-center">
+  //         {priority.icon && (
+  //           <priority.icon className="mr-2 h-4 w-4 text-muted-foreground" />
+  //         )}
+  //         <span>{priority.label}</span>
+  //       </div>
+  //     )
+  //   },
+  //   filterFn: (row, id, value) => {
+  //     return value.includes(row.getValue(id))
+  //   },
+  // },
 
   // 3-dot menu
   {
