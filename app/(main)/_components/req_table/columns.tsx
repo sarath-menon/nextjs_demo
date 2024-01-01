@@ -80,7 +80,7 @@ export const columns: ColumnDef<Task>[] = [
       <div className="flex space-x-2">
 
         {/* Req description */}
-        <span className="w-[800px] truncate font-medium">
+        <span className="max-w-[400px] overflow-x-scroll font-medium">
           <ViewReqDialog name={row.getValue("title")} />
         </span>
 
