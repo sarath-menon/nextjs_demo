@@ -24,10 +24,14 @@ export function DataTablePagination<TData>({
 }: DataTablePaginationProps<TData>) {
   return (
     <div className="flex items-center justify-between px-2">
+
+      {/* Table footer - no. of rows selected  */}
       <div className="flex-1 text-sm text-muted-foreground">
         {table.getFilteredSelectedRowModel().rows.length} of{" "}
         {table.getFilteredRowModel().rows.length} row(s) selected.
       </div>
+
+      {/* Table footer - everything else other than no. of rows selected  */}
       <div className="flex items-center space-x-6 lg:space-x-8">
         <div className="flex items-center space-x-2">
           <p className="text-sm font-medium">Rows per page</p>
@@ -92,6 +96,7 @@ export function DataTablePagination<TData>({
           </Button>
         </div>
       </div>
+
     </div>
   )
 }

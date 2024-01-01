@@ -41,6 +41,8 @@ export function DataTableFacetedFilter<TData, TValue>({
 
   return (
     <Popover>
+
+      {/* Status, priority menus above table */}
       <PopoverTrigger asChild>
         <Button variant="outline" size="sm" className="h-8 border-dashed">
           <PlusCircledIcon className="mr-2 h-4 w-4" />
@@ -80,6 +82,7 @@ export function DataTableFacetedFilter<TData, TValue>({
           )}
         </Button>
       </PopoverTrigger>
+
       <PopoverContent className="w-[200px] p-0" align="start">
         <Command>
           <CommandInput placeholder={title} />

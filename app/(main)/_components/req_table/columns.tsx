@@ -11,6 +11,8 @@ import { DataTableColumnHeader } from "./data-table-column-header"
 import { DataTableRowActions } from "./data-table-row-actions"
 
 export const columns: ColumnDef<Task>[] = [
+
+  // checkbox
   {
     id: "select",
     header: ({ table }) => (
@@ -35,6 +37,8 @@ export const columns: ColumnDef<Task>[] = [
     enableSorting: false,
     enableHiding: false,
   },
+
+  // Task name
   {
     accessorKey: "id",
     header: ({ column }) => (
@@ -44,6 +48,8 @@ export const columns: ColumnDef<Task>[] = [
     enableSorting: false,
     enableHiding: false,
   },
+
+  // Title
   {
     accessorKey: "title",
     header: ({ column }) => (
@@ -62,6 +68,8 @@ export const columns: ColumnDef<Task>[] = [
       )
     },
   },
+
+  // Status
   {
     accessorKey: "status",
     header: ({ column }) => (
@@ -89,6 +97,8 @@ export const columns: ColumnDef<Task>[] = [
       return value.includes(row.getValue(id))
     },
   },
+
+  // Priority
   {
     accessorKey: "priority",
     header: ({ column }) => (
@@ -116,6 +126,8 @@ export const columns: ColumnDef<Task>[] = [
       return value.includes(row.getValue(id))
     },
   },
+
+  // 3-dot menu
   {
     id: "actions",
     cell: ({ row }) => <DataTableRowActions row={row} />,

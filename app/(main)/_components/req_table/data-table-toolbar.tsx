@@ -21,6 +21,8 @@ export function DataTableToolbar<TData>({
 
   return (
     <div className="flex items-center justify-between">
+
+      {/* Toolbar above table */}
       <div className="flex flex-1 items-center space-x-2">
         <Input
           placeholder="Filter tasks..."
@@ -55,6 +57,8 @@ export function DataTableToolbar<TData>({
           </Button>
         )}
       </div>
+
+      {/* View options */}
       <DataTableViewOptions table={table} />
     </div>
   )

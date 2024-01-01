@@ -32,6 +32,8 @@ export function DataTableRowActions<TData>({
 
   return (
     <DropdownMenu>
+
+      {/* Row actions - 3 dots menu at end of each row */}
       <DropdownMenuTrigger asChild>
         <Button
           variant="ghost"
@@ -41,6 +43,7 @@ export function DataTableRowActions<TData>({
           <span className="sr-only">Open menu</span>
         </Button>
       </DropdownMenuTrigger>
+
       <DropdownMenuContent align="end" className="w-[160px]">
         <DropdownMenuItem>Edit</DropdownMenuItem>
         <DropdownMenuItem>Make a copy</DropdownMenuItem>
@@ -64,6 +67,7 @@ export function DataTableRowActions<TData>({
           <DropdownMenuShortcut>⌘⌫</DropdownMenuShortcut>
         </DropdownMenuItem>
       </DropdownMenuContent>
+
     </DropdownMenu>
   )
 }

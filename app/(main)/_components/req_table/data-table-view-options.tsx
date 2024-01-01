@@ -21,7 +21,10 @@ export function DataTableViewOptions<TData>({
   table,
 }: DataTableViewOptionsProps<TData>) {
   return (
+
     <DropdownMenu>
+
+      {/* View options */}
       <DropdownMenuTrigger asChild>
         <Button
           variant="outline"
@@ -32,6 +35,8 @@ export function DataTableViewOptions<TData>({
           View
         </Button>
       </DropdownMenuTrigger>
+
+      {/* No idea  */}
       <DropdownMenuContent align="end" className="w-[150px]">
         <DropdownMenuLabel>Toggle columns</DropdownMenuLabel>
         <DropdownMenuSeparator />
@@ -54,6 +59,7 @@ export function DataTableViewOptions<TData>({
             )
           })}
       </DropdownMenuContent>
+
     </DropdownMenu>
   )
 }
