@@ -52,6 +52,22 @@ export const columns: ColumnDef<Task>[] = [
   //   enableHiding: false,
   // },
 
+  // Req nature
+  {
+    accessorKey: "label",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="Nature" />
+    ),
+    cell: ({ row }) => <div className="w-[50px]">
+      <Badge variant="outline">
+        {row.getValue("label")}
+      </Badge>
+    </div>,
+    enableSorting: false,
+    enableHiding: false,
+  },
+
+
   // Req description
   {
     accessorKey: "title",
@@ -65,14 +81,9 @@ export const columns: ColumnDef<Task>[] = [
       return (
         <div className="flex space-x-2">
 
-          {/* Req nature */}
-          {label && <Badge variant="outline">{label.label}</Badge>}
-
           {/* Req description */}
           <span className="max-w-[500px] truncate font-medium">
-
             <ViewReqDialog name={row.getValue("title")} />
-
           </span>
 
         </div>
