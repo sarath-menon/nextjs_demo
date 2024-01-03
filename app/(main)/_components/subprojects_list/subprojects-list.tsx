@@ -81,7 +81,7 @@ export function SubProjectList({ items }: SubProjectListProps) {
               </div>
             ) : null}
 
-            <Link href="/">Home</Link>
+            {/* <Link href="/">Home</Link> */}
 
           </button>
         ))}
@@ -93,13 +93,14 @@ export function SubProjectList({ items }: SubProjectListProps) {
 function getBadgeVariantFromLabel(
   label: string
 ): ComponentProps<typeof Badge>["variant"] {
-  if (["work"].includes(label.toLowerCase())) {
-    return "default"
-  }
 
-  if (["personal"].includes(label.toLowerCase())) {
-    return "outline"
-  }
+  // if (["work"]) {
+  //   return "outline"
+  // }
 
-  return "secondary"
+  // if (["personal"]) {
+  //   return "outline"
+  // }
+
+  return "outline"
 }
