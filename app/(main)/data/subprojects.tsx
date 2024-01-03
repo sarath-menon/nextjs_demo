@@ -171,7 +171,7 @@ export const SUB_PROJECTS = [
   },
 ]
 
-export type subprojects = (typeof SUB_PROJECTS)[number]
+export type SubProject = (typeof SUB_PROJECTS)[number]
 
 export const accounts = [
   {
