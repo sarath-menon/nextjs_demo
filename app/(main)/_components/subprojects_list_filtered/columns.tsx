@@ -204,9 +204,9 @@ export const columnsV2: ColumnDef<Task>[] = [
   //   },
   // },
 
-  // // 3-dot menu
-  // {
-  //   id: "actions",
-  //   cell: ({ row }) => <DataTableRowActions row={row} />,
-  // },
+  // 3-dot menu
+  {
+    id: "actions",
+    cell: ({ row }) => <DataTableRowActions row={row} />,
+  },
 ]
