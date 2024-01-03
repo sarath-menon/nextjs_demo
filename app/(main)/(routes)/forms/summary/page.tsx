@@ -10,6 +10,7 @@ import { DataTable } from "@/app/(main)/_components/req_table/data-table"
 import { UserNav } from "@/app/(main)/_components/user-nav"
 import { taskSchema } from "@/app/(main)/data/schema"
 import { DataTableV2 } from "@/app/(main)/_components/subprojects_list_filtered/data-table"
+import { columnsV2 } from "@/app/(main)/_components/subprojects_list_filtered/columns"
 
 export const metadata: Metadata = {
     title: "Tasks",
@@ -71,7 +72,7 @@ export default async function TaskPage() {
                 </div>
 
                 <div className="flex">
-                    <DataTableV2 data={tasks} columns={columns} />
+                    <DataTableV2 data={tasks} columns={columnsV2} />
                 </div>
 
             </div>
