@@ -53,7 +53,7 @@ export function IconSidebar({ className, items, ...props }: IconSidebarProps) {
                         </Button> */}
 
                         <TooltipProvider>
-                            <Tooltip delayDuration={150}>
+                            <Tooltip delayDuration={300}  >
                                 <TooltipTrigger asChild>
                                     <button>
                                         <div className="flex mx-3  items-center justify-center brightness-100 hover:brightness-200">
