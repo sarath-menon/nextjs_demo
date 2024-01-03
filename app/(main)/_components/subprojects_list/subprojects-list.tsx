@@ -4,7 +4,6 @@ import formatDistanceToNow from "date-fns/formatDistanceToNow"
 import { cn } from "@/lib/utils"
 import { Badge } from "@/components/ui/badge"
 import { ScrollArea } from "@/components/ui/scroll-area"
-import { Separator } from "@/components/ui/separator"
 import { SubProject } from "@/app/(main)/data/subprojects"
 import { useSubProject } from "./use-subproject"
 
