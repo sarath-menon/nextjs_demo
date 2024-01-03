@@ -6,14 +6,14 @@ import { Badge } from "@/components/ui/badge"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Separator } from "@/components/ui/separator"
 import { SubProject } from "@/app/(main)/data/subprojects"
-import { useSubProject } from "./use-mail"
+import { useSubProject } from "./use-subproject"
 
 interface SubProjectListProps {
   items: SubProject[]
 }
 
 export function SubProjectList({ items }: SubProjectListProps) {
-  const [mail, setSubProject] = useSubProject()
+  const [subproject, setSubProject] = useSubProject()
 
   return (
     <ScrollArea className="h-screen">
@@ -23,11 +23,11 @@ export function SubProjectList({ items }: SubProjectListProps) {
             key={item.id}
             className={cn(
               "flex flex-col items-start gap-2 rounded-lg border p-3 text-left text-sm transition-all hover:bg-accent",
-              mail.selected === item.id && "bg-muted"
+              subproject.selected === item.id && "bg-muted"
             )}
             onClick={() =>
               setSubProject({
-                ...mail,
+                ...subproject,
                 selected: item.id,
               })
             }
@@ -43,7 +43,7 @@ export function SubProjectList({ items }: SubProjectListProps) {
                 <div
                   className={cn(
                     "ml-auto text-xs",
-                    mail.selected === item.id
+                    subproject.selected === item.id
                       ? "text-foreground"
                       : "text-muted-foreground"
                   )}
