@@ -48,7 +48,7 @@ export default function ObjectivesLayout({ children }: ObjectivesLayoutProps) {
             </div> */}
 
             {/* Shad-cn icon sidebar*/}
-            <div className="absolute h-full border-r flex">
+            <div className="fixed h-full border-r flex">
                 <IconSidebar items={ICON_SIDEBAR_ITEMS} />
             </div>
 
