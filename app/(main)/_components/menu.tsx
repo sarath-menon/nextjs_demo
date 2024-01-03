@@ -22,7 +22,7 @@ export function Menu() {
 
             {/* About */}
             <MenubarMenu>
-                <MenubarTrigger className="font-bold">Music</MenubarTrigger>
+                <MenubarTrigger className="font-bold">About</MenubarTrigger>
                 <MenubarContent>
                     <MenubarItem>About Music</MenubarItem>
                     <MenubarSeparator />
@@ -192,7 +192,7 @@ export function Menu() {
 
             {/* Help */}
             <MenubarMenu>
-                <MenubarTrigger className="hidden md:block">Account</MenubarTrigger>
+                <MenubarTrigger className="hidden md:block">Help</MenubarTrigger>
                 <MenubarContent forceMount>
                     <MenubarLabel inset>Switch Account</MenubarLabel>
                     <MenubarSeparator />
