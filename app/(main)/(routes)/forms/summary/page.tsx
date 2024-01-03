@@ -67,9 +67,9 @@ export default async function TaskPage() {
 
                 </div>
 
-                <div className="flex">
+                {/* <div className="flex">
                     <DataTable data={tasks} columns={columns} />
-                </div>
+                </div> */}
 
                 <div className="flex">
                     <DataTableV2 data={tasks} columns={columnsV2} />
