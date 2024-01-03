@@ -1,6 +1,7 @@
 "use client"
 
 import { SubProject } from "@/app/(main)/_components/subprojects_list/subprojects"
+import { TeamMembersList } from "@/app/(main)/_components/team-members"
 import { SUB_PROJECTS } from "@/app/(main)/data/subprojects"
 
 export function TeamForm() {
@@ -14,9 +15,7 @@ export function TeamForm() {
                     List
                 </h3>
                 <div className="flex">
-                    <SubProject
-                        mails={SUB_PROJECTS}
-                    />
+                    <TeamMembersList />
                 </div>
             </div>
 
