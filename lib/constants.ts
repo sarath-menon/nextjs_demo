@@ -138,8 +138,8 @@ export const PRICING_CARDS = [
 
 export const SIDEBAR_ITEMS: SidebarItem[] = [
   {
-    title: "Requirements",
-    href: '/forms/requirements',
+    title: "Home",
+    href: '/forms/home',
   },
   {
       title: "Team",
@@ -162,7 +162,7 @@ export const SIDEBAR_ITEMS: SidebarItem[] = [
 export const ICON_SIDEBAR_ITEMS: IconSidebarItem[] = [
   { 
     title: "Home",
-    href: '/forms/requirements',
+    href: '/forms/home',
     svg_path: "/icons/home.svg",
     
   },

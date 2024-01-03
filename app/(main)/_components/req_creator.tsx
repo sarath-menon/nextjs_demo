@@ -13,11 +13,11 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 
-export function CreateReqDialog() {
+export function CreateObjectiveDialog(props) {
     return (
         <Dialog>
             <DialogTrigger asChild>
-                <Button variant="secondary">Create new requirement</Button>
+                <Button variant="secondary">{props.button_text}</Button>
             </DialogTrigger>
 
             <DialogContent className="sm:max-w-[475px]">
