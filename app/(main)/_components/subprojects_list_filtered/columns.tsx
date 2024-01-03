@@ -77,13 +77,6 @@ export const columnsV2: ColumnDef<Task>[] = [
       <DataTableColumnHeader column={column} title="Title" />
     ),
 
-
-    // cell: ({ row }) => {
-    //   const status = statuses.find(
-    //     (status) => status.value === row.getValue("status")
-    //   )
-
-
     cell: ({ row }) =>
       <div className="flex space-x-2">
 
@@ -146,6 +139,14 @@ export const columnsV2: ColumnDef<Task>[] = [
 
           <div className="flex items-center gap-2">
             <Badge variant="outline">
+              {row.getValue("type")}
+            </Badge>
+
+            <Badge variant="outline">
+              {row.getValue("label")}
+            </Badge>
+
+            <Badge variant="outline">
               {row.getValue("status")}
             </Badge>
           </div>
@@ -189,33 +190,62 @@ export const columnsV2: ColumnDef<Task>[] = [
   },
 
   // Type
-  // {
-  //   accessorKey: "type",
-  //   header: ({ column }) => (
-  //     <DataTableColumnHeader column={column} title="Type" />
-  //   ),
-  //   cell: ({ row }) => {
-  //     const type = types.find(
-  //       (type) => type.value === row.getValue("type")
-  //     )
+  {
+    accessorKey: "type",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="Type" />
+    ),
+    cell: ({ row }) => {
+      const type = types.find(
+        (type) => type.value === row.getValue("type")
+      )
 
-  //     if (!type) {
-  //       return null
-  //     }
+      if (!type) {
+        return null
+      }
 
-  //     return (
-  //       <div className="flex items-center">
-  //         {/* {type.icon && (
-  //           <type.icon className="mr-2 h-4 w-4 text-muted-foreground" />
-  //         )} */}
-  //         <span>{type.label}</span>
-  //       </div>
-  //     )
-  //   },
-  //   filterFn: (row, id, value) => {
-  //     return value.includes(row.getValue(id))
-  //   },
-  // },
+      return (
+        <div className="flex items-center">
+          {/* {type.icon && (
+            <type.icon className="mr-2 h-4 w-4 text-muted-foreground" />
+          )} */}
+          <span>{type.label}</span>
+        </div>
+      )
+    },
+    filterFn: (row, id, value) => {
+      return value.includes(row.getValue(id))
+    },
+  },
+
+  // Natures
+  {
+    accessorKey: "label",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="Nature" />
+    ),
+    cell: ({ row }) => {
+      const label = labels.find(
+        (label) => label.value === row.getValue("label")
+      )
+
+      if (!label) {
+        return null
+      }
+
+      return (
+        <div className="flex items-center">
+          {/* {label.icon && (
+              <label.icon className="mr-2 h-4 w-4 text-muted-foreground" />
+            )} */}
+          <span>{label.label}</span>
+        </div>
+      )
+    },
+    filterFn: (row, id, value) => {
+      return value.includes(row.getValue(id))
+    },
+  },
 
   // 3-dot menu
   {
