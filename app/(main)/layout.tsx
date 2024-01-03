@@ -48,14 +48,14 @@ export default function ObjectivesLayout({ children }: ObjectivesLayoutProps) {
             </div> */}
 
             {/* Shad-cn icon sidebar*/}
-            <div className="border-r flex">
+            <div className="absolute h-full border-r flex">
                 <IconSidebar items={ICON_SIDEBAR_ITEMS} />
             </div>
 
             <div className="justify-end flex-grow ">
 
                 {/* top navbar */}
-                <div className="flex items-center p-4">
+                <div className="flex items-center p-4 px-16">
 
                     {/* Dropdown menu */}
                     <Menu />
