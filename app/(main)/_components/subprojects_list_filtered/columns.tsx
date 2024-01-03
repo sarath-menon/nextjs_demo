@@ -98,8 +98,8 @@ export const columnsV2: ColumnDef<Task>[] = [
 
                 <div className="font-semibold">
                   {/* <SubprojectViewDialog name={item.name} /> */}
-                  {/* {row.getValue("title")} */}
-                  Project title
+                  {row.getValue("title")}
+                  {/* Project title */}
                 </div>
 
                 {!row.getValue("title") && (
@@ -124,20 +124,20 @@ export const columnsV2: ColumnDef<Task>[] = [
             </div>
 
             {/* Subtitle */}
-            <div className="text-xs font-medium">
-              {/* {row.getValue("title")} */}
-              Type of thesis
-            </div>
+            {/* <div className="text-xs font-medium">
+              {row.getValue("type")}
+            </div> */}
 
             {/* Absract */}
             <div className="line-clamp-2 text-xs text-muted-foreground">
-              {/* {item.text.substring(0, 300)} */}
+              Whenever there's an error observed in dynamically fetching helper JavaScript files known as Chunks, a ChunkLoad Error is thrown.
               {row.getValue("title")}
             </div>
 
           </div>
 
-          <div className="flex items-center gap-2">
+          {/* Badges */}
+          {/* <div className="flex items-center gap-2">
             <Badge variant="outline">
               {row.getValue("type")}
             </Badge>
@@ -149,8 +149,7 @@ export const columnsV2: ColumnDef<Task>[] = [
             <Badge variant="outline">
               {row.getValue("status")}
             </Badge>
-          </div>
-
+          </div> */}
 
         </button >
         {/* <ViewReqDialog name={row.getValue("title")} /> */}
@@ -218,7 +217,7 @@ export const columnsV2: ColumnDef<Task>[] = [
     },
   },
 
-  // Natures
+  // Nature
   {
     accessorKey: "label",
     header: ({ column }) => (

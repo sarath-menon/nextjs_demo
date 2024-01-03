@@ -18,9 +18,10 @@ export const metadata: Metadata = {
 }
 
 // Simulate a database read for tasks.
-async function getTasks() {
+async function getFileData(file_path: string) {
+
     const data = await fs.readFile(
-        path.join(process.cwd(), "app/(main)/data/tasks.json")
+        path.join(process.cwd(), file_path)
     )
 
     const tasks = JSON.parse(data.toString())
@@ -30,7 +31,8 @@ async function getTasks() {
 
 export default async function TaskPage() {
 
-    const tasks = await getTasks()
+    const tasks = await getFileData("app/(main)/data/tasks.json")
+    const subprojects = await getFileData("app/(main)/data/subprojects.json")
 
     const layout = cookies().get("react-resizable-panels:layout")
     const collapsed = cookies().get("react-resizable-panels:collapsed")
@@ -72,7 +74,7 @@ export default async function TaskPage() {
                 </div> */}
 
                 <div className="flex">
-                    <DataTableV2 data={tasks} columns={columnsV2} />
+                    <DataTableV2 data={subprojects} columns={columnsV2} />
                 </div>
 
             </div>

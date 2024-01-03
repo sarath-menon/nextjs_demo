@@ -26,16 +26,12 @@ export const labels = [
 
 export const types = [
   {
-    value: "functional",
-    label: "Functional",
+    value: "master_thesis",
+    label: "Master thesis",
   },
   {
-    value: "performance",
-    label: "Performance",
-  },
-  {
-    value: "regulatory",
-    label: "Regulatory",
+    value: "semester_project",
+    label: "Semester project",
   },
 ]
 
