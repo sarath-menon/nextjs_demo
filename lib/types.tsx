@@ -5,7 +5,8 @@ export type SidebarItem = {
 
 
 export type IconSidebarItem = {
-    tooltip: string;
+    title: string;
     href: string;
+    svg_path: string;
 };
 

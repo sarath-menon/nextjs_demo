@@ -161,24 +161,30 @@ export const SIDEBAR_ITEMS: SidebarItem[] = [
 
 export const ICON_SIDEBAR_ITEMS: IconSidebarItem[] = [
   { 
-    tooltip: "Home",
-    href: "/icons/home.svg",
+    title: "Home",
+    href: '/forms/requirements',
+    svg_path: "/icons/home.svg",
+    
   },
   {
-    tooltip: "Team",
-    href: '/icons/organization.svg',
+    title: "Team",
+    href: '/forms/team',
+    svg_path: '/icons/organization.svg',
   },
   {
-    tooltip: "Settings",
-    href: '/icons/settings.svg',
+    title: "Settings",
+    href: '/forms/financial',
+    svg_path: '/icons/settings.svg',
   },
   {
-    tooltip: "Search",
-    href: '/icons/search.svg',
+    title: "Search",
+    href: '/forms/roadmap',
+    svg_path: '/icons/search.svg',
 },
 {
-  tooltip: "Trash",
-  href: '/icons/trash.svg',
+  title: "Trash",
+  href: '/forms/summary',
+  svg_path: '/icons/trash.svg',
 }
 ]
 

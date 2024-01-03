@@ -21,8 +21,9 @@ import {
 
 interface IconSidebarProps extends React.HTMLAttributes<HTMLElement> {
     items: {
+        title: string
         href: string
-        tooltip: string
+        svg_path: string
     }[]
 }
 
@@ -47,35 +48,22 @@ export function IconSidebar({ className, items, ...props }: IconSidebarProps) {
             >
                 {items.map((item) => (
                     <div className="space-y-1">
-
-                        {/* <Button asChild variant="secondary" className="w-full justify-start hover:bg-transparent">
-                            <Link href={item.href}>{item.title}</Link>
-                        </Button> */}
-
                         <TooltipProvider>
                             <Tooltip delayDuration={300}  >
                                 <TooltipTrigger asChild>
-                                    <button>
+                                    <button >
                                         <div className="flex mx-3  items-center justify-center brightness-100 hover:brightness-200">
-                                            {/* <Plus
-                                                className="group-hover:text-white transition text-emerald-500"
-                                                size={25}
-                                            /> */}
 
-                                            <Image
-                                                src={item.href}
-                                                height="30"
-                                                width="30"
-                                                alt=""
-                                                className=""
-                                            />
+                                            <Link href={item.href}>
+                                                <Image src={item.svg_path} height="30" width="30" alt="" />
+                                            </Link>
 
                                         </div>
                                     </button>
 
                                 </TooltipTrigger>
                                 <TooltipContent>
-                                    <p>{item.tooltip}</p>
+                                    <p>{item.title}</p>
                                 </TooltipContent>
                             </Tooltip>
                         </TooltipProvider>
