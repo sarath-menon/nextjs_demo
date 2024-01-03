@@ -6,7 +6,7 @@ import { z } from "zod"
 
 import { columns } from "@/app/(main)/_components/req_table/columns"
 import { DataTable } from "@/app/(main)/_components/req_table/data-table"
-import { UserNav } from "@/app/(main)/_components/req_table/user-nav"
+import { UserNav } from "@/app/(main)/_components/user-nav"
 import { taskSchema } from "@/app/(main)/data/schema"
 
 export const metadata: Metadata = {
@@ -54,9 +54,7 @@ export default async function TaskPage() {
                             Here&apos;s a list of your tasks for this month!
                         </p>
                     </div>
-                    <div className="flex items-center space-x-2">
-                        <UserNav />
-                    </div>
+
                 </div>
 
                 <div className="flex">

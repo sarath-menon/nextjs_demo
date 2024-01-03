@@ -12,6 +12,7 @@ import { Separator } from "@/components/ui/separator";
 import { ICON_SIDEBAR_ITEMS, SIDEBAR_ITEMS } from "@/lib/constants";
 import TeamSwitcher from "./_components/project-switcher";
 import { IconSidebar } from "./_components/icon-sidebar";
+import { UserNav } from "./_components/user-nav";
 
 
 interface ObjectivesLayoutProps {
@@ -51,15 +52,24 @@ export default function ObjectivesLayout({ children }: ObjectivesLayoutProps) {
                 <IconSidebar items={ICON_SIDEBAR_ITEMS} />
             </div>
 
-            <div className="justify-end flex-grow">
+            <div className="justify-end flex-grow ">
 
-                {/* Shad-cn menu */}
+                {/* top navbar */}
                 <div className="flex items-center p-4">
+
+                    {/* Dropdown menu */}
                     <Menu />
 
-                    <div className="flex  w-full justify-end">
+                    {/* Team switcher  */}
+                    <div className="flex w-full justify-end">
                         <TeamSwitcher />
                     </div>
+
+                    {/* User icon */}
+                    <div className="flex items-center mx-16">
+                        <UserNav />
+                    </div>
+
                 </div>
 
 
