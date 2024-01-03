@@ -19,14 +19,14 @@ import {
 } from "@/components/ui/tooltip"
 
 
-interface SidebarProps extends React.HTMLAttributes<HTMLElement> {
+interface IconSidebarProps extends React.HTMLAttributes<HTMLElement> {
     items: {
         href: string
-        title: string
+        tooltip: string
     }[]
 }
 
-export function IconSidebar({ className, items, ...props }: SidebarProps) {
+export function IconSidebar({ className, items, ...props }: IconSidebarProps) {
 
     // variables  
     const pathname = usePathname()
@@ -35,15 +35,12 @@ export function IconSidebar({ className, items, ...props }: SidebarProps) {
 
 
     return (
-        <div className="space-y-4 py-4">
 
-            <h2 className="mb-2 px-4 text-lg font-semibold tracking-tight">
-                Discover
-            </h2>
+        <div className=" py-6">
 
             <nav
                 className={cn(
-                    "flex flex-col  space-y-1",
+                    "flex flex-col space-y-3",
                     className
                 )}
                 {...props}
@@ -59,17 +56,26 @@ export function IconSidebar({ className, items, ...props }: SidebarProps) {
                             <Tooltip delayDuration={150}>
                                 <TooltipTrigger asChild>
                                     <button>
-                                        <div className="flex mx-3 h-[48px] w-[48px] rounded-[24px] group-hover:rounded-[16px] transition-all overflow-hidden items-center justify-center bg-background dark:bg-neutral-700 group-hover:bg-emerald-500">
-                                            <Plus
+                                        <div className="flex mx-3  items-center justify-center brightness-100 hover:brightness-200">
+                                            {/* <Plus
                                                 className="group-hover:text-white transition text-emerald-500"
                                                 size={25}
+                                            /> */}
+
+                                            <Image
+                                                src={item.href}
+                                                height="30"
+                                                width="30"
+                                                alt=""
+                                                className=""
                                             />
+
                                         </div>
                                     </button>
 
                                 </TooltipTrigger>
                                 <TooltipContent>
-                                    <p>Add to library</p>
+                                    <p>{item.tooltip}</p>
                                 </TooltipContent>
                             </Tooltip>
                         </TooltipProvider>

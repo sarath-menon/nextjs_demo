@@ -3,3 +3,9 @@ export type SidebarItem = {
     href: string;
 };
 
+
+export type IconSidebarItem = {
+    tooltip: string;
+    href: string;
+};
+

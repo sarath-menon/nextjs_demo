@@ -1,4 +1,4 @@
-import { SidebarItem } from "./types";
+import { IconSidebarItem, SidebarItem } from "./types";
 import { Icon } from '@iconify/react';
 
 export const CLIENTS = [
@@ -156,6 +156,29 @@ export const SIDEBAR_ITEMS: SidebarItem[] = [
 {
   title: "Summary",
   href: '/forms/summary',
+}
+]
+
+export const ICON_SIDEBAR_ITEMS: IconSidebarItem[] = [
+  { 
+    tooltip: "Home",
+    href: "/icons/home.svg",
+  },
+  {
+    tooltip: "Team",
+    href: '/icons/organization.svg',
+  },
+  {
+    tooltip: "Settings",
+    href: '/icons/settings.svg',
+  },
+  {
+    tooltip: "Search",
+    href: '/icons/search.svg',
+},
+{
+  tooltip: "Trash",
+  href: '/icons/trash.svg',
 }
 ]
 

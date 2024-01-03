@@ -9,8 +9,9 @@ import { Navigation } from "./_components/notion_clone/navigation";
 import { Sidebar } from "./_components/sidebar";
 import { Menu } from "./_components/menu";
 import { Separator } from "@/components/ui/separator";
-import { SIDEBAR_ITEMS } from "@/lib/constants";
+import { ICON_SIDEBAR_ITEMS, SIDEBAR_ITEMS } from "@/lib/constants";
 import TeamSwitcher from "./_components/project-switcher";
+import { IconSidebar } from "./_components/icon-sidebar";
 
 
 interface ObjectivesLayoutProps {
@@ -41,8 +42,12 @@ export default function ObjectivesLayout({ children }: ObjectivesLayoutProps) {
 
 
             {/* Shad-cn sidebar (simple) */}
-            <div className="border-r flex pr-1 w-[240px]">
+            {/* <div className="border-r flex pr-1 w-[240px]">
                 <Sidebar items={SIDEBAR_ITEMS} />
+            </div> */}
+
+            <div className="border-r flex">
+                <IconSidebar items={ICON_SIDEBAR_ITEMS} />
             </div>
 
             <div className="justify-end flex-grow">
