@@ -1,29 +1,29 @@
-import { Separator } from "@/components/ui/separator"
-import { Team } from "./form"
+"use client"
 
-export default function SettingsAccountPage() {
+import { TeamForm } from "./form"
+import React from "react";
+
+
+const DocumentsPage = () => {
+
     return (
         <div className="">
 
             {/* Top heading */}
-            <div className="space-y-0.5">
-                <h2 className="text-2xl font-bold tracking-tight">Team</h2>
-                <p className="text-muted-foreground">
-                    Manage your account settings and set e-mail preferences.
+            <div className="">
+                <h2 className="text-5xl my-4">
+                    Team
+                </h2>
+                <p className="text-muted">
+                    Manage your team here
                 </p>
             </div>
-            <Separator className="my-6" />
 
+            <TeamForm />
 
-            <div className="space-y-6">
-                <h3 className="text-lg font-medium">Account</h3>
-                <p className="text-sm text-muted-foreground">
-                    Update your account settings. Set your preferred language and
-                    timezone.
-                </p>
-            </div>
-            <Separator />
-            <Team />
         </div>
-    )
+
+    );
 }
+
+export default DocumentsPage;
