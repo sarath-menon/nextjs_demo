@@ -1,7 +1,7 @@
 "use client"
 
 import { SubProject } from "@/app/(main)/_components/subprojects_list/subprojects"
-import { SUB_PROJECTS } from "@/app/(main)/data/subprojects"
+import { SUB_PROJECTS } from "@/app/(main)/data/subprojects_"
 
 export function SubProjectsForm() {
 

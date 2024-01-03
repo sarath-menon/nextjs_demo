@@ -33,7 +33,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { CreateAssumptionDialog } from "@/app/(main)/_components/assumption_creator"
 import { CreateConstraintDialog } from "@/app/(main)/_components/constraint_creator"
 import { SubProject } from "@/app/(main)/_components/subprojects_list/subprojects"
-import { SUB_PROJECTS } from "@/app/(main)/data/subprojects"
+import { SUB_PROJECTS } from "@/app/(main)/data/subprojects_"
 
 const profileFormSchema = z.object({
     type: z

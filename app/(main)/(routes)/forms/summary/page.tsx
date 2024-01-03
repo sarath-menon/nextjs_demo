@@ -1,63 +1,23 @@
-import { promises as fs } from "fs"
-import path from "path"
 import { Metadata } from "next"
 import { cookies } from "next/headers"
 import Image from "next/image"
-import { z } from "zod"
 
 import { columns } from "@/app/(main)/_components/req_table/columns"
 import { DataTable } from "@/app/(main)/_components/req_table/data-table"
-import { UserNav } from "@/app/(main)/_components/user-nav"
-import { taskSchema } from "@/app/(main)/data/schema"
 import { DataTableV2 } from "@/app/(main)/_components/subprojects_list_filtered/data-table"
 import { columnsV2 } from "@/app/(main)/_components/subprojects_list_filtered/columns"
+import { SUB_PROJECTS } from "@/app/(main)/data/subprojects"
 
 export const metadata: Metadata = {
     title: "Tasks",
     description: "A task and issue tracker build using Tanstack Table.",
 }
 
-// Simulate a database read for tasks.
-async function getFileData(file_path: string) {
-
-    const data = await fs.readFile(
-        path.join(process.cwd(), file_path)
-    )
-
-    const tasks = JSON.parse(data.toString())
-
-    return z.array(taskSchema).parse(tasks)
-}
 
 export default async function TaskPage() {
-
-    const tasks = await getFileData("app/(main)/data/tasks.json")
-    const subprojects = await getFileData("app/(main)/data/subprojects.json")
-
-    const layout = cookies().get("react-resizable-panels:layout")
-    const collapsed = cookies().get("react-resizable-panels:collapsed")
-
-    const defaultLayout = layout ? JSON.parse(layout.value) : undefined
-    const defaultCollapsed = collapsed ? JSON.parse(collapsed.value) : undefined
-
     return (
         <>
-            <div className="md:hidden">
-                <Image
-                    src="/examples/tasks-light.png"
-                    width={1280}
-                    height={998}
-                    alt="Playground"
-                    className="block dark:hidden"
-                />
-                <Image
-                    src="/examples/tasks-dark.png"
-                    width={1280}
-                    height={998}
-                    alt="Playground"
-                    className="hidden dark:block"
-                />
-            </div>
+
             <div className="hidden h-full flex-1 flex-col space-y-8 p-8 md:flex">
                 <div className="flex items-center justify-between space-y-2">
                     <div>
@@ -74,7 +34,7 @@ export default async function TaskPage() {
                 </div> */}
 
                 <div className="flex">
-                    <DataTableV2 data={subprojects} columns={columnsV2} />
+                    <DataTableV2 data={SUB_PROJECTS} columns={columnsV2} />
                 </div>
 
             </div>

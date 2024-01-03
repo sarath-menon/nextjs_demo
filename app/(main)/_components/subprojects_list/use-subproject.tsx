@@ -1,6 +1,6 @@
 import { atom, useAtom } from "jotai"
 
-import { SubProject, SUB_PROJECTS } from "@/app/(main)/data/subprojects"
+import { SubProject, SUB_PROJECTS } from "@/app/(main)/data/subprojects_"
 
 type Config = {
     selected: SubProject["id"] | null

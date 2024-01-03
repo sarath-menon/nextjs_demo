@@ -1,6 +1,6 @@
 "use client"
 import { SubProjectList } from "./subprojects-list"
-import { SubProject } from "@/app/(main)/data/subprojects"
+import { SubProject } from "@/app/(main)/data/subprojects_"
 
 interface SubProjectProps {
   accounts: {
