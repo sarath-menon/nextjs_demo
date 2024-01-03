@@ -1,6 +1,6 @@
 "use client"
 
-import { Requirements } from "./form"
+import { SubProjectsForm } from "./form"
 import React from "react";
 
 
@@ -19,7 +19,7 @@ const DocumentsPage = () => {
                 </p>
             </div>
 
-            <Requirements />
+            <SubProjectsForm />
 
         </div>
 
