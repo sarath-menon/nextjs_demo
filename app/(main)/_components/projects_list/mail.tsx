@@ -68,7 +68,9 @@ export function Mail({
       }}
       className="h-full max-h-[800px] items-stretch"
     >
-      <ResizablePanel
+
+      {/* Left menu - mail options */}
+      {/* <ResizablePanel
         defaultSize={defaultLayout[0]}
         collapsedSize={navCollapsedSize}
         collapsible={true}
@@ -167,10 +169,11 @@ export function Mail({
           ]}
         />
 
-      </ResizablePanel>
+      </ResizablePanel> */}
+      {/* 
+      <ResizableHandle withHandle /> */}
 
-      <ResizableHandle withHandle />
-
+      {/* Mail list */}
       <ResizablePanel defaultSize={defaultLayout[1]} minSize={30}>
         <Tabs defaultValue="all">
           <div className="flex items-center px-4 py-2">
@@ -198,9 +201,9 @@ export function Mail({
         </Tabs>
 
       </ResizablePanel>
-
       <ResizableHandle withHandle />
 
+      {/* Mail open window */}
       <ResizablePanel defaultSize={defaultLayout[2]}>
         <MailDisplay
           mail={mails.find((item) => item.id === mail.selected) || null}
