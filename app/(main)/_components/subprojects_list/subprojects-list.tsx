@@ -18,16 +18,15 @@ interface SubProjectListProps {
 export function SubProjectList({ items }: SubProjectListProps) {
   const [subproject, setSubProject] = useSubProject()
 
-
-
   return (
     <ScrollArea className="h-screen">
       <div className="flex flex-col gap-2 p-4 pt-0">
         {items.map((item) => (
+
           <button
             key={item.id}
             className={cn(
-              "flex flex-col items-start gap-2 rounded-lg border p-3 text-left text-sm transition-all hover:bg-accent"
+              "flex flex-col items-start gap-2 rounded-lg border p-3 text-left text-sm transition-all"
             )}
           >
 
@@ -81,6 +80,9 @@ export function SubProjectList({ items }: SubProjectListProps) {
                 ))}
               </div>
             ) : null}
+
+            <Link href="/">Home</Link>
+
           </button>
         ))}
       </div>
