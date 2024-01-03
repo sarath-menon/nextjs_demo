@@ -41,7 +41,7 @@ const DocumentsPage = () => {
                 <h2 className="text-5xl my-4">
                     Project Home
                 </h2>
-                <p className="text-muted-foreground">
+                <p className="text-muted">
                     Manage your account settings and set e-mail preferences.
                 </p>
             </div>

@@ -10,7 +10,7 @@ import { DataTable } from "@/app/(main)/_components/req_table/data-table"
 import { UserNav } from "@/app/(main)/_components/user-nav"
 import { taskSchema } from "@/app/(main)/data/schema"
 import { Mail } from "@/app/(main)/_components/projects_list/mail"
-import { accounts, mails } from "@/app/(main)/data/mail"
+import { SUB_PROJECTS } from "@/app/(main)/data/subprojects"
 
 export const metadata: Metadata = {
     title: "Tasks",
@@ -73,11 +73,7 @@ export default async function TaskPage() {
 
                 <div className="flex">
                     <Mail
-                        accounts={accounts}
-                        mails={mails}
-                        defaultLayout={defaultLayout}
-                        defaultCollapsed={defaultCollapsed}
-                        navCollapsedSize={4}
+                        mails={SUB_PROJECTS}
                     />
                 </div>
 
