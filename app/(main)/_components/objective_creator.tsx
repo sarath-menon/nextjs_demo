@@ -13,11 +13,13 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 
-export function CreateObjectiveDialog(props) {
+export function CreateObjectiveDialog() {
     return (
         <Dialog>
             <DialogTrigger asChild>
-                <Button variant="secondary">{props.button_text}</Button>
+                <Button variant="secondary">
+                    Add new objective
+                </Button>
             </DialogTrigger>
 
             <DialogContent className="sm:max-w-[475px]">

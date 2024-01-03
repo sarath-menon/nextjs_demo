@@ -5,9 +5,8 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useFieldArray, useForm } from "react-hook-form"
 import * as z from "zod"
 
-import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
-import { CreateObjectiveDialog } from "@/app/(main)/_components/req_creator"
+import { CreateObjectiveDialog } from "@/app/(main)/_components/objective_creator"
 
 import {
     Form,
@@ -31,6 +30,8 @@ import {
 import { Textarea } from "@/components/ui/textarea"
 import { toast } from "@/components/ui/use-toast"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { CreateAssumptionDialog } from "@/app/(main)/_components/assumption_creator"
+import { CreateConstraintDialog } from "@/app/(main)/_components/constraint_creator"
 
 const profileFormSchema = z.object({
     type: z
@@ -92,13 +93,6 @@ export function Requirements() {
     return (
 
         <div>
-
-            <div className="space-y-6">
-                <h3 className="text-lg font-medium">
-                    Objectives
-                </h3>
-            </div>
-
             {/* Tabs */}
             {/* <Tabs defaultValue="account" className="w-[400px]">
                 <TabsList className="grid w-full grid-cols-2">
@@ -123,20 +117,43 @@ export function Requirements() {
             </Tabs> */}
 
             {/* Objectives */}
-            <div className="py-6">
-                <CreateObjectiveDialog button_text="Create new objective" />
+            <div className="my-6">
+                <h3 className="text-3xl font-medium">
+                    Objectives
+                </h3>
+
+                <div className="py-6">
+                    <CreateObjectiveDialog />
+                </div>
             </div>
 
 
-            {/* Budget */}
-            {/* <div className="py-6">
-                <CreateReqDialog />
+            {/* Assumption */}
+
+            <div className="my-6">
+                <h3 className="text-3xl font-medium">
+                    Assumptions
+                </h3>
+
+                <div className="py-6">
+                    <CreateAssumptionDialog />
+                </div>
+
             </div>
 
             {/* Constrains */}
-            {/* <div className="py-6">
-                <CreateReqDialog />
-            </div> */}
+
+            <div className="my-6">
+                <h3 className="text-3xl font-medium">
+                    Constraints
+                </h3>
+
+
+                <div className="py-6">
+                    <CreateConstraintDialog />
+                </div>
+
+            </div>
 
         </div >
     )
