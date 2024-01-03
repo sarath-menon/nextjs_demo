@@ -17,7 +17,6 @@ export const metadata: Metadata = {
 export default async function TaskPage() {
     return (
         <>
-
             <div className="hidden h-full flex-1 flex-col space-y-8 p-8 md:flex">
                 <div className="flex items-center justify-between space-y-2">
                     <div>
@@ -32,11 +31,6 @@ export default async function TaskPage() {
                 {/* <div className="flex">
                     <DataTable data={tasks} columns={columns} />
                 </div> */}
-
-                <div className="flex">
-                    <DataTableV2 data={SUB_PROJECTS} columns={columnsV2} />
-                </div>
-
             </div>
         </>
     )
