@@ -77,6 +77,13 @@ export const columnsV2: ColumnDef<Task>[] = [
       <DataTableColumnHeader column={column} title="Title" />
     ),
 
+
+    // cell: ({ row }) => {
+    //   const status = statuses.find(
+    //     (status) => status.value === row.getValue("status")
+    //   )
+
+
     cell: ({ row }) =>
       <div className="flex space-x-2">
 
@@ -139,7 +146,7 @@ export const columnsV2: ColumnDef<Task>[] = [
 
           <div className="flex items-center gap-2">
             <Badge variant="outline">
-              selva
+              {row.getValue("status")}
             </Badge>
           </div>
 
