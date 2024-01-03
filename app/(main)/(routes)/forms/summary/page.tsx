@@ -1,6 +1,7 @@
 import { promises as fs } from "fs"
 import path from "path"
 import { Metadata } from "next"
+import { cookies } from "next/headers"
 import Image from "next/image"
 import { z } from "zod"
 
@@ -8,6 +9,8 @@ import { columns } from "@/app/(main)/_components/req_table/columns"
 import { DataTable } from "@/app/(main)/_components/req_table/data-table"
 import { UserNav } from "@/app/(main)/_components/user-nav"
 import { taskSchema } from "@/app/(main)/data/schema"
+import { Mail } from "@/app/(main)/_components/projects_list/mail"
+import { accounts, mails } from "@/app/(main)/data/mail"
 
 export const metadata: Metadata = {
     title: "Tasks",
@@ -26,7 +29,14 @@ async function getTasks() {
 }
 
 export default async function TaskPage() {
+
     const tasks = await getTasks()
+
+    const layout = cookies().get("react-resizable-panels:layout")
+    const collapsed = cookies().get("react-resizable-panels:collapsed")
+
+    const defaultLayout = layout ? JSON.parse(layout.value) : undefined
+    const defaultCollapsed = collapsed ? JSON.parse(collapsed.value) : undefined
 
     return (
         <>
@@ -59,6 +69,16 @@ export default async function TaskPage() {
 
                 <div className="flex">
                     <DataTable data={tasks} columns={columns} />
+                </div>
+
+                <div className="flex">
+                    <Mail
+                        accounts={accounts}
+                        mails={mails}
+                        defaultLayout={defaultLayout}
+                        defaultCollapsed={defaultCollapsed}
+                        navCollapsedSize={4}
+                    />
                 </div>
 
             </div>
