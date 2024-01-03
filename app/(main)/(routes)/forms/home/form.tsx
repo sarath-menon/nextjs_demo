@@ -32,6 +32,8 @@ import { toast } from "@/components/ui/use-toast"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { CreateAssumptionDialog } from "@/app/(main)/_components/assumption_creator"
 import { CreateConstraintDialog } from "@/app/(main)/_components/constraint_creator"
+import { SubProject } from "@/app/(main)/_components/subprojects_list/subprojects"
+import { SUB_PROJECTS } from "@/app/(main)/data/subprojects"
 
 const profileFormSchema = z.object({
     type: z
@@ -138,7 +140,6 @@ export function Requirements() {
                 <div className="py-6">
                     <CreateAssumptionDialog />
                 </div>
-
             </div>
 
             {/* Constrains */}
@@ -148,11 +149,16 @@ export function Requirements() {
                     Constraints
                 </h3>
 
-
                 <div className="py-6">
                     <CreateConstraintDialog />
                 </div>
+            </div>
 
+            {/* Subprojects list */}
+            <div className="flex">
+                <SubProject
+                    mails={SUB_PROJECTS}
+                />
             </div>
 
         </div >
