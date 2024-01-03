@@ -25,17 +25,21 @@ export function CreateAssumptionDialog() {
             <DialogContent className="sm:max-w-[475px]">
 
                 <DialogHeader>
-                    <DialogTitle>Save preset</DialogTitle>
+                    <DialogTitle>
+                        Add new assumption
+                    </DialogTitle>
+
                     <DialogDescription>
                         This will save the current playground state as a preset which you
                         can access later or share with others.
                     </DialogDescription>
+
                 </DialogHeader>
 
                 <div className="grid grid-cols-2 gap-4">
 
                     {/* Requirement nature */}
-                    <div className="grid gap-2">
+                    {/* <div className="grid gap-2">
                         <Label htmlFor="area">Nature</Label>
 
                         <Select defaultValue="billing">
@@ -48,11 +52,11 @@ export function CreateAssumptionDialog() {
                                 <SelectItem value="account">Mixed</SelectItem>
                             </SelectContent>
                         </Select>
-                    </div>
+                    </div> */}
 
 
                     {/* Requirement type */}
-                    <div className="grid gap-2">
+                    {/* <div className="grid gap-2">
                         <Label htmlFor="area">Area</Label>
                         <Select defaultValue="billing">
                             <SelectTrigger id="area">
@@ -66,7 +70,7 @@ export function CreateAssumptionDialog() {
                                 <SelectItem value="support">Environment</SelectItem>
                             </SelectContent>
                         </Select>
-                    </div>
+                    </div> */}
                 </div>
 
                 <div className="grid gap-4 py-4">
@@ -81,10 +85,10 @@ export function CreateAssumptionDialog() {
                         <Input id="name" autoFocus />
                     </div>
 
-                    <div className="grid gap-2">
+                    {/* <div className="grid gap-2">
                         <Label htmlFor="name">How to test</Label>
                         <Input id="name" autoFocus />
-                    </div>
+                    </div> */}
 
                 </div>
 

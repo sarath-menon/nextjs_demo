@@ -25,7 +25,10 @@ export function CreateObjectiveDialog() {
             <DialogContent className="sm:max-w-[475px]">
 
                 <DialogHeader>
-                    <DialogTitle>Save preset</DialogTitle>
+                    <DialogTitle>
+                        Add new objective
+                    </DialogTitle>
+
                     <DialogDescription>
                         This will save the current playground state as a preset which you
                         can access later or share with others.
@@ -50,9 +53,8 @@ export function CreateObjectiveDialog() {
                         </Select>
                     </div>
 
-
                     {/* Requirement type */}
-                    <div className="grid gap-2">
+                    {/* <div className="grid gap-2">
                         <Label htmlFor="area">Area</Label>
                         <Select defaultValue="billing">
                             <SelectTrigger id="area">
@@ -66,7 +68,7 @@ export function CreateObjectiveDialog() {
                                 <SelectItem value="support">Environment</SelectItem>
                             </SelectContent>
                         </Select>
-                    </div>
+                    </div> */}
                 </div>
 
                 <div className="grid gap-4 py-4">

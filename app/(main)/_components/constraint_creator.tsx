@@ -20,12 +20,16 @@ export function CreateConstraintDialog() {
                 <Button variant="secondary">
                     Add new constraint
                 </Button>
+
             </DialogTrigger>
 
             <DialogContent className="sm:max-w-[475px]">
 
                 <DialogHeader>
-                    <DialogTitle>Save preset</DialogTitle>
+                    <DialogTitle>
+                        Add new constraint
+                    </DialogTitle>
+
                     <DialogDescription>
                         This will save the current playground state as a preset which you
                         can access later or share with others.
