@@ -41,11 +41,12 @@ export default function ObjectivesLayout({ children }: ObjectivesLayoutProps) {
             {/* <Navigation /> */}
 
 
-            {/* Shad-cn sidebar (simple) */}
+            {/* Shad-cn text sidebar  */}
             {/* <div className="border-r flex pr-1 w-[240px]">
                 <Sidebar items={SIDEBAR_ITEMS} />
             </div> */}
 
+            {/* Shad-cn icon sidebar*/}
             <div className="border-r flex">
                 <IconSidebar items={ICON_SIDEBAR_ITEMS} />
             </div>
@@ -62,7 +63,7 @@ export default function ObjectivesLayout({ children }: ObjectivesLayoutProps) {
                 </div>
 
 
-                <div className="grid space-y-6 p-10 pb-16">
+                <div className="grid mx-[200px] my-16">
 
                     <main className="flex-1 h-full overflow-y-auto">
                         {children}
