@@ -43,13 +43,13 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
-import { Mail } from "@/app/examples/mail/data"
+import { SubProject } from "@/app/(main)/data/subprojects"
 
-interface MailDisplayProps {
-  mail: Mail | null
+interface SubProjectDisplayProps {
+  mail: SubProject | null
 }
 
-export function MailDisplay({ mail }: MailDisplayProps) {
+export function SubProjectDisplay({ mail }: SubProjectDisplayProps) {
   const today = new Date()
 
   return (

@@ -16,12 +16,12 @@ import {
 } from "lucide-react"
 
 import { AccountSwitcher } from "./account-switcher"
-import { MailDisplay } from "./mail-display"
-import { MailList } from "./mail-list"
+import { SubProjectDisplay } from "./subprojects-display"
+import { SubProjectList } from "./subprojects-list"
 import { Nav } from "./nav"
 
-import { Mail } from "@/app/(main)/data/mail"
-import { useMail } from "./use-mail"
+import { SubProject } from "@/app/(main)/data/subprojects"
+import { useSubProject } from "./use-mail"
 import { cn } from "@/lib/utils"
 
 import { Separator } from "@/components/ui/separator"
@@ -35,21 +35,21 @@ import {
 import { TooltipProvider } from "@/components/ui/tooltip"
 import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "@/components/ui/resizable"
 
-interface MailProps {
+interface SubProjectProps {
   accounts: {
     label: string
     email: string
     icon: React.ReactNode
   }[]
-  mails: Mail[]
+  mails: SubProject[]
   defaultLayout: number[] | undefined
   defaultCollapsed?: boolean
   navCollapsedSize: number
 }
 
-export function Mail({
+export function SubProject({
   mails,
-}: MailProps) {
+}: SubProjectProps) {
 
 
   return (
@@ -77,11 +77,11 @@ export function Mail({
       </div>
 
       <TabsContent value="all" className="m-0">
-        <MailList items={mails} />
+        <SubProjectList items={mails} />
       </TabsContent>
 
       <TabsContent value="unread" className="m-0">
-        <MailList items={mails.filter((item) => !item.read)} />
+        <SubProjectList items={mails.filter((item) => !item.read)} />
       </TabsContent>
 
     </Tabs >

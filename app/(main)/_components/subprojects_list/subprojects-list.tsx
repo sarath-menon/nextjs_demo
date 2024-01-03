@@ -5,15 +5,15 @@ import { cn } from "@/lib/utils"
 import { Badge } from "@/components/ui/badge"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Separator } from "@/components/ui/separator"
-import { Mail } from "@/app/(main)/data/mail"
-import { useMail } from "./use-mail"
+import { SubProject } from "@/app/(main)/data/subprojects"
+import { useSubProject } from "./use-mail"
 
-interface MailListProps {
-  items: Mail[]
+interface SubProjectListProps {
+  items: SubProject[]
 }
 
-export function MailList({ items }: MailListProps) {
-  const [mail, setMail] = useMail()
+export function SubProjectList({ items }: SubProjectListProps) {
+  const [mail, setSubProject] = useSubProject()
 
   return (
     <ScrollArea className="h-screen">
@@ -26,7 +26,7 @@ export function MailList({ items }: MailListProps) {
               mail.selected === item.id && "bg-muted"
             )}
             onClick={() =>
-              setMail({
+              setSubProject({
                 ...mail,
                 selected: item.id,
               })
