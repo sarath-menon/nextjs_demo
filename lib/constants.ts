@@ -166,6 +166,12 @@ export const ICON_SIDEBAR_ITEMS: IconSidebarItem[] = [
     svg_path: "/icons/home.svg",
     
   },
+  { 
+    title: "Subprojects",
+    href: '/forms/subprojects',
+    svg_path: "/icons/file-submodule.svg",
+    
+  },
   {
     title: "Team",
     href: '/forms/team',
