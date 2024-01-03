@@ -127,34 +127,34 @@ export const columns: ColumnDef<Task>[] = [
     },
   },
 
-  // // Priority
-  // {
-  //   accessorKey: "priority",
-  //   header: ({ column }) => (
-  //     <DataTableColumnHeader column={column} title="Priority" />
-  //   ),
-  //   cell: ({ row }) => {
-  //     const priority = priorities.find(
-  //       (priority) => priority.value === row.getValue("priority")
-  //     )
+  // Type
+  {
+    accessorKey: "type",
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="Type" />
+    ),
+    cell: ({ row }) => {
+      const type = priorities.find(
+        (type) => type.value === row.getValue("type")
+      )
 
-  //     if (!priority) {
-  //       return null
-  //     }
+      if (!type) {
+        return null
+      }
 
-  //     return (
-  //       <div className="flex items-center">
-  //         {priority.icon && (
-  //           <priority.icon className="mr-2 h-4 w-4 text-muted-foreground" />
-  //         )}
-  //         <span>{priority.label}</span>
-  //       </div>
-  //     )
-  //   },
-  //   filterFn: (row, id, value) => {
-  //     return value.includes(row.getValue(id))
-  //   },
-  // },
+      return (
+        <div className="flex items-center">
+          {type.icon && (
+            <type.icon className="mr-2 h-4 w-4 text-muted-foreground" />
+          )}
+          <span>{type.label}</span>
+        </div>
+      )
+    },
+    filterFn: (row, id, value) => {
+      return value.includes(row.getValue(id))
+    },
+  },
 
   // 3-dot menu
   {

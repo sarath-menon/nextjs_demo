@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { DataTableViewOptions } from "./data-table-view-options"
 
-import { priorities, statuses } from "../../data/data"
+import { types, statuses, labels } from "../../data/data"
 import { DataTableFacetedFilter } from "./data-table-faceted-filter"
 
 interface DataTableToolbarProps<TData> {
@@ -23,6 +23,7 @@ export function DataTableToolbar<TData>({
     <div className="flex items-center justify-between">
 
       {/* Toolbar above table */}
+
       <div className="flex flex-1 items-center space-x-2">
         <Input
           placeholder="Filter tasks..."
@@ -32,6 +33,7 @@ export function DataTableToolbar<TData>({
           }
           className="h-8 w-[150px] lg:w-[250px]"
         />
+
         {table.getColumn("status") && (
           <DataTableFacetedFilter
             column={table.getColumn("status")}
@@ -39,13 +41,15 @@ export function DataTableToolbar<TData>({
             options={statuses}
           />
         )}
-        {table.getColumn("priority") && (
+
+        {table.getColumn("type") && (
           <DataTableFacetedFilter
-            column={table.getColumn("priority")}
-            title="Priority"
-            options={priorities}
+            column={table.getColumn("type")}
+            title="Types"
+            options={types}
           />
         )}
+
         {isFiltered && (
           <Button
             variant="ghost"
