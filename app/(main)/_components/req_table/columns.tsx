@@ -5,7 +5,7 @@ import { ColumnDef } from "@tanstack/react-table"
 import { Badge } from "@/components/ui/badge"
 import { Checkbox } from "@/components/ui/checkbox"
 
-import { labels, priorities, statuses } from "../../data/data"
+import { labels, types, statuses } from "../../data/data"
 import { Task } from "../../data/schema"
 import { DataTableColumnHeader } from "./data-table-column-header"
 import { DataTableRowActions } from "./data-table-row-actions"
@@ -87,16 +87,16 @@ export const columns: ColumnDef<Task>[] = [
       </div>
   },
 
-  // Req type
-  {
-    accessorKey: "type",
-    header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Type" />
-    ),
-    cell: ({ row }) => <div className="w-[60px]">{row.getValue("type")}</div>,
-    enableSorting: false,
-    enableHiding: false,
-  },
+  // // Req type
+  // {
+  //   accessorKey: "type",
+  //   header: ({ column }) => (
+  //     <DataTableColumnHeader column={column} title="Type" />
+  //   ),
+  //   cell: ({ row }) => <div className="w-[60px]">{row.getValue("type")}</div>,
+  //   enableSorting: false,
+  //   enableHiding: false,
+  // },
 
   // Status
   {
@@ -134,7 +134,7 @@ export const columns: ColumnDef<Task>[] = [
       <DataTableColumnHeader column={column} title="Type" />
     ),
     cell: ({ row }) => {
-      const type = priorities.find(
+      const type = types.find(
         (type) => type.value === row.getValue("type")
       )
 
@@ -144,9 +144,9 @@ export const columns: ColumnDef<Task>[] = [
 
       return (
         <div className="flex items-center">
-          {type.icon && (
+          {/* {type.icon && (
             <type.icon className="mr-2 h-4 w-4 text-muted-foreground" />
-          )}
+          )} */}
           <span>{type.label}</span>
         </div>
       )
