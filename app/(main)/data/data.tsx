@@ -40,14 +40,10 @@ export const types = [
 ]
 
 export const statuses = [
+
   {
-    value: "backlog",
-    label: "Backlog",
-    icon: QuestionMarkCircledIcon,
-  },
-  {
-    value: "todo",
-    label: "Todo",
+    value: "starting soon",
+    label: "Starting soon",
     icon: CircleIcon,
   },
   {

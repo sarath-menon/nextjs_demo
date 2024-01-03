@@ -2,7 +2,7 @@
   {
     "id": "Task-1",
     "title": "You can't compress the program without quantifying the open-source SSD pixel!",
-    "status": "in progress",
+    "status": "done",
     "label": "scientific",
     "type": "Functional", 
     "priority": "medium"
@@ -11,7 +11,7 @@
   {
     "id": "Task-2",
     "title": "Try to calculate the EXE feed, maybe it will index the multi-byte pixel!",
-    "status": "backlog",
+    "status": "starting soon",
     "label": "engineering",
     "type": "Functional", 
     "priority": "medium"
@@ -19,7 +19,7 @@
   {
     "id": "Task-3",
     "title": "We need to bypass the neural TCP card!",
-    "status": "todo",
+    "status": "in progress",
     "label": "scientific",
     "type": "Functional", 
     "priority": "high"
@@ -27,7 +27,7 @@
   {
     "id": "Task-4",
     "title": "The SAS interface is down, bypass the open-source pixel so we can back up the PNG bandwidth!",
-    "status": "backlog",
+    "status": "in progress",
     "label": "engineering",
     "type": "Functional", 
     "priority": "medium"
