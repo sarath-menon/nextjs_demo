@@ -5,8 +5,8 @@ import { ColumnDef } from "@tanstack/react-table"
 import { Badge } from "@/components/ui/badge"
 import { Checkbox } from "@/components/ui/checkbox"
 
-import { labels, types, statuses } from "../../../data/data"
-import { Task } from "../../../data/schema"
+import { labels, types, statuses } from "./constants"
+import { taskSchema, Task } from "./schema"
 import { DataTableColumnHeader } from "../../../_components/datatable_v1/data-table-column-header"
 import { DataTableRowActions } from "../../../_components/datatable_v1/data-table-row-actions"
 import Link from "next/link"
@@ -159,6 +159,6 @@ export const taskColumns: ColumnDef<Task>[] = [
   // 3-dot menu
   {
     id: "actions",
-    cell: ({ row }) => <DataTableRowActions row={row} />,
+    cell: ({ row }) => <DataTableRowActions row={row} schema={taskSchema} />,
   },
 ]

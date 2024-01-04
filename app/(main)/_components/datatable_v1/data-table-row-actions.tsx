@@ -19,16 +19,17 @@ import {
 } from "@/components/ui/dropdown-menu"
 
 import { labels } from "../../data/data"
-import { taskSchema } from "../../data/schema"
+import { ZodObject } from "zod"
 
 interface DataTableRowActionsProps<TData> {
-  row: Row<TData>
+  row: Row<TData>,
+  schema: ZodObject<any>
 }
 
 export function DataTableRowActions<TData>({
-  row,
+  row, schema
 }: DataTableRowActionsProps<TData>) {
-  const task = taskSchema.parse(row.original)
+  const task = schema.parse(row.original)
 
   return (
     <DropdownMenu>

@@ -1,12 +1,13 @@
 import { z } from "zod"
 
 
-export const objectiveSchema = z.object({
+export const taskSchema = z.object({
   id: z.string(),
-  nature: z.string(),
-  description: z.string(),
-  rationale: z.string(),
-  test: z.string(),
+  title: z.string(),
+  status: z.string(),
+  label: z.string(),
+  type: z.string(),
+  priority: z.string(),
 })
 
-export type Objective = z.infer<typeof objectiveSchema>
+export type Task = z.infer<typeof taskSchema>
