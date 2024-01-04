@@ -83,8 +83,6 @@ export function BoardColumn({ column, tasks, isOverlay }: BoardColumnProps) {
 
                 <Button
                     variant={"ghost"}
-                    // {...attributes}
-                    // {...listeners}
                     className=" p-1 text-primary/50 -ml-2 h-auto cursor-grab relative"
                 >
                     <span className="sr-only">{`Move column: ${column.title}`}</span>
