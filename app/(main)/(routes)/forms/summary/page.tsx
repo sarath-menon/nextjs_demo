@@ -5,7 +5,7 @@ import Image from "next/image"
 import { columns } from "@/app/(main)/_components/req_table/columns"
 import { DataTable } from "@/app/(main)/_components/req_table/data-table"
 import { DataTableV2 } from "@/app/(main)/_components/subprojects_list_filtered/data-table"
-import { columnsV2 } from "@/app/(main)/_components/subprojects_list_filtered/columns"
+import { subprojectColumns } from "@/app/(main)/_components/subprojects_list_filtered/subproject-columns"
 import { SUB_PROJECTS } from "@/app/(main)/data/subprojects"
 
 export const metadata: Metadata = {

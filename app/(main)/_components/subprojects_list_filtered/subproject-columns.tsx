@@ -14,7 +14,7 @@ import { Button } from "@/components/ui/button"
 import { ViewReqDialog } from "../req_viewer"
 import { cn } from "@/lib/utils"
 
-export const columnsV2: ColumnDef<Task>[] = [
+export const subprojectColumns: ColumnDef<Task>[] = [
 
   // checkbox
   // {

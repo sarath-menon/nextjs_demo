@@ -1,7 +1,7 @@
 "use client"
 
 import { SubProject } from "@/app/(main)/_components/subprojects_list/subprojects"
-import { columnsV2 } from "@/app/(main)/_components/subprojects_list_filtered/columns"
+import { subprojectColumns } from "@/app/(main)/_components/subprojects_list_filtered/subproject-columns"
 import { DataTableV2 } from "@/app/(main)/_components/subprojects_list_filtered/data-table"
 import { SUB_PROJECTS } from "@/app/(main)/data/subprojects"
 
@@ -26,7 +26,7 @@ export function SubProjectsForm() {
                 </div> */}
 
                 <div className="flex">
-                    <DataTableV2 data={SUB_PROJECTS} columns={columnsV2} />
+                    <DataTableV2 data={SUB_PROJECTS} columns={subprojectColumns} />
                 </div>
 
             </div>

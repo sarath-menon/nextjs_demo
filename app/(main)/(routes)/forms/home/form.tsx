@@ -33,7 +33,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { CreateAssumptionDialog } from "@/app/(main)/_components/assumption_creator"
 import { CreateConstraintDialog } from "@/app/(main)/_components/constraint_creator"
 import { SubProject } from "@/app/(main)/_components/subprojects_list/subprojects"
-import { SUB_PROJECTS } from "@/app/(main)/data/subprojects_"
+import { SUB_PROJECTS } from "@/app/(main)/data/subprojects"
+import { DataTableV2 } from "@/app/(main)/_components/subprojects_list_filtered/data-table"
+import { subprojectColumns } from "@/app/(main)/_components/subprojects_list_filtered/subproject-columns"
 
 const profileFormSchema = z.object({
     type: z
@@ -96,7 +98,7 @@ export function Requirements() {
 
         <div>
             {/* Tabs */}
-            {/* <Tabs defaultValue="account" className="w-[400px]">
+            {/* <Tabs defaultValue="account" className="w-[200px]">
                 <TabsList className="grid w-full grid-cols-2">
                     <TabsTrigger value="account">Account</TabsTrigger>
                     <TabsTrigger value="password">Password</TabsTrigger>
@@ -119,12 +121,14 @@ export function Requirements() {
             </Tabs> */}
 
             {/* Objectives */}
-            <div className="my-6">
+            <div className="my-12">
                 <h3 className="text-3xl font-medium">
                     Objectives
                 </h3>
 
-                <div className="py-6">
+                <div className="py-8">
+                    <DataTableV2 data={SUB_PROJECTS} columns={subprojectColumns} />
+
                     <CreateObjectiveDialog />
                 </div>
             </div>
@@ -132,7 +136,7 @@ export function Requirements() {
 
             {/* Assumption */}
 
-            <div className="my-6">
+            <div className="my-12">
                 <h3 className="text-3xl font-medium">
                     Assumptions
                 </h3>
@@ -144,7 +148,7 @@ export function Requirements() {
 
             {/* Constrains */}
 
-            <div className="my-6">
+            <div className="my-12">
                 <h3 className="text-3xl font-medium">
                     Constraints
                 </h3>
