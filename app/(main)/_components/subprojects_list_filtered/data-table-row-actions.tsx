@@ -19,7 +19,6 @@ import {
 } from "@/components/ui/dropdown-menu"
 
 import { labels } from "../../data/data"
-import { subprojectSchema } from "../../data/schema"
 import { ZodObject } from "zod"
 
 interface DataTableRowActionsProps<TData> {
@@ -30,7 +29,7 @@ interface DataTableRowActionsProps<TData> {
 export function DataTableRowActions<TData>({
   row, schema
 }: DataTableRowActionsProps<TData>) {
-  const task = subprojectSchema.parse(row.original)
+  const task = schema.parse(row.original)
 
   return (
     <DropdownMenu>
