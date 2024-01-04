@@ -16,7 +16,7 @@ import {
     FormMessage,
 } from "@/components/ui/form"
 import { toast } from "@/components/ui/use-toast"
-import KanbanBoard, { KanbanBoardV2 } from "@/app/(main)/_components/kanban_board_v2/KanbanBoard"
+import { KanbanBoard } from "@/app/(main)/_components/kanban_board_v2/KanbanBoard"
 
 const items = [
     {
