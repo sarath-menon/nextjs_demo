@@ -25,4 +25,12 @@ export const subprojectSchema = z.object({
 
 export type Subproject = z.infer<typeof subprojectSchema>
 
+export const objectiveSchema = z.object({
+  id: z.string(),
+  nature: z.string(),
+  description: z.string(),
+  rationale: z.string(),
+  test: z.string(),
+})
 
+export type Objective = z.infer<typeof objectiveSchema>

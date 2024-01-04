@@ -36,6 +36,8 @@ import { SubProject } from "@/app/(main)/_components/subprojects_list/subproject
 import { SUB_PROJECTS } from "@/app/(main)/data/subprojects"
 import { DataTableV2 } from "@/app/(main)/_components/subprojects_list_filtered/data-table"
 import { subprojectColumns } from "@/app/(main)/_components/subprojects_list_filtered/subproject-columns"
+import { OBJECTIVES } from "@/app/(main)/data/objectives"
+import { objectiveColumns } from "@/app/(main)/_components/subprojects_list_filtered/objective-columns"
 
 const profileFormSchema = z.object({
     type: z
@@ -127,7 +129,7 @@ export function Requirements() {
                 </h3>
 
                 <div className="py-8">
-                    <DataTableV2 data={SUB_PROJECTS} columns={subprojectColumns} />
+                    {/* <DataTableV2 data={OBJECTIVES} columns={objectiveColumns} /> */}
 
                     <CreateObjectiveDialog />
                 </div>
