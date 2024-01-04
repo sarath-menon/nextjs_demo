@@ -23,7 +23,7 @@ export const subprojectSchema = z.object({
   priority: z.string(),
 })
 
-export type Subproject = z.infer<typeof subprojectSchema>
+export type SubProject = z.infer<typeof subprojectSchema>
 
 export const objectiveSchema = z.object({
   id: z.string(),
