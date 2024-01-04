@@ -7,7 +7,7 @@ import { Checkbox } from "@/components/ui/checkbox"
 
 import { labels, types, statuses } from "../../../data/data"
 import { Task, objectiveSchema } from "../../../data/schema"
-import { DataTableColumnHeader } from "../../../_components/datatable_v2/data-table-column-header"
+import { DataTableColumnHeader } from "../../../_components/datatable_common/data-table-column-header"
 import { DataTableRowActions } from "../../../_components/datatable_v2/data-table-row-actions"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
