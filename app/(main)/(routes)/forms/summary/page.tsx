@@ -1,7 +1,7 @@
 import { Metadata } from "next"
 
 import { taskColumns } from "./table-columns"
-import { DataTableV1 } from "@/app/(main)/_components/req_table/data-table"
+import { DataTableV1 } from "@/app/(main)/_components/datatable_v1/data-table"
 import { TASKS } from "@/app/(main)/data/tasks"
 
 export const metadata: Metadata = {
