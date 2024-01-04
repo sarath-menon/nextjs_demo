@@ -2,7 +2,6 @@ import { useMemo, useState } from "react";
 import { Column, Id, Task } from "../kanban_board/types";
 import ColumnContainer from "../kanban_board/ColumnContainer";
 
-
 import {
     DndContext,
     DragEndEvent,
@@ -18,8 +17,6 @@ import { createPortal } from "react-dom";
 import TaskCard from "./TaskCard";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-
-
 
 const defaultCols: Column[] = [
     {
@@ -126,15 +123,15 @@ function KanbanBoard() {
     return (
         <div
             className="
-        m-auto
-        flex
-        min-h-screen
-        w-full
-        items-center
-        overflow-x-auto
-        overflow-y-hidden
-        px-[40px]
-    "
+            m-auto
+            flex
+            min-h-screen
+            w-full
+            items-center
+            overflow-x-auto
+            overflow-y-hidden
+            px-[40px]
+            "
         >
             <DndContext
                 sensors={sensors}
@@ -145,6 +142,9 @@ function KanbanBoard() {
                 <div className="m-auto flex gap-4">
                     <div className="flex gap-4">
                         <SortableContext items={columnsId}>
+
+                            {/* Columns  */}
+
                             {columns.map((col) => (
                                 <ColumnContainer
                                     key={col.id}
@@ -159,33 +159,35 @@ function KanbanBoard() {
                             ))}
                         </SortableContext>
                     </div>
-                    <Button variant="outline"
+
+                    {/* To add columns */}
+                    {/* <Button variant="outline"
                         onClick={() => {
                             createNewColumn();
                         }}
                         className="
-      h-[60px]
-      w-[350px]
-      min-w-[350px]
-      cursor-pointer
-      rounded-lg
-      bg-mainBackgroundColor
-      border-2
-      border-columnBackgroundColor
-      p-4
-      ring-rose-500
-      hover:ring-2
-      flex
-      gap-2
-      "
+                            h-[60px]
+                            w-[350px]
+                            min-w-[350px]
+                            cursor-pointer
+                            rounded-lg
+                            bg-mainBackgroundColor
+                            border-2
+                            border-columnBackgroundColor
+                            p-4
+                            ring-rose-500
+                            hover:ring-2
+                            flex
+                            gap-2
+                            "
                     >
-                        {/* Plus icon*/}
+
                         <Image src="/icons/add.svg" width={"20"} height={"20"} alt="" />
                         Add Column
-                    </Button>
+                    </Button> */}
                 </div>
 
-                {createPortal(
+                {/* {createPortal(
                     <DragOverlay>
                         {activeColumn && (
                             <ColumnContainer
@@ -209,7 +211,7 @@ function KanbanBoard() {
                         )}
                     </DragOverlay>,
                     document.body
-                )}
+                )} */}
             </DndContext>
         </div>
     );
