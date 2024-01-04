@@ -1,36 +1,33 @@
 import { SortableContext, useSortable } from "@dnd-kit/sortable";
-import { Column, Id, Task } from "../kanban_board/types";
+import { useDndContext, type UniqueIdentifier } from "@dnd-kit/core";
 import { CSS } from "@dnd-kit/utilities";
-import { useMemo, useState } from "react";
-
-
-
-import Image from "next/image";
-import TaskCard from "./TaskCard";
+import { useMemo } from "react";
+import { Task, TaskCard } from "./TaskCard";
+import { cva } from "class-variance-authority";
+import { Card, CardContent, CardHeader } from "@/components//ui/card";
 import { Button } from "@/components/ui/button";
+import { GripVertical } from "lucide-react";
+import { ScrollArea, ScrollBar } from "@/components//ui/scroll-area";
 
-interface Props {
-    column: Column;
-    deleteColumn: (id: Id) => void;
-    updateColumn: (id: Id, title: string) => void;
-
-    createTask: (columnId: Id) => void;
-    updateTask: (id: Id, content: string) => void;
-    deleteTask: (id: Id) => void;
-    tasks: Task[];
+export interface Column {
+    id: UniqueIdentifier;
+    title: string;
 }
 
-function ColumnContainer({
-    column,
-    deleteColumn,
-    updateColumn,
-    createTask,
-    tasks,
-    deleteTask,
-    updateTask,
-}: Props) {
-    const [editMode, setEditMode] = useState(false);
+export type ColumnType = "Column";
 
+export interface ColumnDragData {
+    type: ColumnType;
+    column: Column;
+}
+
+interface BoardColumnProps {
+    column: Column;
+    tasks: Task[];
+    isOverlay?: boolean;
+}
+
+export function BoardColumn({ column, tasks, isOverlay }: BoardColumnProps) {
     const tasksIds = useMemo(() => {
         return tasks.map((task) => task.id);
     }, [tasks]);
@@ -47,156 +44,85 @@ function ColumnContainer({
         data: {
             type: "Column",
             column,
+        } satisfies ColumnDragData,
+        attributes: {
+            roleDescription: `Column: ${column.title}`,
         },
-        disabled: editMode,
     });
 
     const style = {
         transition,
-        transform: CSS.Transform.toString(transform),
+        transform: CSS.Translate.toString(transform),
     };
 
-    // If button is being dragged
-    if (isDragging) {
-        return (
-            <div
-                ref={setNodeRef}
-                style={style}
-                className="
-                bg-transparent
-                opacity-40
-                border-2
-                border-pink-500
-                w-[350px]
-                h-[500px]
-                max-h-[500px]
-                rounded-md
-                flex
-                flex-col
-                "
-            ></div>
-        );
-    }
+    const variants = cva(
+        "h-[500px] max-h-[500px] w-[350px] max-w-full bg-dark/dark-12 flex flex-col flex-shrink-0 snap-center",
+        {
+            variants: {
+                dragging: {
+                    default: "border-2 border-transparent",
+                    over: "ring-2 opacity-30",
+                    overlay: "ring-2 ring-primary",
+                },
+            },
+        }
+    );
 
     return (
-        <div
+        <Card
             ref={setNodeRef}
             style={style}
-            className="
-            bg-dark/dark-11
-            w-[350px]
-            h-[500px]
-            max-h-[500px]
-            rounded-md
-            flex
-            flex-col
-            "
+            className={variants({
+                dragging: isOverlay ? "overlay" : isDragging ? "over" : undefined,
+            })}
         >
-
-            {/* Column title */}
-            <div
-                {...attributes}
-                {...listeners}
-                onClick={() => {
-                    setEditMode(true);
-                }}
-                className="
-                border-dark/dark-11
-                border-2
-                bg-black
-                text-md
-                h-[60px]
-                cursor-grab
-                rounded-md
-                rounded-b-none
-                p-3
-                pb-1
-                font-bold
-                flex
-                items-center
-                justify-between
-                relative
-                "
-            >
-                <div className="flex gap-2">
-                    <div
-                        className="
-                        flex
-                        justify-center
-                        items-center
-                        bg-columnBackgroundColor
-                        px-2
-                        py-1
-                        text-sm
-                        rounded-full
-                        "
-                    >
-
-                    </div>
-                    {!editMode && column.title}
-                    {editMode && (
-                        <input
-                            className="bg-black focus:border-rose-500 border rounded outline-none px-2"
-                            value={column.title}
-                            onChange={(e) => updateColumn(column.id, e.target.value)}
-                            autoFocus
-                            onBlur={() => {
-                                setEditMode(false);
-                            }}
-                            onKeyDown={(e) => {
-                                if (e.key !== "Enter") return;
-                                setEditMode(false);
-                            }}
-                        />
-                    )}
-                </div>
-
-                {/* Delete */}
+            <CardHeader className="p-4 font-semibold border-b-2 text-left flex flex-row space-between items-center">
                 <Button
-                    variant="ghost"
-                    onClick={() => {
-                        deleteColumn(column.id);
-                    }}
-                    className="
-                    rounded
-                    px-1
-                    py-2
-                    "
+                    variant={"ghost"}
+                    {...attributes}
+                    {...listeners}
+                    className=" p-1 text-primary/50 -ml-2 h-auto cursor-grab relative"
                 >
-                    {/* Trash icon*/}
-                    <Image src="/icons/trash.svg" width={"20"} height={"20"} alt="" />
+                    <span className="sr-only">{`Move column: ${column.title}`}</span>
+                    <GripVertical />
                 </Button>
-            </div>
-
-            {/* Column task container */}
-            <div className="flex flex-grow flex-col gap-4 p-2 overflow-x-hidden overflow-y-auto">
-                <SortableContext items={tasksIds}>
-                    {tasks.map((task) => (
-                        <TaskCard
-                            key={task.id}
-                            task={task}
-                            deleteTask={deleteTask}
-                            updateTask={updateTask}
-                        />
-                    ))}
-                </SortableContext>
-            </div>
-
-            {/* Column footer */}
-            {/* <Button
-                variant="secondary"
-                className="flex gap-2 items-center border-columnBackgroundColor border-2 rounded-md p-4 border-x-columnBackgroundColor hover:bg-mainBackgroundColor hover:text-rose-500 active:bg-black"
-                onClick={() => {
-                    createTask(column.id);
-                }}
-            >
-
-                <Image src="/icons/add.svg" width={"20"} height={"20"} alt="" />
-                Add task
-            </Button> */}
-
-        </div>
+                <span className="ml-auto"> {column.title}</span>
+            </CardHeader>
+            <ScrollArea>
+                <CardContent className="flex flex-grow flex-col gap-2 p-2">
+                    <SortableContext items={tasksIds}>
+                        {tasks.map((task) => (
+                            <TaskCard key={task.id} task={task} />
+                        ))}
+                    </SortableContext>
+                </CardContent>
+            </ScrollArea>
+        </Card>
     );
 }
 
-export default ColumnContainer;
+export function BoardContainer({ children }: { children: React.ReactNode }) {
+    const dndContext = useDndContext();
+
+    const variations = cva("px-2 md:px-0 flex lg:justify-center pb-4", {
+        variants: {
+            dragging: {
+                default: "snap-x snap-mandatory",
+                active: "snap-none",
+            },
+        },
+    });
+
+    return (
+        <ScrollArea
+            className={variations({
+                dragging: dndContext.active ? "active" : "default",
+            })}
+        >
+            <div className="flex gap-4 items-center flex-row justify-center">
+                {children}
+            </div>
+            <ScrollBar orientation="horizontal" />
+        </ScrollArea>
+    );
+}
