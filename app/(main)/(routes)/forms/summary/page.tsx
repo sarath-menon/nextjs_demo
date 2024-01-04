@@ -1,19 +1,13 @@
 import { Metadata } from "next"
-import { cookies } from "next/headers"
-import Image from "next/image"
 
 import { taskColumns } from "./table-columns"
-import { DataTable } from "@/app/(main)/_components/req_table/data-table"
-import { DataTableV2 } from "@/app/(main)/_components/datatable_v2/data-table"
-import { subprojectColumns } from "@/app/(main)/(routes)/forms/subprojects/table-columns"
-import { SUB_PROJECTS } from "@/app/(main)/data/subprojects"
+import { DataTableV1 } from "@/app/(main)/_components/req_table/data-table"
 import { TASKS } from "@/app/(main)/data/tasks"
 
 export const metadata: Metadata = {
     title: "Tasks",
     description: "A task and issue tracker build using Tanstack Table.",
 }
-
 
 export default async function TaskPage() {
     return (
@@ -30,7 +24,7 @@ export default async function TaskPage() {
                 </div>
 
                 <div className="flex">
-                    <DataTable data={TASKS} columns={taskColumns} />
+                    <DataTableV1 data={TASKS} columns={taskColumns} />
                 </div>
             </div>
         </>
