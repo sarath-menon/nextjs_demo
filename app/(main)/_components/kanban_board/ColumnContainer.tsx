@@ -101,7 +101,7 @@ function ColumnContainer({
                     setEditMode(true);
                 }}
                 className="
-                bg-mainBackgroundColor
+                bg-purple-500
                 text-md
                 h-[60px]
                 cursor-grab
@@ -109,8 +109,6 @@ function ColumnContainer({
                 rounded-b-none
                 p-3
                 font-bold
-                border-columnBackgroundColor
-                border-4
                 flex
                 items-center
                 justify-between
