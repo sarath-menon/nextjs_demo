@@ -166,7 +166,7 @@ function ColumnContainer({
         "
                 >
                     {/* Trash icon*/}
-                    <Image src="./icons/trash.svg" width={"10"} height={"10"} alt="" />
+                    <Image src="/icons/trash.svg" width={"20"} height={"20"} alt="" />
                 </button>
             </div>
 
@@ -191,7 +191,7 @@ function ColumnContainer({
                 }}
             >
                 {/* Plus icon*/}
-                <Image src="./icons/plus.svg" width={"10"} height={"10"} alt="" />
+                <Image src="/icons/add.svg" width={"20"} height={"20"} alt="" />
                 Add task
             </button>
         </div>

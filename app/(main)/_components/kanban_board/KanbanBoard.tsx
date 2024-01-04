@@ -179,7 +179,7 @@ function KanbanBoard() {
       "
                     >
                         {/* Plus icon*/}
-                        <Image src="./icons/plus.svg" width={"10"} height={"10"} alt="" />
+                        <Image src="/icons/add.svg" width={"20"} height={"20"} alt="" />
                         Add Column
                     </button>
                 </div>

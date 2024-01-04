@@ -110,7 +110,7 @@ function TaskCard({ task, deleteTask, updateTask }: Props) {
                     className="stroke-white absolute right-4 top-1/2 -translate-y-1/2 bg-columnBackgroundColor p-2 rounded opacity-60 hover:opacity-100"
                 >
                     {/* Trash icon*/}
-                    <Image src="./icons/trash.svg" width={"10"} height={"10"} alt="" />
+                    <Image src="/icons/trash.svg" width={"20"} height={"20"} alt="" />
                 </button>
             )}
         </div>
