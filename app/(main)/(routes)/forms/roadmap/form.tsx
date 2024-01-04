@@ -77,9 +77,7 @@ export function Roadmap() {
 
     return (
         <>
-
-            <KanbanBoardV2 />
-
+            <KanbanBoard />
         </>
     )
 }

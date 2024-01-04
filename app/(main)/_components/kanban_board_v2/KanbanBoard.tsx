@@ -106,7 +106,7 @@ const initialTasks: Task[] = [
         content: "Launch website and deploy to server",
     },
 ];
-export function KanbanBoardV2() {
+export function KanbanBoard() {
     const [columns, setColumns] = useState<Column[]>(defaultCols);
     const pickedUpTaskColumn = useRef<ColumnId | null>(null);
     const columnsId = useMemo(() => columns.map((col) => col.id), [columns]);
