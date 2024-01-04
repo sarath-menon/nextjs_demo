@@ -2,7 +2,7 @@ import { Metadata } from "next"
 import { cookies } from "next/headers"
 import Image from "next/image"
 
-import { columns } from "@/app/(main)/_components/req_table/columns"
+import { taskColumns } from "./table-columns"
 import { DataTable } from "@/app/(main)/_components/req_table/data-table"
 import { DataTableV2 } from "@/app/(main)/_components/datatable_v2/data-table"
 import { subprojectColumns } from "@/app/(main)/(routes)/forms/subprojects/table-columns"
@@ -30,7 +30,7 @@ export default async function TaskPage() {
                 </div>
 
                 <div className="flex">
-                    <DataTable data={TASKS} columns={columns} />
+                    <DataTable data={TASKS} columns={taskColumns} />
                 </div>
             </div>
         </>
