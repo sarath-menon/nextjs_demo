@@ -79,15 +79,8 @@ export function BoardColumn({ column, tasks, isOverlay }: BoardColumnProps) {
             <CardHeader
                 {...attributes}
                 {...listeners}
-                className="p-4 font-semibold border-b-2 text-left flex flex-row space-between items-center">
+                className="p-4 font-semibold border-b-2 text-left flex flex-row space-between items-center justify-center">
 
-                <Button
-                    variant={"ghost"}
-                    className=" p-1 text-primary/50 -ml-2 h-auto cursor-grab relative"
-                >
-                    <span className="sr-only">{`Move column: ${column.title}`}</span>
-
-                </Button>
                 <span className="ml-auto"> {column.title}</span>
 
             </CardHeader>
