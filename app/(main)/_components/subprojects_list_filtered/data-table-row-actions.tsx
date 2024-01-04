@@ -20,13 +20,15 @@ import {
 
 import { labels } from "../../data/data"
 import { subprojectSchema } from "../../data/schema"
+import { ZodObject } from "zod"
 
 interface DataTableRowActionsProps<TData> {
   row: Row<TData>
+  schema: ZodObject<any>
 }
 
 export function DataTableRowActions<TData>({
-  row,
+  row, schema
 }: DataTableRowActionsProps<TData>) {
   const task = subprojectSchema.parse(row.original)
 
