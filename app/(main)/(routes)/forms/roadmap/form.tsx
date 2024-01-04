@@ -16,6 +16,7 @@ import {
     FormMessage,
 } from "@/components/ui/form"
 import { toast } from "@/components/ui/use-toast"
+import KanbanBoard from "@/app/(main)/_components/kanban_board/KanbanBoard"
 
 const items = [
     {
@@ -75,58 +76,64 @@ export function Roadmap() {
     }
 
     return (
-        <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-                <FormField
-                    control={form.control}
-                    name="items"
-                    render={() => (
-                        <FormItem>
-                            <div className="mb-4">
-                                <FormLabel className="text-base">Sidebar</FormLabel>
-                                <FormDescription>
-                                    Select the items you want to display in the sidebar.
-                                </FormDescription>
-                            </div>
-                            {items.map((item) => (
-                                <FormField
-                                    key={item.id}
-                                    control={form.control}
-                                    name="items"
-                                    render={({ field }) => {
-                                        return (
-                                            <FormItem
-                                                key={item.id}
-                                                className="flex flex-row items-start space-x-3 space-y-0"
-                                            >
-                                                <FormControl>
-                                                    <Checkbox
-                                                        checked={field.value?.includes(item.id)}
-                                                        onCheckedChange={(checked) => {
-                                                            return checked
-                                                                ? field.onChange([...field.value, item.id])
-                                                                : field.onChange(
-                                                                    field.value?.filter(
-                                                                        (value) => value !== item.id
-                                                                    )
-                                                                )
-                                                        }}
-                                                    />
-                                                </FormControl>
-                                                <FormLabel className="font-normal">
-                                                    {item.label}
-                                                </FormLabel>
-                                            </FormItem>
-                                        )
-                                    }}
-                                />
-                            ))}
-                            <FormMessage />
-                        </FormItem>
-                    )}
-                />
-                <Button type="submit">Update display</Button>
-            </form>
-        </Form>
+        <>
+
+            <KanbanBoard />
+
+        </>
     )
 }
+
+{/* <Form {...form}>
+<form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+    <FormField
+        control={form.control}
+        name="items"
+        render={() => (
+            <FormItem>
+                <div className="mb-4">
+                    <FormLabel className="text-base">Sidebar</FormLabel>
+                    <FormDescription>
+                        Select the items you want to display in the sidebar.
+                    </FormDescription>
+                </div>
+                {items.map((item) => (
+                    <FormField
+                        key={item.id}
+                        control={form.control}
+                        name="items"
+                        render={({ field }) => {
+                            return (
+                                <FormItem
+                                    key={item.id}
+                                    className="flex flex-row items-start space-x-3 space-y-0"
+                                >
+                                    <FormControl>
+                                        <Checkbox
+                                            checked={field.value?.includes(item.id)}
+                                            onCheckedChange={(checked) => {
+                                                return checked
+                                                    ? field.onChange([...field.value, item.id])
+                                                    : field.onChange(
+                                                        field.value?.filter(
+                                                            (value) => value !== item.id
+                                                        )
+                                                    )
+                                            }}
+                                        />
+                                    </FormControl>
+                                    <FormLabel className="font-normal">
+                                        {item.label}
+                                    </FormLabel>
+                                </FormItem>
+                            )
+                        }}
+                    />
+                ))}
+                <FormMessage />
+            </FormItem>
+        )}
+    />
+    <Button type="submit">Update display</Button>
+</form>
+</Form> */}
