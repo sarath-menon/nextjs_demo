@@ -110,6 +110,7 @@ function ColumnContainer({
                 rounded-md
                 rounded-b-none
                 p-3
+                pb-1
                 font-bold
                 flex
                 items-center
