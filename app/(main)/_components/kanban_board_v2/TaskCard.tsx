@@ -1,21 +1,32 @@
-import { useState } from "react";
-
-import { Id, Task } from "../kanban_board/utils";
+import type { UniqueIdentifier } from "@dnd-kit/core";
 import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
-import Image from "next/image";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { cva } from "class-variance-authority";
+import { GripVertical } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { ColumnId } from "./KanbanBoard";
 
-interface Props {
-    task: Task;
-    deleteTask: (id: Id) => void;
-    updateTask: (id: Id, content: string) => void;
+export interface Task {
+    id: UniqueIdentifier;
+    columnId: ColumnId;
+    content: string;
 }
 
-function TaskCard({ task, deleteTask, updateTask }: Props) {
-    const [mouseIsOver, setMouseIsOver] = useState(false);
-    const [editMode, setEditMode] = useState(true);
+interface TaskCardProps {
+    task: Task;
+    isOverlay?: boolean;
+}
 
+export type TaskType = "Task";
+
+export interface TaskDragData {
+    type: TaskType;
+    task: Task;
+}
+
+export function TaskCard({ task, isOverlay }: TaskCardProps) {
     const {
         setNodeRef,
         attributes,
@@ -28,99 +39,51 @@ function TaskCard({ task, deleteTask, updateTask }: Props) {
         data: {
             type: "Task",
             task,
+        } satisfies TaskDragData,
+        attributes: {
+            roleDescription: "Task",
         },
-        disabled: editMode,
     });
 
     const style = {
         transition,
-        transform: CSS.Transform.toString(transform),
+        transform: CSS.Translate.toString(transform),
     };
 
-    const toggleEditMode = () => {
-        setEditMode((prev) => !prev);
-        setMouseIsOver(false);
-    };
-
-    if (isDragging) {
-        return (
-            <div
-                ref={setNodeRef}
-                style={style}
-                className="
-        opacity-30
-      bg-mainBackgroundColor p-2.5 h-[100px] min-h-[100px] items-center flex text-left rounded-xl border-2 border-rose-500  cursor-grab relative
-      "
-            />
-        );
-    }
-
-    if (editMode) {
-        return (
-            <div
-                ref={setNodeRef}
-                style={style}
-                {...attributes}
-                {...listeners}
-                className="bg-mainBackgroundColor p-2.5 h-[100px] min-h-[100px] items-center flex text-left rounded-xl hover:ring-2 hover:ring-inset hover:ring-rose-500 cursor-grab relative"
-            >
-                <textarea
-                    className="
-        h-[90%]
-        w-full resize-none border-none rounded bg-transparent text-white focus:outline-none
-        "
-                    value={task.content}
-                    autoFocus
-                    placeholder="Task content here"
-                    onBlur={toggleEditMode}
-                    onKeyDown={(e) => {
-                        if (e.key === "Enter" && e.shiftKey) {
-                            toggleEditMode();
-                        }
-                    }}
-                    onChange={(e) => updateTask(task.id, e.target.value)}
-                />
-            </div>
-        );
-    }
+    const variants = cva("", {
+        variants: {
+            dragging: {
+                over: "ring-2 opacity-30",
+                overlay: "ring-2 ring-primary",
+            },
+        },
+    });
 
     return (
-        <Button variant="ghost"
-
+        <Card
             ref={setNodeRef}
             style={style}
-            {...attributes}
-            {...listeners}
-            onClick={toggleEditMode}
-            className="
-            bg-black
-            p-2.5 
-            h-[100px]
-            min-h-[100px] 
-            items-center 
-            flex 
-            text-left 
-            rounded-xl 
-            hover:ring-2 
-            hover:ring-inset
-            hover:ring-rose-500 
-            cursor-grab 
-            relative 
-            task"
-            onMouseEnter={() => {
-                setMouseIsOver(true);
-            }}
-            onMouseLeave={() => {
-                setMouseIsOver(false);
-            }}
+            className={variants({
+                dragging: isOverlay ? "overlay" : isDragging ? "over" : undefined,
+            })}
         >
-            <p className="my-auto h-[90%] w-full overflow-y-auto overflow-x-hidden whitespace-pre-wrap">
+            <CardHeader className="px-3 py-3 space-between flex flex-row border-b-2 border-secondary relative">
+                <Button
+                    variant={"ghost"}
+                    {...attributes}
+                    {...listeners}
+                    className="p-1 text-secondary-foreground/50 -ml-2 h-auto cursor-grab"
+                >
+                    <span className="sr-only">Move task</span>
+                    <GripVertical />
+                </Button>
+                <Badge variant={"outline"} className="ml-auto font-semibold">
+                    Task
+                </Badge>
+            </CardHeader>
+            <CardContent className="px-3 pt-3 pb-6 text-left whitespace-pre-wrap">
                 {task.content}
-            </p>
-
-
-        </Button>
+            </CardContent>
+        </Card>
     );
 }
-
-export default TaskCard;
