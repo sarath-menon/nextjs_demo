@@ -4,7 +4,6 @@ import Link from "next/link"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useFieldArray, useForm } from "react-hook-form"
 import * as z from "zod"
-
 import { Button } from "@/components/ui/button"
 import { CreateObjectiveDialog } from "@/app/(main)/_components/objective_creator"
 
@@ -32,12 +31,8 @@ import { toast } from "@/components/ui/use-toast"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { CreateAssumptionDialog } from "@/app/(main)/_components/assumption_creator"
 import { CreateConstraintDialog } from "@/app/(main)/_components/constraint_creator"
-import { SubProject } from "@/app/(main)/_components/subprojects_list/subprojects"
-import { SUB_PROJECTS } from "@/app/(main)/data/subprojects"
-import { DataTableV2 } from "@/app/(main)/_components/datatable_v2/data-table"
-import { subprojectColumns } from "@/app/(main)/(routes)/forms/subprojects/table-columns"
 import { OBJECTIVES } from "@/app/(main)/data/objectives"
-import { objectiveColumns } from "@/app/(main)/_components/datatable_v2/objective-columns"
+import { objectiveColumns } from "@/app/(main)/(routes)/forms/home/table-columns"
 
 const profileFormSchema = z.object({
     type: z
