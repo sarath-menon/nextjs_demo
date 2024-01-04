@@ -17,6 +17,7 @@ import { SortableContext, arrayMove } from "@dnd-kit/sortable";
 import { createPortal } from "react-dom";
 import TaskCard from "./TaskCard";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
 
 
 
@@ -158,7 +159,7 @@ function KanbanBoard() {
                             ))}
                         </SortableContext>
                     </div>
-                    <button
+                    <Button variant="outline"
                         onClick={() => {
                             createNewColumn();
                         }}
@@ -181,7 +182,7 @@ function KanbanBoard() {
                         {/* Plus icon*/}
                         <Image src="/icons/add.svg" width={"20"} height={"20"} alt="" />
                         Add Column
-                    </button>
+                    </Button>
                 </div>
 
                 {createPortal(

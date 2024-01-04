@@ -4,6 +4,7 @@ import { Id, Task } from "../kanban_board/types";
 import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
 
 interface Props {
     task: Task;
@@ -103,7 +104,7 @@ function TaskCard({ task, deleteTask, updateTask }: Props) {
             </p>
 
             {mouseIsOver && (
-                <button
+                <Button variant="outline"
                     onClick={() => {
                         deleteTask(task.id);
                     }}
@@ -111,7 +112,7 @@ function TaskCard({ task, deleteTask, updateTask }: Props) {
                 >
                     {/* Trash icon*/}
                     <Image src="/icons/trash.svg" width={"20"} height={"20"} alt="" />
-                </button>
+                </Button>
             )}
         </div>
     );

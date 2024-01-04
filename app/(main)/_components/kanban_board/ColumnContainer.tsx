@@ -14,6 +14,7 @@ import {
 
 import Image from "next/image";
 import TaskCard from "./TaskCard";
+import { Button } from "@/components/ui/button";
 
 interface Props {
     column: Column;
@@ -152,7 +153,7 @@ function ColumnContainer({
                         />
                     )}
                 </div>
-                <button
+                <Button variant="outline"
                     onClick={() => {
                         deleteColumn(column.id);
                     }}
@@ -167,7 +168,7 @@ function ColumnContainer({
                 >
                     {/* Trash icon*/}
                     <Image src="/icons/trash.svg" width={"20"} height={"20"} alt="" />
-                </button>
+                </Button>
             </div>
 
             {/* Column task container */}
@@ -183,8 +184,9 @@ function ColumnContainer({
                     ))}
                 </SortableContext>
             </div>
+
             {/* Column footer */}
-            <button
+            <Button variant="secondary"
                 className="flex gap-2 items-center border-columnBackgroundColor border-2 rounded-md p-4 border-x-columnBackgroundColor hover:bg-mainBackgroundColor hover:text-rose-500 active:bg-black"
                 onClick={() => {
                     createTask(column.id);
@@ -193,7 +195,7 @@ function ColumnContainer({
                 {/* Plus icon*/}
                 <Image src="/icons/add.svg" width={"20"} height={"20"} alt="" />
                 Add task
-            </button>
+            </Button>
         </div>
     );
 }
