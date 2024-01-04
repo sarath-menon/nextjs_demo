@@ -4,6 +4,8 @@ import { taskColumns } from "./table-columns"
 import { DataTableV1 } from "@/app/(main)/_components/datatable_v1/data-table"
 import { TASKS } from "@/app/(main)/data/tasks"
 
+import { ReactFlowApp } from "./form"
+
 export const metadata: Metadata = {
     title: "Tasks",
     description: "A task and issue tracker build using Tanstack Table.",
@@ -23,8 +25,12 @@ export default async function TaskPage() {
 
                 </div>
 
-                <div className="flex">
+                {/* <div className="flex">
                     <DataTableV1 data={TASKS} columns={taskColumns} />
+                </div> */}
+
+                <div>
+                    <ReactFlowApp />
                 </div>
             </div>
         </>
