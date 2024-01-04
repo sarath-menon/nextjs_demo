@@ -127,7 +127,7 @@ function ColumnContainer({
                         rounded-full
                         "
                     >
-                        0
+
                     </div>
                     {!editMode && column.title}
                     {editMode && (
@@ -146,6 +146,8 @@ function ColumnContainer({
                         />
                     )}
                 </div>
+
+                {/* Delete button */}
                 <Button
                     variant="outline"
                     onClick={() => {
