@@ -71,7 +71,7 @@ export function TaskCard({ task, isOverlay }: TaskCardProps) {
         >
             <CardHeader className="px-3 py-3 space-between flex flex-row border-b-2 border-secondary relative">
 
-                <Badge variant={"outline"} className="ml-auto font-semibold">
+                <Badge variant={"outline"} className="font-semibold">
                     Task
                 </Badge>
 

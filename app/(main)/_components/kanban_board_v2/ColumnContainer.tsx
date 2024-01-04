@@ -81,7 +81,9 @@ export function BoardColumn({ column, tasks, isOverlay }: BoardColumnProps) {
                 {...listeners}
                 className="p-4 font-semibold border-b-2 text-left flex flex-row space-between items-center justify-center">
 
-                <span className="ml-auto"> {column.title}</span>
+                <span className="">
+                    {column.title}
+                </span>
 
             </CardHeader>
 
@@ -94,7 +96,7 @@ export function BoardColumn({ column, tasks, isOverlay }: BoardColumnProps) {
                     </SortableContext>
                 </CardContent>
             </ScrollArea>
-        </Card>
+        </Card >
     );
 }
 
