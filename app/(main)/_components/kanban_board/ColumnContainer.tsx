@@ -3,14 +3,7 @@ import { Column, Id, Task } from "../kanban_board/types";
 import { CSS } from "@dnd-kit/utilities";
 import { useMemo, useState } from "react";
 
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardFooter,
-    CardHeader,
-    CardTitle,
-} from "@/components/ui/card"
+
 
 import Image from "next/image";
 import TaskCard from "./TaskCard";
@@ -63,23 +56,24 @@ function ColumnContainer({
         transform: CSS.Transform.toString(transform),
     };
 
+    // If button is being dragged
     if (isDragging) {
         return (
             <div
                 ref={setNodeRef}
                 style={style}
                 className="
-      bg-columnBackgroundColor
-      opacity-40
-      border-2
-      border-pink-500
-      w-[350px]
-      h-[500px]
-      max-h-[500px]
-      rounded-md
-      flex
-      flex-col
-      "
+                bg-transparent
+                opacity-40
+                border-2
+                border-pink-500
+                w-[350px]
+                h-[500px]
+                max-h-[500px]
+                rounded-md
+                flex
+                flex-col
+                "
             ></div>
         );
     }
@@ -89,15 +83,16 @@ function ColumnContainer({
             ref={setNodeRef}
             style={style}
             className="
-  bg-columnBackgroundColor
-  w-[350px]
-  h-[500px]
-  max-h-[500px]
-  rounded-md
-  flex
-  flex-col
-  "
+            bg-transparent
+            w-[350px]
+            h-[500px]
+            max-h-[500px]
+            rounded-md
+            flex
+            flex-col
+            "
         >
+
             {/* Column title */}
             <div
                 {...attributes}
@@ -106,33 +101,33 @@ function ColumnContainer({
                     setEditMode(true);
                 }}
                 className="
-      bg-mainBackgroundColor
-      text-md
-      h-[60px]
-      cursor-grab
-      rounded-md
-      rounded-b-none
-      p-3
-      font-bold
-      border-columnBackgroundColor
-      border-4
-      flex
-      items-center
-      justify-between
-      "
+                bg-mainBackgroundColor
+                text-md
+                h-[60px]
+                cursor-grab
+                rounded-md
+                rounded-b-none
+                p-3
+                font-bold
+                border-columnBackgroundColor
+                border-4
+                flex
+                items-center
+                justify-between
+                "
             >
                 <div className="flex gap-2">
                     <div
                         className="
-        flex
-        justify-center
-        items-center
-        bg-columnBackgroundColor
-        px-2
-        py-1
-        text-sm
-        rounded-full
-        "
+                        flex
+                        justify-center
+                        items-center
+                        bg-columnBackgroundColor
+                        px-2
+                        py-1
+                        text-sm
+                        rounded-full
+                        "
                     >
                         0
                     </div>
@@ -153,18 +148,19 @@ function ColumnContainer({
                         />
                     )}
                 </div>
-                <Button variant="outline"
+                <Button
+                    variant="outline"
                     onClick={() => {
                         deleteColumn(column.id);
                     }}
                     className="
-        stroke-gray-500
-        hover:stroke-white
-        hover:bg-columnBackgroundColor
-        rounded
-        px-1
-        py-2
-        "
+                    stroke-gray-500
+                    hover:stroke-white
+                    hover:bg-columnBackgroundColor
+                    rounded
+                    px-1
+                    py-2
+                    "
                 >
                     {/* Trash icon*/}
                     <Image src="/icons/trash.svg" width={"20"} height={"20"} alt="" />
@@ -186,16 +182,18 @@ function ColumnContainer({
             </div>
 
             {/* Column footer */}
-            <Button variant="secondary"
+            {/* <Button
+                variant="secondary"
                 className="flex gap-2 items-center border-columnBackgroundColor border-2 rounded-md p-4 border-x-columnBackgroundColor hover:bg-mainBackgroundColor hover:text-rose-500 active:bg-black"
                 onClick={() => {
                     createTask(column.id);
                 }}
             >
-                {/* Plus icon*/}
+
                 <Image src="/icons/add.svg" width={"20"} height={"20"} alt="" />
                 Add task
-            </Button>
+            </Button> */}
+
         </div>
     );
 }
