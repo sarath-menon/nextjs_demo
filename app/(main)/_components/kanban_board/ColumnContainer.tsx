@@ -112,6 +112,7 @@ function ColumnContainer({
                 flex
                 items-center
                 justify-between
+                relative
                 "
             >
                 <div className="flex gap-2">
@@ -147,16 +148,13 @@ function ColumnContainer({
                     )}
                 </div>
 
-                {/* Delete button */}
+                {/* Delete */}
                 <Button
                     variant="outline"
                     onClick={() => {
                         deleteColumn(column.id);
                     }}
                     className="
-                    stroke-gray-500
-                    hover:stroke-white
-                    hover:bg-columnBackgroundColor
                     rounded
                     px-1
                     py-2
