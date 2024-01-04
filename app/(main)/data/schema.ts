@@ -14,16 +14,6 @@ export const taskSchema = z.object({
 
 export type Task = z.infer<typeof taskSchema>
 
-export const subprojectSchema = z.object({
-  id: z.string(),
-  title: z.string(),
-  status: z.string(),
-  label: z.string(),
-  type: z.string(),
-  priority: z.string(),
-})
-
-export type SubProject = z.infer<typeof subprojectSchema>
 
 export const objectiveSchema = z.object({
   id: z.string(),
