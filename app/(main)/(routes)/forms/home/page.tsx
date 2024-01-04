@@ -35,7 +35,7 @@ const DocumentsPage = () => {
     }
 
     return (
-        <div className="">
+        <>
 
             {/* Top heading */}
             <div className="">
@@ -84,9 +84,7 @@ const DocumentsPage = () => {
             </div>
 
             <Requirements />
-
-        </div >
-
+        </>
     );
 }
 
