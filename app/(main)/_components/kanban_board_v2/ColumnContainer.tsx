@@ -76,18 +76,24 @@ export function BoardColumn({ column, tasks, isOverlay }: BoardColumnProps) {
                 dragging: isOverlay ? "overlay" : isDragging ? "over" : undefined,
             })}
         >
-            <CardHeader className="p-4 font-semibold border-b-2 text-left flex flex-row space-between items-center">
+            <CardHeader
+                {...attributes}
+                {...listeners}
+                className="p-4 font-semibold border-b-2 text-left flex flex-row space-between items-center">
+
                 <Button
                     variant={"ghost"}
-                    {...attributes}
-                    {...listeners}
+                    // {...attributes}
+                    // {...listeners}
                     className=" p-1 text-primary/50 -ml-2 h-auto cursor-grab relative"
                 >
                     <span className="sr-only">{`Move column: ${column.title}`}</span>
-                    <GripVertical />
+
                 </Button>
                 <span className="ml-auto"> {column.title}</span>
+
             </CardHeader>
+
             <ScrollArea>
                 <CardContent className="flex flex-grow flex-col gap-2 p-2">
                     <SortableContext items={tasksIds}>
