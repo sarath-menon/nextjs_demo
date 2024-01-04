@@ -21,8 +21,11 @@ export default function SettingsDisplayPage() {
                     Turn items on or off to control what&apos;s displayed in the app.
                 </p>
             </div>
-            <Separator />
-            <Roadmap />
+
+            <div className="flex">
+                <Roadmap />
+            </div>
+
         </div>
     )
 }
