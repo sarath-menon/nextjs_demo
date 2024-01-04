@@ -1,6 +1,5 @@
 "use client"
 
-import { SubProject } from "@/app/(main)/_components/subprojects_list/subprojects"
 import { subprojectColumns } from "@/app/(main)/(routes)/forms/subprojects/table-columns"
 import { DataTableV2 } from "@/app/(main)/_components/subprojects_list_filtered/data-table"
 import { SUB_PROJECTS } from "@/app/(main)/data/subprojects"

@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import { Checkbox } from "@/components/ui/checkbox"
 
 import { labels, types, statuses } from "./constants"
-import { subprojectSchema } from "./schema"
+import { SubProject, subprojectSchema } from "./schema"
 import { DataTableColumnHeader } from "../../../_components/subprojects_list_filtered/data-table-column-header"
 import { DataTableRowActions } from "../../../_components/subprojects_list_filtered/data-table-row-actions"
 import Link from "next/link"
@@ -14,7 +14,7 @@ import { Button } from "@/components/ui/button"
 import { ViewReqDialog } from "../../../_components/req_viewer"
 import { cn } from "@/lib/utils"
 
-export const subprojectColumns: ColumnDef<Task>[] = [
+export const subprojectColumns: ColumnDef<SubProject>[] = [
 
   // checkbox
   // {
