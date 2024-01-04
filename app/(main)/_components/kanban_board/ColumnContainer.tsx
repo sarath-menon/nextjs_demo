@@ -83,7 +83,7 @@ function ColumnContainer({
             ref={setNodeRef}
             style={style}
             className="
-            bg-transparent
+            bg-dark/dark-11
             w-[350px]
             h-[500px]
             max-h-[500px]
@@ -101,7 +101,9 @@ function ColumnContainer({
                     setEditMode(true);
                 }}
                 className="
-                bg-purple-500
+                border-dark/dark-11
+                border-2
+                bg-black
                 text-md
                 h-[60px]
                 cursor-grab
@@ -150,7 +152,7 @@ function ColumnContainer({
 
                 {/* Delete */}
                 <Button
-                    variant="outline"
+                    variant="ghost"
                     onClick={() => {
                         deleteColumn(column.id);
                     }}
