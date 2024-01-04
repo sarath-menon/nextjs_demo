@@ -34,10 +34,10 @@ import { CreateAssumptionDialog } from "@/app/(main)/_components/assumption_crea
 import { CreateConstraintDialog } from "@/app/(main)/_components/constraint_creator"
 import { SubProject } from "@/app/(main)/_components/subprojects_list/subprojects"
 import { SUB_PROJECTS } from "@/app/(main)/data/subprojects"
-import { DataTableV2 } from "@/app/(main)/_components/subprojects_list_filtered/data-table"
+import { DataTableV2 } from "@/app/(main)/_components/datatable_v2/data-table"
 import { subprojectColumns } from "@/app/(main)/(routes)/forms/subprojects/table-columns"
 import { OBJECTIVES } from "@/app/(main)/data/objectives"
-import { objectiveColumns } from "@/app/(main)/_components/subprojects_list_filtered/objective-columns"
+import { objectiveColumns } from "@/app/(main)/_components/datatable_v2/objective-columns"
 
 const profileFormSchema = z.object({
     type: z

@@ -4,7 +4,7 @@ import Image from "next/image"
 
 import { columns } from "@/app/(main)/_components/req_table/columns"
 import { DataTable } from "@/app/(main)/_components/req_table/data-table"
-import { DataTableV2 } from "@/app/(main)/_components/subprojects_list_filtered/data-table"
+import { DataTableV2 } from "@/app/(main)/_components/datatable_v2/data-table"
 import { subprojectColumns } from "@/app/(main)/(routes)/forms/subprojects/table-columns"
 import { SUB_PROJECTS } from "@/app/(main)/data/subprojects"
 import { TASKS } from "@/app/(main)/data/tasks"
