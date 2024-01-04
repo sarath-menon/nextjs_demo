@@ -15,11 +15,14 @@ export const taskSchema = z.object({
 export type Task = z.infer<typeof taskSchema>
 
 export const subprojectSchema = z.object({
+  id: z.string(),
   title: z.string(),
-  type: z.string(),
-  abstract: z.string(),
-  label: z.string(),
   status: z.string(),
+  label: z.string(),
+  type: z.string(),
+  priority: z.string(),
 })
 
 export type Subproject = z.infer<typeof subprojectSchema>
+
+
