@@ -73,28 +73,34 @@ export default function TaskPage() {
 
     return (
         <>
-            <div className="hidden h-full flex-1 flex-col space-y-8 p-8 md:flex">
-                <div className="flex items-center justify-between space-y-2">
-                    <div>
-                        <h2 className="text-2xl font-bold tracking-tight">Welcome back!</h2>
-                        <p className="text-muted-foreground">
-                            Here&apos;s a list of your tasks for this month!
-                        </p>
-                    </div>
+            <div className="">
+
+                {/* Top heading */}
+                <div className="">
+                    <h2 className="text-5xl my-4">
+                        File generator
+                    </h2>
+                    <p className="text-muted">
+                        Manage your account settings and set e-mail preferences.
+                    </p>
                 </div>
 
-                <Button onClick={generate_ppt}>
-                    Create PPT
-                </Button>
+                <div className="flex flex-col" >
 
-                {/* Need to clik on the text ! */}
-                <Button>
-                    <PDFDownloadLink document={<MyDocument />} fileName="somename.pdf">
-                        {({ blob, url, loading, error }) =>
-                            loading ? 'Loading document...' : 'Download now!'
-                        }
-                    </PDFDownloadLink>
-                </Button>
+                    <Button variant={"outline"} onClick={generate_ppt}>
+                        Create PPT
+                    </Button>
+
+                    {/* Need to clik on the text ! */}
+                    <Button variant={"outline"} >
+                        <PDFDownloadLink document={<MyDocument />} fileName="somename.pdf">
+                            {({ blob, url, loading, error }) =>
+                                loading ? 'Loading document...' : 'Download now!'
+                            }
+                        </PDFDownloadLink>
+                    </Button>
+
+                </div>
 
                 {/* 
                 <PDFViewer>
