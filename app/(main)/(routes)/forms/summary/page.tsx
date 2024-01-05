@@ -4,9 +4,9 @@ import { taskColumns } from "./table-columns"
 import { DataTableV1 } from "@/app/(main)/_components/datatable_v1/data-table"
 import { TASKS } from "@/app/(main)/data/tasks"
 
-import { ReactFlowDemo } from "@/app/(main)/_components/react_flow/simple_demo/simple_demo"
-import { DragHandleFlow } from "@/app/(main)/_components/react_flow/DragHandle"
-import { EasyConnectExample } from "@/app/(main)/_components/react_flow/EasyConnect"
+import { ReactFlowDemo } from "@/app/(main)/_components/react_flow/simple_demo/app"
+import { DragHandleFlow } from "@/app/(main)/_components/react_flow/DragHandle/app"
+import { EasyConnectExample } from "@/app/(main)/_components/react_flow/EasyConnect/app"
 import { NestedFlow } from "@/app/(main)/_components/react_flow/NestedFlow/app"
 import { StyledComponents } from "@/app/(main)/_components/react_flow/StyledComponents/App"
 
