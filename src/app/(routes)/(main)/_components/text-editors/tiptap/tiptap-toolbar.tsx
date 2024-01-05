@@ -88,7 +88,7 @@ export function TipTapToolbar({ editor }: Props) {
             {/* Bullerlist */}
             <Toggle
                 size={"sm"}
-                pressed={editor.isActive("underline")}
+                pressed={editor.isActive("bulletlist")}
                 onPressedChange={() =>
                     editor.chain().focus().toggleBulletList().run()
                 }
