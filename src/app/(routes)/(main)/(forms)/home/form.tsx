@@ -33,7 +33,7 @@ import { CreateAssumptionDialog } from "@/src/app/(routes)/(main)/_components/di
 import { CreateConstraintDialog } from "@/src/app/(routes)/(main)/_components/dialogs/constraint_creator"
 import { OBJECTIVES } from "@/src/app/(routes)/(main)/data/objectives"
 import { objectiveColumns } from "@/src/app/(routes)/(main)/(forms)/home/table-columns"
-import { SubHeading } from "../../_components/headings/headings"
+import { SubHeading } from "../../_components/headings/page-style"
 
 const profileFormSchema = z.object({
     type: z

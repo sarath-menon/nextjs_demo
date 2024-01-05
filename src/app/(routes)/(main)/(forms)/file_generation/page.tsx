@@ -4,7 +4,7 @@ import { Button } from "@/src/components/ui/button";
 import ReactPDF, { PDFViewer, PDFDownloadLink } from '@react-pdf/renderer';
 import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
 import pptxgen from "pptxgenjs";
-import { TopHeading } from "../../_components/headings/headings";
+import { TopHeading } from "../../_components/headings/page-style";
 
 export const QTRS = ["Q1", "Q2", "Q3", "Q4"];
 

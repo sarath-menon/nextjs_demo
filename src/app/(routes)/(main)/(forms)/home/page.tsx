@@ -3,7 +3,7 @@
 import { Requirements } from "./form"
 import React from "react";
 import { DashboardCard } from "@/src/app/(routes)/(main)/_components/dashboard-card";
-import { TopHeading } from "../../_components/headings/headings";
+import { TopHeading } from "../../_components/headings/page-style";
 
 
 export const Page = () => {

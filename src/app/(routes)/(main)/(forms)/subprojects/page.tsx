@@ -1,6 +1,6 @@
 "use client"
 
-import { TopHeading } from "../../_components/headings/headings";
+import { TopHeading } from "../../_components/headings/page-style";
 import { SubProjectsForm } from "./form"
 import React from "react";
 

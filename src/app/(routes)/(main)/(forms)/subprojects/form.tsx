@@ -3,7 +3,7 @@
 import { subprojectColumns } from "@/src/app/(routes)/(main)/(forms)/subprojects/table-columns"
 import { DataTableV2 } from "@/src/app/(routes)/(main)/_components/datatable_v2/data-table"
 import { SUB_PROJECTS } from "@/src/app/(routes)/(main)/data/subprojects"
-import { SubHeading } from "../../_components/headings/headings"
+import { SubHeading } from "../../_components/headings/page-style"
 
 export function SubProjectsForm() {
 
