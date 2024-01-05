@@ -3,11 +3,6 @@
 import { Editor } from "@tiptap/react"
 
 import {
-    Bold,
-    Strikethrough,
-    Italic,
-    List,
-    ListOrdered,
     Heading2
 } from "lucide-react"
 
@@ -88,7 +83,7 @@ export function TipTapToolbar({ editor }: Props) {
             {/* Bullerlist */}
             <Toggle
                 size={"sm"}
-                pressed={editor.isActive("bulletlist")}
+                pressed={editor.isActive("bulletList")}
                 onPressedChange={() =>
                     editor.chain().focus().toggleBulletList().run()
                 }

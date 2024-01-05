@@ -4,13 +4,18 @@ import { useEditor, EditorContent } from '@tiptap/react'
 import StarterKit from '@tiptap/starter-kit'
 import { TipTapToolbar } from './tiptap-toolbar'
 
-import { Toggle } from '@/src/components/ui/toggle'
 import { Heading } from '@tiptap/extension-heading'
+import { BulletList } from '@tiptap/extension-bullet-list'
+import { ListItem } from '@tiptap/extension-list-item'
 
 export function TiptapEntry() {
     const editor = useEditor({
         extensions: [
             StarterKit.configure({
+                bulletList: {
+                    keepMarks: true,
+                    keepAttributes: false, // TODO : Making this as `false` becase marks are not preserved when I try to preserve attrs, awaiting a bit of help
+                },
 
             }),
             Heading.configure({
@@ -18,8 +23,10 @@ export function TiptapEntry() {
                     class: "text-xl font-bold",
                     levels: [2],
                 }
-            }
-            )],
+            }),
+
+            BulletList, ListItem
+        ],
         content: "",
         editorProps: {
             attributes: {
