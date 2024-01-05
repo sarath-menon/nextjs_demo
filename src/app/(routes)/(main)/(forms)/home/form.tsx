@@ -33,6 +33,7 @@ import { CreateAssumptionDialog } from "@/src/app/(routes)/(main)/_components/di
 import { CreateConstraintDialog } from "@/src/app/(routes)/(main)/_components/dialogs/constraint_creator"
 import { OBJECTIVES } from "@/src/app/(routes)/(main)/data/objectives"
 import { objectiveColumns } from "@/src/app/(routes)/(main)/(forms)/home/table-columns"
+import { SubHeading } from "../../_components/headings/headings"
 
 const profileFormSchema = z.object({
     type: z
@@ -94,11 +95,16 @@ export function Requirements() {
     return (
 
         <div className="">
+
             {/* Objectives */}
             <div className="my-6">
-                <h3 className="text-3xl font-medium">
+                {/* <h3 className="text-3xl font-medium">
                     Objectives
-                </h3>
+                </h3> */}
+
+                <SubHeading
+                    subheading="Objectives"
+                    text="tasks for this month" />
 
                 <div className="py-6">
                     {/* <DataTableV2 data={OBJECTIVES} columns={objectiveColumns} /> */}
@@ -111,9 +117,10 @@ export function Requirements() {
             {/* Assumption */}
 
             <div className="my-6">
-                <h3 className="text-3xl font-medium">
-                    Assumptions
-                </h3>
+
+                <SubHeading
+                    subheading="Assumptions"
+                    text="tasks for this month" />
 
                 <div className="py-6">
                     <CreateAssumptionDialog />
@@ -123,9 +130,10 @@ export function Requirements() {
             {/* Constrains */}
 
             <div className="my-6">
-                <h3 className="text-3xl font-medium">
-                    Constraints
-                </h3>
+
+                <SubHeading
+                    subheading="Constraints"
+                    text="tasks for this month" />
 
                 <div className="py-6">
                     <CreateConstraintDialog />

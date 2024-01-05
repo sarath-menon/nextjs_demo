@@ -3,6 +3,7 @@
 import { subprojectColumns } from "@/src/app/(routes)/(main)/(forms)/subprojects/table-columns"
 import { DataTableV2 } from "@/src/app/(routes)/(main)/_components/datatable_v2/data-table"
 import { SUB_PROJECTS } from "@/src/app/(routes)/(main)/data/subprojects"
+import { SubHeading } from "../../_components/headings/headings"
 
 export function SubProjectsForm() {
 
@@ -11,12 +12,10 @@ export function SubProjectsForm() {
         <>
             <div className="hidden h-full flex-1 flex-col space-y-8 p-8 md:flex">
                 <div className="flex items-center justify-between space-y-2">
-                    <div>
-                        <h2 className="text-2xl font-bold tracking-tight">Welcome back!</h2>
-                        <p className="text-muted-foreground">
-                            Here&apos;s a list of your tasks for this month!
-                        </p>
-                    </div>
+
+                    <SubHeading
+                        subheading="Subheading"
+                        text="tasks for this month" />
 
                 </div>
 
