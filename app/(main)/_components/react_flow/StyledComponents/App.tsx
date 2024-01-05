@@ -2,13 +2,13 @@
 
 import React, { useCallback, useState } from 'react';
 import ReactFlow, {
-    useNodesState,
-    useEdgesState,
-    addEdge,
-    MiniMap,
-    Controls,
-    Panel,
-    Background,
+  useNodesState,
+  useEdgesState,
+  addEdge,
+  MiniMap,
+  Controls,
+  Panel,
+  Background,
 } from 'reactflow';
 import styled, { ThemeProvider } from 'styled-components';
 
@@ -19,7 +19,7 @@ import CustomNode from './CustomNode';
 import 'reactflow/dist/style.css';
 
 const nodeTypes = {
-    custom: CustomNode,
+  custom: CustomNode,
 };
 
 const ReactFlowStyled = styled(ReactFlow)`
@@ -56,44 +56,44 @@ const ControlsStyled = styled(Controls)`
 `;
 
 const Flow = ({ children }) => {
-    const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
-    const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
+  const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
+  const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
 
-    const onConnect = useCallback((params) => setEdges((eds) => addEdge(params, eds)), []);
+  const onConnect = useCallback((params) => setEdges((eds) => addEdge(params, eds)), []);
 
-    return (
-        <ReactFlowStyled
-            nodes={nodes}
-            edges={edges}
-            onNodesChange={onNodesChange}
-            onEdgesChange={onEdgesChange}
-            onConnect={onConnect}
-            nodeTypes={nodeTypes}
-            fitView
-        >
-            <Background variant="dots" gap={12} size={1} />
+  return (
+    <ReactFlowStyled
+      nodes={nodes}
+      edges={edges}
+      onNodesChange={onNodesChange}
+      onEdgesChange={onEdgesChange}
+      onConnect={onConnect}
+      nodeTypes={nodeTypes}
+      fitView
+    >
+      <Background variant="dots" gap={12} size={1} />
 
-            <ControlsStyled />
-            {children}
-        </ReactFlowStyled>
-    );
+      <ControlsStyled />
+      {children}
+    </ReactFlowStyled>
+  );
 };
 
 export function StyledComponents() {
-    const [mode, setMode] = useState('light');
-    const theme = mode === 'light' ? lightTheme : darkTheme;
+  const [mode, setMode] = useState('dark');
+  const theme = mode === 'light' ? lightTheme : darkTheme;
 
-    const toggleMode = () => {
-        setMode((m) => (m === 'light' ? 'dark' : 'light'));
-    };
+  const toggleMode = () => {
+    setMode((m) => (m === 'light' ? 'dark' : 'light'));
+  };
 
-    return (
-        <ThemeProvider theme={theme}>
-            <Flow>
-                <Panel position="top-left">
-                    <button onClick={toggleMode}>switch mode</button>
-                </Panel>
-            </Flow>
-        </ThemeProvider>
-    );
+  return (
+    <ThemeProvider theme={theme}>
+      <Flow>
+        <Panel position="top-left">
+          <button onClick={toggleMode}>switch mode</button>
+        </Panel>
+      </Flow>
+    </ThemeProvider>
+  );
 };
