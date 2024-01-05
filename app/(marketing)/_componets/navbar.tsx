@@ -28,24 +28,28 @@ export const Navbar = () => {
                 )}
                 {!isAuthenticated && !isLoading && (
                     <>
-                        <SignInButton mode="modal">
+                        <SignInButton
+                            mode="modal"
+                            afterSignInUrl="/forms/home"
+                        >
                             <Button variant={"ghost"} size={"sm"}>
                                 Login
                             </Button>
                         </SignInButton>
 
+                        {/* 
                         <SignInButton mode="modal">
                             <Button size={"sm"}>
                                 Get Simplicyti free
                             </Button>
-                        </SignInButton>
+                        </SignInButton> */}
                     </>
                 )}
 
                 {isAuthenticated && !isLoading && (
                     <>
                         <Button variant={"ghost"} size="sm" asChild>
-                            <Link href="/forms/requirements">
+                            <Link href="/forms/home">
                                 Enter Simplicyti
                             </Link>
                         </Button>
