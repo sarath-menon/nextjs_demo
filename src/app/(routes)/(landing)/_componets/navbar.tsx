@@ -30,7 +30,7 @@ export const Navbar = () => {
                     <>
                         <SignInButton
                             mode="modal"
-                            afterSignInUrl="/forms/home"
+                            afterSignInUrl="/home"
                         >
                             <Button variant={"ghost"} size={"sm"}>
                                 Login
@@ -49,7 +49,7 @@ export const Navbar = () => {
                 {isAuthenticated && !isLoading && (
                     <>
                         <Button variant={"ghost"} size="sm" asChild>
-                            <Link href="/forms/home">
+                            <Link href="/home">
                                 Enter Simplicyti
                             </Link>
                         </Button>
