@@ -1,6 +1,6 @@
 "use client"
 
-import { TopHeading } from "../../_components/headings/top_heading/top-heading";
+import { TopHeading } from "../../_components/headings/headings";
 import { TeamForm } from "./form"
 import React from "react";
 
@@ -12,7 +12,7 @@ const DocumentsPage = () => {
 
             <TopHeading
                 heading="Team"
-                subheading="Manage your team here" />
+                text="Manage your team here" />
 
             <TeamForm />
 

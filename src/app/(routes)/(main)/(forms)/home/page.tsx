@@ -12,7 +12,7 @@ import { Requirements } from "./form"
 import React from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/src/components/ui/card";
 import { DashboardCard } from "@/src/app/(routes)/(main)/_components/dashboard-card";
-import { TopHeading } from "../../_components/headings/top_heading/top-heading";
+import { TopHeading } from "../../_components/headings/headings";
 
 
 const DocumentsPage = () => {
@@ -40,7 +40,7 @@ const DocumentsPage = () => {
             {/* Top heading */}
             <TopHeading
                 heading="Project Home"
-                subheading=" Manage your account settings and set e-mail preferences." />
+                text=" Manage your account settings and set e-mail preferences." />
 
             {/* Dashboard Cards row */}
 

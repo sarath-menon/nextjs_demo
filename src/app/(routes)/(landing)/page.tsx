@@ -80,7 +80,7 @@ const HomePage = () => {
 
         <TitleSection
           title="Keep track of your meetings all in one place"
-          subheading="Capture your ideas, thoughts, and meeting notes in a structured and organized manner."
+          text="Capture your ideas, thoughts, and meeting notes in a structured and organized manner."
           pill="Features"
         />
 
@@ -109,7 +109,7 @@ const HomePage = () => {
         >
           <TitleSection
             title="Trusted by all"
-            subheading="Join thousands of satisfied users who rely on our platform for their 
+            text="Join thousands of satisfied users who rely on our platform for their 
             personal and professional productivity needs."
             pill="Testimonials"
           />
@@ -177,7 +177,7 @@ const HomePage = () => {
 
         <TitleSection
           title="The Perfect Plan For You"
-          subheading="Experience all the benefits of our platform. Select a plan that suits your needs and take your productivity to new heights."
+          text="Experience all the benefits of our platform. Select a plan that suits your needs and take your productivity to new heights."
           pill="Pricing"
         />
 
