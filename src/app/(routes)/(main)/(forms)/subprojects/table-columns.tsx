@@ -93,13 +93,12 @@ export const subprojectColumns: ColumnDef<SubProject>[] = [
           <div className="flex w-full flex-col gap-1">
             <div className="flex items-center">
 
-              {/* Title */}
               <div className="flex items-center gap-2">
 
-                <div className="font-semibold">
+                {/* Title */}
+                <div className="text-lg">
                   {/* <SubprojectViewDialog name={item.name} /> */}
                   {row.getValue("title")}
-                  {/* Project title */}
                 </div>
 
                 {!row.getValue("title") && (
@@ -129,7 +128,7 @@ export const subprojectColumns: ColumnDef<SubProject>[] = [
             </div> */}
 
             {/* Absract */}
-            <div className="line-clamp-2 text-xs text-muted-foreground">
+            <div className="line-clamp-2 text-sm text-muted-foreground">
               Whenever there's an error observed in dynamically fetching helper JavaScript files known as Chunks, a ChunkLoad Error is thrown.
               {row.getValue("title")}
             </div>

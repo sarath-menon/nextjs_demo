@@ -92,6 +92,7 @@ export function DataTableV2<TData, TValue>({
               </TableRow>
             ))}
           </TableHeader>
+
           <TableBody>
             {table.getRowModel().rows?.length ? (
               table.getRowModel().rows.map((row) => (
@@ -101,15 +102,18 @@ export function DataTableV2<TData, TValue>({
                 >
                   {row.getVisibleCells().map((cell) => (
                     <TableCell key={cell.id}>
+
                       {flexRender(
                         cell.column.columnDef.cell,
                         cell.getContext()
                       )}
+
                     </TableCell>
                   ))}
                 </TableRow>
               ))
             ) : (
+
               <TableRow>
                 <TableCell
                   colSpan={columns.length}
@@ -119,7 +123,9 @@ export function DataTableV2<TData, TValue>({
                 </TableCell>
               </TableRow>
             )}
+
           </TableBody>
+
         </Table>
       </div>
 
