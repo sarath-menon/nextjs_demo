@@ -5,14 +5,14 @@ import { redirect } from "next/navigation";
 
 import { Spinner } from "@/components/spinner";
 
-import { Navigation } from "./_components/notion_clone/navigation";
-import { Sidebar } from "./_components/sidebar";
-import { Menu } from "./_components/menu";
+import { Navigation } from "./_components/sidebar/notion_clone/navigation";
+import { Sidebar } from "./_components/sidebar/notion_clone/sidebar";
+import { Menu } from "./_components/top_navbar/menu";
 import { Separator } from "@/components/ui/separator";
 import { ICON_SIDEBAR_ITEMS, SIDEBAR_ITEMS } from "@/lib/constants";
-import TeamSwitcher from "./_components/project-switcher";
-import { IconSidebar } from "./_components/icon-sidebar";
-import { UserNav } from "./_components/user-nav";
+import TeamSwitcher from "./_components/top_navbar/project-switcher";
+import { IconSidebar } from "./_components/sidebar/icon-sidebar";
+import { UserNav } from "./_components/top_navbar/user-nav";
 
 
 interface ObjectivesLayoutProps {

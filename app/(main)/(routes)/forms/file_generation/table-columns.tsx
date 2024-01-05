@@ -11,7 +11,7 @@ import { DataTableColumnHeader } from "@/app/(main)/_components/datatable_common
 import { DataTableRowActions } from "../../../_components/datatable_v1/data-table-row-actions"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ViewReqDialog } from "../../../_components/req_viewer"
+import { ViewReqDialog } from "../../../_components/dialogs/req_viewer"
 
 export const taskColumns: ColumnDef<Task>[] = [
 

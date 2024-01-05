@@ -50,7 +50,7 @@ import {
     SelectValue,
 } from "@/components/ui/select"
 import { PROJECTS_LIST } from "@/lib/constants"
-import { TeamMembersList } from "./team-members"
+import { TeamMembersList } from "../team-members"
 import Link from "next/link"
 
 
