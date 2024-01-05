@@ -18,7 +18,7 @@ export function CreateConstraintDialog() {
         <Dialog>
             <DialogTrigger asChild>
                 <Button variant="secondary">
-                    Add new constraint
+                    Add new
                 </Button>
 
             </DialogTrigger>

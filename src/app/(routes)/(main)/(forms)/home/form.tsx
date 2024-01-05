@@ -93,37 +93,14 @@ export function Requirements() {
 
     return (
 
-        <div>
-            {/* Tabs */}
-            {/* <Tabs defaultValue="account" className="w-[200px]">
-                <TabsList className="grid w-full grid-cols-2">
-                    <TabsTrigger value="account">Account</TabsTrigger>
-                    <TabsTrigger value="password">Password</TabsTrigger>
-                </TabsList>
-
-                <TabsContent value="account">
-                    <div>
-                        selva
-                    </div>
-
-
-                </TabsContent>
-
-                <TabsContent value="password">
-                    <div>
-                        selva2
-                    </div>
-                </TabsContent>
-
-            </Tabs> */}
-
+        <div className="">
             {/* Objectives */}
-            <div className="my-12">
+            <div className="my-6">
                 <h3 className="text-3xl font-medium">
                     Objectives
                 </h3>
 
-                <div className="py-8">
+                <div className="py-6">
                     {/* <DataTableV2 data={OBJECTIVES} columns={objectiveColumns} /> */}
 
                     <CreateObjectiveDialog />
@@ -133,7 +110,7 @@ export function Requirements() {
 
             {/* Assumption */}
 
-            <div className="my-12">
+            <div className="my-6">
                 <h3 className="text-3xl font-medium">
                     Assumptions
                 </h3>
@@ -145,7 +122,7 @@ export function Requirements() {
 
             {/* Constrains */}
 
-            <div className="my-12">
+            <div className="my-6">
                 <h3 className="text-3xl font-medium">
                     Constraints
                 </h3>

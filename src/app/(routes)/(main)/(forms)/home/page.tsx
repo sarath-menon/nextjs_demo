@@ -36,7 +36,6 @@ const DocumentsPage = () => {
 
     return (
         <>
-
             {/* Top heading */}
             <div className="">
                 <h2 className="text-5xl my-4">
@@ -48,7 +47,8 @@ const DocumentsPage = () => {
             </div>
 
             {/* Dashboard Cards row */}
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4 my-6">
+
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4 m-6">
 
                 {/* Publications */}
                 <DashboardCard
@@ -83,8 +83,12 @@ const DocumentsPage = () => {
                 </DashboardCard>
             </div>
 
-            <Requirements />
+            <div className="mx-6 py-2">
+                <Requirements />
+            </div>
+
         </>
+
     );
 }
 

@@ -19,7 +19,7 @@ export function CreateObjectiveDialog() {
         <Dialog>
             <DialogTrigger asChild>
                 <Button variant="secondary">
-                    Add new objective
+                    Add new
                 </Button>
             </DialogTrigger>
 

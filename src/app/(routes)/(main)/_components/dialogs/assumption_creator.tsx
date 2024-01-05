@@ -18,7 +18,7 @@ export function CreateAssumptionDialog() {
         <Dialog>
             <DialogTrigger asChild>
                 <Button variant="secondary">
-                    Add new assumption
+                    Add new
                 </Button>
             </DialogTrigger>
 
