@@ -4,7 +4,8 @@ import { taskColumns } from "./table-columns"
 import { DataTableV1 } from "@/app/(main)/_components/datatable_v1/data-table"
 import { TASKS } from "@/app/(main)/data/tasks"
 
-import { ReactFlowApp } from "./form"
+import { ReactFlowApp } from "@/app/(main)/_components/dnd_demo/reactflow_app"
+import { ReactFlowDemo } from "@/app/(main)/_components/react_flow/simple_demo"
 
 export const metadata: Metadata = {
     title: "Tasks",
@@ -29,8 +30,8 @@ export default async function TaskPage() {
                     <DataTableV1 data={TASKS} columns={taskColumns} />
                 </div> */}
 
-                <div>
-                    <ReactFlowApp />
+                <div className="bg-dark/dark-12">
+                    <ReactFlowDemo />
                 </div>
             </div>
         </>
