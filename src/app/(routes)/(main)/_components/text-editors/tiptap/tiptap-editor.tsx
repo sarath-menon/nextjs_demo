@@ -2,18 +2,28 @@
 
 import { useEditor, EditorContent } from '@tiptap/react'
 import StarterKit from '@tiptap/starter-kit'
+import { TipTapToolbar } from './tiptap-toolbar'
 
-const Tiptap = () => {
+import { Toggle } from '@/src/components/ui/toggle'
+
+export function TiptapEntry() {
     const editor = useEditor({
         extensions: [
             StarterKit,
         ],
-        content: '<p>Hello World! 🌎️</p>',
+        content: "Enter description",
+        editorProps: {
+            attributes: {
+                class: "rounded-md border min-h-[150px] border-input bg-back"
+            }
+        }
     })
 
     return (
-        <EditorContent editor={editor} />
+        <>
+            <TipTapToolbar editor={editor} />
+            <EditorContent editor={editor} />
+
+        </>
     )
 }
-
-export default Tiptap
