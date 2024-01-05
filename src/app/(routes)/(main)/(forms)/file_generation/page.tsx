@@ -4,6 +4,7 @@ import { Button } from "@/src/components/ui/button";
 import ReactPDF, { PDFViewer, PDFDownloadLink } from '@react-pdf/renderer';
 import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
 import pptxgen from "pptxgenjs";
+import { TopHeading } from "../../_components/headings/top_heading/top-heading";
 
 export const QTRS = ["Q1", "Q2", "Q3", "Q4"];
 
@@ -75,15 +76,10 @@ export default function TaskPage() {
         <>
             <div className="">
 
-                {/* Top heading */}
-                <div className="">
-                    <h2 className="text-5xl my-4">
-                        File generator
-                    </h2>
-                    <p className="text-muted">
-                        Manage your account settings and set e-mail preferences.
-                    </p>
-                </div>
+
+                <TopHeading
+                    heading="File generator"
+                    subheading="Manage your account settings and set e-mail preferences" />
 
                 <div className="flex flex-col" >
 

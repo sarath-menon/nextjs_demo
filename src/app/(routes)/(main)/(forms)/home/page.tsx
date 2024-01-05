@@ -12,6 +12,7 @@ import { Requirements } from "./form"
 import React from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/src/components/ui/card";
 import { DashboardCard } from "@/src/app/(routes)/(main)/_components/dashboard-card";
+import { TopHeading } from "../../_components/headings/top_heading/top-heading";
 
 
 const DocumentsPage = () => {
@@ -37,14 +38,9 @@ const DocumentsPage = () => {
     return (
         <>
             {/* Top heading */}
-            <div className="">
-                <h2 className="text-5xl my-4">
-                    Project Home
-                </h2>
-                <p className="text-muted">
-                    Manage your account settings and set e-mail preferences.
-                </p>
-            </div>
+            <TopHeading
+                heading="Project Home"
+                subheading=" Manage your account settings and set e-mail preferences." />
 
             {/* Dashboard Cards row */}
 
