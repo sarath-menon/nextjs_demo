@@ -20,7 +20,7 @@ export function TiptapEntry() {
                 }
             }
             )],
-        content: "Enter description",
+        content: " Enter description",
         editorProps: {
             attributes: {
                 class: "p-4 rounded-md border min-h-[150px] border-input bg-back"
