@@ -7,11 +7,11 @@ import { Checkbox } from "@/src/components/ui/checkbox"
 
 import { labels, types, statuses } from "./constants"
 import { taskSchema, Task } from "./schema"
-import { DataTableColumnHeader } from "@/src/app/(main)/_components/datatable_common/data-table-column-header"
-import { DataTableRowActions } from "../../../_components/datatable_v1/data-table-row-actions"
+import { DataTableColumnHeader } from "@/src/app/(routes)/(main)/_components/datatable_common/data-table-column-header"
+import { DataTableRowActions } from "../../_components/datatable_v1/data-table-row-actions"
 import Link from "next/link"
 import { Button } from "@/src/components/ui/button"
-import { ViewReqDialog } from "../../../_components/dialogs/req_viewer"
+import { ViewReqDialog } from "../../_components/dialogs/req_viewer"
 
 export const taskColumns: ColumnDef<Task>[] = [
 

@@ -20,7 +20,7 @@ import { MailDisplay } from "./mail-display"
 import { MailList } from "./mail-list"
 import { Nav } from "./nav"
 
-import { Mail } from "@/src/app/(main)/data/mail"
+import { Mail } from "@/src/app/(routes)/(main)/data/mail"
 import { useMail } from "./use-mail"
 import { cn } from "@/src/lib/utils"
 

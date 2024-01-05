@@ -1,14 +1,14 @@
 import { Metadata } from "next"
 
 import { taskColumns } from "./table-columns"
-import { DataTableV1 } from "@/src/app/(main)/_components/datatable_v1/data-table"
-import { TASKS } from "@/src/app/(main)/data/tasks"
+import { DataTableV1 } from "@/src/app/(routes)/(main)/_components/datatable_v1/data-table"
+import { TASKS } from "@/src/app/(routes)/(main)/data/tasks"
 
-import { ReactFlowDemo } from "@/src/app/(main)/_components/react_flow/simple_demo/app"
-import { DragHandleFlow } from "@/src/app/(main)/_components/react_flow/DragHandle/app"
-import { EasyConnectExample } from "@/src/app/(main)/_components/react_flow/EasyConnect/app"
-import { NestedFlow } from "@/src/app/(main)/_components/react_flow/NestedFlow/app"
-import { StyledComponents } from "@/src/app/(main)/_components/react_flow/StyledComponents/App"
+import { ReactFlowDemo } from "@/src/app/(routes)/(main)/_components/react_flow/simple_demo/app"
+import { DragHandleFlow } from "@/src/app/(routes)/(main)/_components/react_flow/DragHandle/app"
+import { EasyConnectExample } from "@/src/app/(routes)/(main)/_components/react_flow/EasyConnect/app"
+import { NestedFlow } from "@/src/app/(routes)/(main)/_components/react_flow/NestedFlow/app"
+import { StyledComponents } from "@/src/app/(routes)/(main)/_components/react_flow/StyledComponents/App"
 
 export const metadata: Metadata = {
     title: "Tasks",

@@ -11,7 +11,7 @@ import { Separator } from "@radix-ui/react-dropdown-menu";
 import { Requirements } from "./form"
 import React from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/src/components/ui/card";
-import { DashboardCard } from "@/src/app/(main)/_components/dashboard-card";
+import { DashboardCard } from "@/src/app/(routes)/(main)/_components/dashboard-card";
 
 
 const DocumentsPage = () => {

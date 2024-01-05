@@ -1,5 +1,5 @@
 import { Button } from "@/src/components/ui/button";
-import { Logo } from "@/src/app/(landing)/_componets/logo";
+import { Logo } from "@/src/app/(routes)/(landing)/_componets/logo";
 
 const Footer = () => {
     return (

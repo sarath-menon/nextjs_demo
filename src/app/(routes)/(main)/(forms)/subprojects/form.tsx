@@ -1,8 +1,8 @@
 "use client"
 
-import { subprojectColumns } from "@/src/app/(main)/(routes)/(forms)/subprojects/table-columns"
-import { DataTableV2 } from "@/src/app/(main)/_components/datatable_v2/data-table"
-import { SUB_PROJECTS } from "@/src/app/(main)/data/subprojects"
+import { subprojectColumns } from "@/src/app/(routes)/(main)/(forms)/subprojects/table-columns"
+import { DataTableV2 } from "@/src/app/(routes)/(main)/_components/datatable_v2/data-table"
+import { SUB_PROJECTS } from "@/src/app/(routes)/(main)/data/subprojects"
 
 export function SubProjectsForm() {
 

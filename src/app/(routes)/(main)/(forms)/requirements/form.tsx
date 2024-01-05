@@ -7,7 +7,7 @@ import * as z from "zod"
 
 import { cn } from "@/src/lib/utils"
 import { Button } from "@/src/components/ui/button"
-import { CreateReqDialog } from "@/src/app/(main)/_components/dialogs/objective_creator"
+import { CreateReqDialog } from "@/src/app/(routes)/(main)/_components/dialogs/objective_creator"
 
 import {
     Form,

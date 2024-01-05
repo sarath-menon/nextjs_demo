@@ -5,7 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useFieldArray, useForm } from "react-hook-form"
 import * as z from "zod"
 import { Button } from "@/src/components/ui/button"
-import { CreateObjectiveDialog } from "@/src/app/(main)/_components/dialogs/objective_creator"
+import { CreateObjectiveDialog } from "@/src/app/(routes)/(main)/_components/dialogs/objective_creator"
 
 import {
     Form,
@@ -29,10 +29,10 @@ import {
 import { Textarea } from "@/src/components/ui/textarea"
 import { toast } from "@/src/components/ui/use-toast"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/src/components/ui/tabs"
-import { CreateAssumptionDialog } from "@/src/app/(main)/_components/dialogs/assumption_creator"
-import { CreateConstraintDialog } from "@/src/app/(main)/_components/dialogs/constraint_creator"
-import { OBJECTIVES } from "@/src/app/(main)/data/objectives"
-import { objectiveColumns } from "@/src/app/(main)/(routes)/(forms)/home/table-columns"
+import { CreateAssumptionDialog } from "@/src/app/(routes)/(main)/_components/dialogs/assumption_creator"
+import { CreateConstraintDialog } from "@/src/app/(routes)/(main)/_components/dialogs/constraint_creator"
+import { OBJECTIVES } from "@/src/app/(routes)/(main)/data/objectives"
+import { objectiveColumns } from "@/src/app/(routes)/(main)/(forms)/home/table-columns"
 
 const profileFormSchema = z.object({
     type: z

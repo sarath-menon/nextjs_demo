@@ -5,7 +5,7 @@ import { cn } from "@/src/lib/utils"
 import { Badge } from "@/src/components/ui/badge"
 import { ScrollArea } from "@/src/components/ui/scroll-area"
 import { Separator } from "@/src/components/ui/separator"
-import { Mail } from "@/src/app/(main)/data/mail"
+import { Mail } from "@/src/app/(routes)/(main)/data/mail"
 import { useMail } from "./use-mail"
 
 interface MailListProps {
