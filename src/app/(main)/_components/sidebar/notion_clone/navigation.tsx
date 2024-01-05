@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/src/lib/utils";
 import { ChevronsLeft, MenuIcon, PlusCircle, Search, Settings } from "lucide-react"
 import { usePathname } from "next/navigation";
 import { ElementRef, useEffect, useRef, useState } from "react";

@@ -5,7 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useFieldArray, useForm } from "react-hook-form"
 import * as z from "zod"
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/src/lib/utils"
 import { Button } from "@/src/components/ui/button"
 import { CreateReqDialog } from "@/src/app/(main)/_components/dialogs/objective_creator"
 

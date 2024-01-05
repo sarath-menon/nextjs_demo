@@ -1,7 +1,7 @@
 import { ComponentProps } from "react"
 import formatDistanceToNow from "date-fns/formatDistanceToNow"
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/src/lib/utils"
 import { Badge } from "@/src/components/ui/badge"
 import { ScrollArea } from "@/src/components/ui/scroll-area"
 import { Separator } from "@/src/components/ui/separator"

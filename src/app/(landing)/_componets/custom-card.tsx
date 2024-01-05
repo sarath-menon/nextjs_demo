@@ -1,5 +1,5 @@
 import { Card, CardContent, CardFooter, CardHeader } from "@/src/components/ui/card";
-import { cn } from '@/lib/utils';
+import { cn } from '@/src/lib/utils';
 
 type CardProps = React.ComponentProps<typeof Card>;
 type CustomCardProps = CardProps & {

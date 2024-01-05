@@ -3,7 +3,7 @@
 import { ModeToggle } from "@/src/components/mode-toggle";
 import { Logo } from "@/src/app/(landing)/_componets/logo";
 import { useScrollTop } from "@/src/hooks/use-scroll-top";
-import { cn } from "@/lib/utils";
+import { cn } from "@/src/lib/utils";
 import { useConvexAuth } from "convex/react";
 import { SignInButton, UserButton } from "@clerk/clerk-react";
 import { Button } from "@/src/components/ui/button";

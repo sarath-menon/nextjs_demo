@@ -14,7 +14,7 @@ import { toast } from "sonner";
 import { useUser } from "@clerk/clerk-react";
 
 import { Id } from "@/convex/_generated/dataModel";
-import { cn } from "@/lib/utils";
+import { cn } from "@/src/lib/utils";
 import { Skeleton } from "@/src/components/ui/skeleton";
 import { api } from "@/convex/_generated/api";
 import {

@@ -5,7 +5,7 @@ import Footer from "./_componets/footer";
 import TitleSection from "./_componets/title";
 import Image from "next/image";
 import { Divide } from "lucide-react";
-import { CLIENTS, PRICING_CARDS, PRICING_PLANS, USERS } from "@/lib/constants";
+import { CLIENTS, PRICING_CARDS, PRICING_PLANS, USERS } from "@/src/lib/constants";
 import { randomUUID } from "crypto";
 import { twMerge } from "tailwind-merge";
 import clsx from "clsx";

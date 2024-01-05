@@ -7,7 +7,7 @@ import {
     PlusCircledIcon,
 } from "@radix-ui/react-icons"
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/src/lib/utils"
 import {
     Avatar,
     AvatarFallback,
@@ -49,7 +49,7 @@ import {
     SelectTrigger,
     SelectValue,
 } from "@/src/components/ui/select"
-import { PROJECTS_LIST } from "@/lib/constants"
+import { PROJECTS_LIST } from "@/src/lib/constants"
 import { TeamMembersList } from "../team-members"
 import Link from "next/link"
 

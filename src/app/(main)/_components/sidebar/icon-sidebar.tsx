@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils"
+import { cn } from "@/src/lib/utils"
 
 import { Button, buttonVariants } from "@/src/components/ui/button"
 import { ScrollArea } from "@/src/components/ui/scroll-area"

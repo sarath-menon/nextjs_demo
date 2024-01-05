@@ -22,7 +22,7 @@ import { Nav } from "./nav"
 
 import { Mail } from "@/src/app/(main)/data/mail"
 import { useMail } from "./use-mail"
-import { cn } from "@/lib/utils"
+import { cn } from "@/src/lib/utils"
 
 import { Separator } from "@/src/components/ui/separator"
 import { Input } from "@/src/components/ui/input"

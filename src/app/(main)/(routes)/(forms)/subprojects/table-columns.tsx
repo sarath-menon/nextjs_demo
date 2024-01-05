@@ -12,7 +12,7 @@ import { DataTableRowActions } from "../../../_components/datatable_v2/data-tabl
 import Link from "next/link"
 import { Button } from "@/src/components/ui/button"
 import { ViewReqDialog } from "../../../_components/dialogs/req_viewer"
-import { cn } from "@/lib/utils"
+import { cn } from "@/src/lib/utils"
 
 export const subprojectColumns: ColumnDef<SubProject>[] = [
 
