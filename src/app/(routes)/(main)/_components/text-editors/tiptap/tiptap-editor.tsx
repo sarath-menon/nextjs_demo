@@ -20,10 +20,10 @@ export function TiptapEntry() {
                 }
             }
             )],
-        content: " Enter description",
+        content: "",
         editorProps: {
             attributes: {
-                class: "p-4 rounded-md border min-h-[150px] border-input bg-back"
+                class: "p-2 text-sm rounded-md border min-h-10 border-input bg-back"
             }
         }
     })
