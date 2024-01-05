@@ -25,7 +25,12 @@ export function TiptapEntry() {
                 }
             }),
 
-            BulletList, ListItem
+            BulletList.configure({
+                HTMLAttributes: {
+                    class: 'list-disc pl-4',
+                }
+            })
+
         ],
         content: "",
         editorProps: {
