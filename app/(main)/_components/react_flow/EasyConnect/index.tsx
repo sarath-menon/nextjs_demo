@@ -2,7 +2,7 @@
 
 import React, { useCallback } from 'react';
 
-import ReactFlow, { addEdge, useNodesState, useEdgesState, MarkerType } from 'reactflow';
+import ReactFlow, { Background, addEdge, useNodesState, useEdgesState, MarkerType } from 'reactflow';
 
 import CustomNode from './CustomNode';
 import FloatingEdge from './FloatingEdge';
@@ -77,7 +77,11 @@ export function EasyConnectExample() {
       defaultEdgeOptions={defaultEdgeOptions}
       connectionLineComponent={CustomConnectionLine}
       connectionLineStyle={connectionLineStyle}
-    />
+    >
+
+      <Background variant="dots" gap={12} size={1} />
+
+    </ReactFlow>
   );
 };
 
