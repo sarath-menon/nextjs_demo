@@ -111,7 +111,7 @@ export function NestedFlow() {
             className="react-flow-subflows-example"
             fitView
         >
-            <MiniMap />
+
             <Controls />
             <Background />
         </ReactFlow>
