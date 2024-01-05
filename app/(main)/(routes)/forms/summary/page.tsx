@@ -4,8 +4,9 @@ import { taskColumns } from "./table-columns"
 import { DataTableV1 } from "@/app/(main)/_components/datatable_v1/data-table"
 import { TASKS } from "@/app/(main)/data/tasks"
 
-import { ReactFlowApp } from "@/app/(main)/_components/dnd_demo/reactflow_app"
-import { ReactFlowDemo } from "@/app/(main)/_components/react_flow/simple_demo"
+import { ReactFlowDemo } from "@/app/(main)/_components/react_flow/simple_demo/simple_demo"
+import { DragHandleFlow } from "@/app/(main)/_components/react_flow/DragHandle"
+import { EasyConnectExample } from "@/app/(main)/_components/react_flow/EasyConnect"
 
 export const metadata: Metadata = {
     title: "Tasks",
@@ -30,8 +31,9 @@ export default async function TaskPage() {
                     <DataTableV1 data={TASKS} columns={taskColumns} />
                 </div> */}
 
-                <div className="bg-dark/dark-12">
-                    <ReactFlowDemo />
+                <div className="bg-dark/dark-3 h-[500px]">
+                    {/* <ReactFlowDemo /> */}
+                    <EasyConnectExample />
                 </div>
             </div>
         </>
