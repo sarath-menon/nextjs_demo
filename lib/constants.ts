@@ -186,12 +186,18 @@ export const ICON_SIDEBAR_ITEMS: IconSidebarItem[] = [
     title: "Search",
     href: '/forms/roadmap',
     svg_path: '/icons/search.svg',
-},
-{
-  title: "Trash",
-  href: '/forms/summary',
-  svg_path: '/icons/trash.svg',
-}
+  },
+  {
+    title: "File generation",
+    href: '/forms/file_generation',
+    svg_path: '/icons/book.svg',
+  },
+  {
+    title: "Trash",
+    href: '/forms/summary',
+    svg_path: '/icons/trash.svg',
+  },
+
 ]
 
 // Projects list
