@@ -8,6 +8,7 @@ import { ReactFlowDemo } from "@/app/(main)/_components/react_flow/simple_demo/s
 import { DragHandleFlow } from "@/app/(main)/_components/react_flow/DragHandle"
 import { EasyConnectExample } from "@/app/(main)/_components/react_flow/EasyConnect"
 import { NestedFlow } from "@/app/(main)/_components/react_flow/NestedFlow/app"
+import { StyledComponents } from "@/app/(main)/_components/react_flow/StyledComponents/App"
 
 export const metadata: Metadata = {
     title: "Tasks",
@@ -34,8 +35,10 @@ export default async function TaskPage() {
 
                 <div className="bg-dark/dark-3 h-[500px]">
                     {/* <ReactFlowDemo /> */}
+                    {/* <DragHandleFlow /> */}
                     {/* <EasyConnectExample /> */}
-                    <NestedFlow />
+                    {/* <NestedFlow /> */}
+                    <StyledComponents />
                 </div>
             </div>
         </>
