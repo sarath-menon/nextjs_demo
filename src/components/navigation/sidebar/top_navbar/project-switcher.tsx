@@ -50,7 +50,7 @@ import {
     SelectValue,
 } from "@/src/components/ui/select"
 import { PROJECTS_LIST } from "@/src/lib/constants"
-import { TeamMembersList } from "../team-members"
+import { TeamMembersList } from "../../../../app/(routes)/(main)/_components/team-members"
 import Link from "next/link"
 
 
