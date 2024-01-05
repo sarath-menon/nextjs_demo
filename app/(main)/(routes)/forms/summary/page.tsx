@@ -33,14 +33,14 @@ export default async function TaskPage() {
                     <DataTableV1 data={TASKS} columns={taskColumns} />
                 </div> */}
 
-                <div className="bg-dark/dark-3 h-[500px]">
+                <div className=" h-[500px] rounded border-2 border-dark/dark-8">
                     {/* <ReactFlowDemo /> */}
                     {/* <DragHandleFlow /> */}
                     {/* <EasyConnectExample /> */}
                     {/* <NestedFlow /> */}
                     <StyledComponents />
                 </div>
-            </div>
+            </div >
         </>
     )
 }
