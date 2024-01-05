@@ -1,7 +1,8 @@
 "use client"
 
 import { Button } from "@/components/ui/button";
-import { Metadata } from "next"
+import ReactPDF, { PDFViewer, PDFDownloadLink } from '@react-pdf/renderer';
+import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
 import pptxgen from "pptxgenjs";
 
 export const QTRS = ["Q1", "Q2", "Q3", "Q4"];
@@ -12,6 +13,33 @@ export const arrDataLineStat = [
     { name: "Green", labels: QTRS, values: [7, 52, 18, 67] },
     { name: "Complete", labels: QTRS, values: [3, 5, 17, 1] },
 ];
+
+// Create styles
+const styles = StyleSheet.create({
+    page: {
+        flexDirection: 'row',
+        backgroundColor: '#E4E4E4'
+    },
+    section: {
+        margin: 10,
+        padding: 10,
+        flexGrow: 1
+    }
+});
+
+// Create Document Component
+const MyDocument = () => (
+    <Document>
+        <Page size="A4" style={styles.page}>
+            <View style={styles.section}>
+                <Text>Section #1</Text>
+            </View>
+            <View style={styles.section}>
+                <Text>Section #2</Text>
+            </View>
+        </Page>
+    </Document>
+);
 
 function generate_ppt() {
 
@@ -36,6 +64,11 @@ function generate_ppt() {
 
 }
 
+
+function generate_pdf() {
+    ReactPDF.render(<MyDocument />, `${__dirname}/example.pdf`);
+}
+
 export default function TaskPage() {
 
     return (
@@ -54,8 +87,24 @@ export default function TaskPage() {
                     Create PPT
                 </Button>
 
+                {/* Need to clik on the text ! */}
+                <Button>
+                    <PDFDownloadLink document={<MyDocument />} fileName="somename.pdf">
+                        {({ blob, url, loading, error }) =>
+                            loading ? 'Loading document...' : 'Download now!'
+                        }
+                    </PDFDownloadLink>
+                </Button>
+
+
+                <PDFViewer>
+                    <MyDocument />
+                </PDFViewer>
+
 
             </div>
         </>
     )
 }
+
+// ReactPDF.render(<MyDocument />, `${__dirname}/example.pdf`);
