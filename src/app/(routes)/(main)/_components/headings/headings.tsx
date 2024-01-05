@@ -25,7 +25,7 @@ export function SubHeading(props: any) {
                 {props.subheading}
             </h2>
 
-            <p className="brightness-50 text-base mt-">
+            <p className="brightness-50 text-base mt-4">
                 {props.text}
             </p>
         </div>
