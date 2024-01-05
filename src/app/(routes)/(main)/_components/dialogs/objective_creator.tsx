@@ -1,19 +1,8 @@
-import { Button } from "@/src/components/ui/button"
-import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle,
-    DialogTrigger,
-} from "@/src/components/ui/dialog"
-
 import { Input } from "@/src/components/ui/input"
 import { Label } from "@/src/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/src/components/ui/select"
 import { TiptapEntry } from "../text-editors/tiptap/tiptap-editor"
-import { DialogSkeleton } from "./dialog-skeleton"
+import { DialogElement, DialogSkeleton } from "./dialog-skeleton"
 
 function customSection() {
     return (
@@ -39,20 +28,20 @@ function customSection() {
                 </div>
             </div>
 
-            <div className="grid gap-2">
-                <Label htmlFor="description">Description</Label>
-                <TiptapEntry />
-            </div>
+            <DialogElement
+                title="Description"
+                custom_section={TiptapEntry}
+            />
 
-            <div className="grid gap-2">
-                <Label htmlFor="name">Rationale</Label>
-                <Input id="name" autoFocus />
-            </div>
+            <DialogElement
+                title="Rationale"
+                custom_section={TiptapEntry}
+            />
 
-            <div className="grid gap-2">
-                <Label htmlFor="name">How to test</Label>
-                <Input id="name" autoFocus />
-            </div>
+            <DialogElement
+                title="How to test"
+                custom_section={TiptapEntry}
+            />
         </>
     )
 }

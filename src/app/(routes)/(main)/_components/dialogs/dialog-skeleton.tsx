@@ -25,7 +25,7 @@ export function DialogSkeleton(props: any) {
             <DialogContent className="sm:max-w-[475px]">
 
                 <DialogHeader>
-                    <DialogTitle className="text-2xl">
+                    <DialogTitle className="text-3xl">
                         {props.title}
                     </DialogTitle>
 
@@ -43,4 +43,20 @@ export function DialogSkeleton(props: any) {
             </DialogContent>
         </Dialog >
     )
+}
+
+export function DialogElement(props: any) {
+
+    return (
+        <div className="grid gap-2 ">
+
+            <Label className="text-lg">
+                {props.title}
+            </Label>
+
+            {props.custom_section()}
+
+        </div>
+    )
+
 }
