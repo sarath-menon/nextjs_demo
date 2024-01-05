@@ -3,7 +3,7 @@
 import { useConvexAuth } from "convex/react";
 import { redirect } from "next/navigation";
 
-import { Spinner } from "@/src/components/spinner";
+import { Spinner } from "@/src/components/ui/spinner";
 
 import { Navigation } from "../../../components/navigation/sidebar/notion_clone/navigation";
 import { Sidebar } from "../../../components/navigation/sidebar/notion_clone/sidebar";

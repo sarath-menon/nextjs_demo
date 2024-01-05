@@ -12,6 +12,7 @@ import {
 import { Input } from "@/src/components/ui/input"
 import { Label } from "@/src/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/src/components/ui/select"
+import Tiptap, { TiptapEntry } from "../text-editors/tiptap/tiptap-editor"
 
 export function CreateObjectiveDialog() {
     return (
@@ -75,7 +76,8 @@ export function CreateObjectiveDialog() {
 
                     <div className="grid gap-2">
                         <Label htmlFor="description">Description</Label>
-                        <Input id="description" />
+                        {/* <Input id="description" /> */}
+                        <TiptapEntry />
                     </div>
 
                     <div className="grid gap-2">

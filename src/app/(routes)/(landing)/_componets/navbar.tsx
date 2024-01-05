@@ -1,13 +1,13 @@
 "use client";
 
-import { ModeToggle } from "@/src/components/mode-toggle";
+import { ModeToggle } from "@/src/components/ui/mode-toggle";
 import { Logo } from "@/src/app/(routes)/(landing)/_componets/logo";
 import { useScrollTop } from "@/src/hooks/use-scroll-top";
 import { cn } from "@/src/lib/utils";
 import { useConvexAuth } from "convex/react";
 import { SignInButton, UserButton } from "@clerk/clerk-react";
 import { Button } from "@/src/components/ui/button";
-import { Spinner } from "@/src/components/spinner";
+import { Spinner } from "@/src/components/ui/spinner";
 import Link from "next/link";
 
 export const Navbar = () => {
