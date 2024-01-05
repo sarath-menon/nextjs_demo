@@ -1,39 +1,12 @@
 "use client"
 
-import { Button } from "@/src/components/ui/button"
-import Image from "next/image"
-import { useUser } from "@clerk/clerk-react";
-import { useMutation } from "convex/react";
-import { update } from "@/convex/documents";
-import { api } from "@/convex/_generated/api";
-import { toast } from "sonner";
-import { Separator } from "@radix-ui/react-dropdown-menu";
 import { Requirements } from "./form"
 import React from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/src/components/ui/card";
 import { DashboardCard } from "@/src/app/(routes)/(main)/_components/dashboard-card";
 import { TopHeading } from "../../_components/headings/headings";
 
 
-const DocumentsPage = () => {
-
-    const { user } = useUser();
-    const create = useMutation(api.documents.create);
-
-    const onCreate = () => {
-        const promise = create({ title: "Untitled" })
-        // .then((documentId) => router.push(`/documents/${documentId}`))
-
-        toast.promise(promise, {
-            loading: "Creating a new note...",
-            success: "New note created!",
-            error: "Failed to create a new note."
-        });
-    };
-
-    if (document === null) {
-        return <div>Not found</div>
-    }
+export const Page = () => {
 
     return (
         <>
@@ -43,7 +16,6 @@ const DocumentsPage = () => {
                 text=" Manage your account settings and set e-mail preferences." />
 
             {/* Dashboard Cards row */}
-
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4 m-6">
 
                 {/* Publications */}
@@ -88,4 +60,4 @@ const DocumentsPage = () => {
     );
 }
 
-export default DocumentsPage;
+export default Page;
