@@ -12,8 +12,18 @@ import {
 } from "lucide-react"
 
 import { Toggle } from "@/src/components/ui/toggle"
-import { FontBoldIcon } from "@radix-ui/react-icons"
 
+import {
+    FontBoldIcon,
+    FontItalicIcon,
+    ListBulletIcon,
+    UnderlineIcon,
+} from "@radix-ui/react-icons"
+
+import {
+    ToggleGroup,
+    ToggleGroupItem,
+} from "@/src/components/ui/toggle-group"
 
 type Props = {
     editor: Editor | null
@@ -28,11 +38,6 @@ export function TipTapToolbar({ editor }: Props) {
     return (
 
         <div className="border border-input bg-transparent">
-
-            <Toggle aria-label="Toggle italic">
-                <FontBoldIcon className="h-4 w-4" />
-            </Toggle>
-
 
             {/* Heading */}
             <Toggle
@@ -53,7 +58,7 @@ export function TipTapToolbar({ editor }: Props) {
                     editor.chain().focus().toggleBold().run()
                 }
             >
-                <Bold className="h-4 w-4" />
+                <FontBoldIcon className="h-4 w-4" />
             </Toggle>
 
 
@@ -65,9 +70,31 @@ export function TipTapToolbar({ editor }: Props) {
                     editor.chain().focus().toggleItalic().run()
                 }
             >
-                <Italic className="h-4 w-4" />
+                <FontItalicIcon className="h-4 w-4" />
             </Toggle>
 
+
+            {/* Underline */}
+            <Toggle
+                size={"sm"}
+                pressed={editor.isActive("underline")}
+                onPressedChange={() =>
+                    editor.chain().focus().toggleStrike().run()
+                }
+            >
+                <UnderlineIcon className="h-4 w-4" />
+            </Toggle>
+
+            {/* Bullerlist */}
+            <Toggle
+                size={"sm"}
+                pressed={editor.isActive("underline")}
+                onPressedChange={() =>
+                    editor.chain().focus().toggleBulletList().run()
+                }
+            >
+                <ListBulletIcon className="h-4 w-4" />
+            </Toggle>
 
 
         </div >
