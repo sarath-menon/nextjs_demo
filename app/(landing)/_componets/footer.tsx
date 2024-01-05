@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Logo } from "@/app/(marketing)/_componets/logo";
+import { Logo } from "@/app/(landing)/_componets/logo";
 
 const Footer = () => {
     return (

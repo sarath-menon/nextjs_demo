@@ -1,7 +1,7 @@
 "use client";
 
 import { ModeToggle } from "@/components/mode-toggle";
-import { Logo } from "@/app/(marketing)/_componets/logo";
+import { Logo } from "@/app/(landing)/_componets/logo";
 import { useScrollTop } from "@/hooks/use-scroll-top";
 import { cn } from "@/lib/utils";
 import { useConvexAuth } from "convex/react";

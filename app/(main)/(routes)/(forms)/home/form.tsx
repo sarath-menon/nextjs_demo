@@ -32,7 +32,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { CreateAssumptionDialog } from "@/app/(main)/_components/dialogs/assumption_creator"
 import { CreateConstraintDialog } from "@/app/(main)/_components/dialogs/constraint_creator"
 import { OBJECTIVES } from "@/app/(main)/data/objectives"
-import { objectiveColumns } from "@/app/(main)/(routes)/forms/home/table-columns"
+import { objectiveColumns } from "@/app/(main)/(routes)/(forms)/home/table-columns"
 
 const profileFormSchema = z.object({
     type: z

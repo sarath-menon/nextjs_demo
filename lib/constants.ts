@@ -139,62 +139,62 @@ export const PRICING_CARDS = [
 export const SIDEBAR_ITEMS: SidebarItem[] = [
   {
     title: "Home",
-    href: '/forms/home',
+    href: '/home',
   },
   {
       title: "Team",
-      href: '/forms/team',
+      href: '/team',
   },
   {
       title: "Financial",
-      href: '/forms/financial',
+      href: '/financial',
   },
   {
     title: "Roadmap",
-    href: '/forms/roadmap',
+    href: '/roadmap',
 },
 {
   title: "Summary",
-  href: '/forms/summary',
+  href: '/summary',
 }
 ]
 
 export const ICON_SIDEBAR_ITEMS: IconSidebarItem[] = [
   { 
     title: "Home",
-    href: '/forms/home',
+    href: '/home',
     svg_path: "/icons/home.svg",
     
   },
   { 
     title: "Subprojects",
-    href: '/forms/subprojects',
+    href: '/subprojects',
     svg_path: "/icons/file-submodule.svg",
     
   },
   {
     title: "Team",
-    href: '/forms/team',
+    href: '/team',
     svg_path: '/icons/organization.svg',
   },
   {
     title: "Settings",
-    href: '/forms/financial',
+    href: '/financial',
     svg_path: '/icons/settings.svg',
   },
   {
     title: "Search",
-    href: '/forms/roadmap',
+    href: '/roadmap',
     svg_path: '/icons/search.svg',
   },
   {
     title: "File generation",
-    href: '/forms/file_generation',
+    href: '/file_generation',
     svg_path: '/icons/book.svg',
   },
   {
     title: "Trash",
-    href: '/forms/summary',
+    href: '/summary',
     svg_path: '/icons/trash.svg',
   },
 
