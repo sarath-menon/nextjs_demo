@@ -221,7 +221,7 @@ export default function TeamSwitcher({ className }: TeamSwitcherProps) {
 
                     {/* Continue button */}
                     <Button asChild onClick={() => setShowNewTeamDialog(false)}>
-                        <Link href={"/forms/requirements"}>Continue</Link>
+                        <Link href={"/forms/home"}>Continue</Link>
                     </Button>
 
                 </DialogFooter>
