@@ -10,9 +10,6 @@ import { EasyConnectExample } from "@/src/app/(routes)/(main)/_components/react_
 import { NestedFlow } from "@/src/app/(routes)/(main)/_components/react_flow/NestedFlow/app"
 import { StyledComponents } from "@/src/app/(routes)/(main)/_components/react_flow/StyledComponents/App"
 
-import { Editor } from "../../_components/text-editors/lexical/lexical-editor"
-import Tiptap from "../../_components/text-editors/tiptap/tiptap-editor"
-
 export const metadata: Metadata = {
     title: "Tasks",
     description: "A task and issue tracker build using Tanstack Table.",
@@ -44,10 +41,6 @@ export default async function TaskPage() {
                     {/* <EasyConnectExample /> */}
                     {/* <NestedFlow /> */}
                     <StyledComponents />
-                </div>
-
-                <div className="">
-                    <Tiptap />
                 </div>
             </div >
         </>
