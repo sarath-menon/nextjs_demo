@@ -9,7 +9,7 @@ export function TopHeading(props: any) {
                 {props.heading}
             </h2>
 
-            <p className="brightness-50 text-xl">
+            <p className="brightness-50 text-xl pl-2">
                 {props.text}
             </p>
         </div >
