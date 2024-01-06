@@ -8,7 +8,7 @@ import { SubHeading } from "../../_components/headings/page-style"
 export function SubProjectsForm() {
 
     return (
-        <div className="flex space-y-6 m-16">
+        <div className="flex space-y-6 m-16 ">
             <div className="flex items-center justify-center">
 
                 {/* <SubHeading

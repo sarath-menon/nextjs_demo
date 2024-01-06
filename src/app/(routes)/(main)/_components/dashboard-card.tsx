@@ -4,7 +4,7 @@ import Image from "next/image";
 export function DashboardCard(props: any) {
     return (
         <>
-            <Card className="border-2 bg-dark/dark-12">
+            <Card className="border-2 bg-dark/dark-12 shadow-lg shadow-slate-900">
                 <CardHeader className=" flex flex-row items-center justify-between space-y-0 pb-2">
                     <CardTitle className="text-sm font-medium">
                         {props.title}

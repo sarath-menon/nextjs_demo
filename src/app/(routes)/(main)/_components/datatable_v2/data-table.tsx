@@ -72,7 +72,7 @@ export function DataTableV2<TData, TValue>({
 
       {/*  Table */}
       <DataTableToolbar table={table} />
-      <div className="rounded-md border">
+      <div className="rounded-md border shadow shadow-slate-600">
         <Table>
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
