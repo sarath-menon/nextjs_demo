@@ -8,26 +8,16 @@ import { SubHeading } from "../../_components/headings/page-style"
 export function SubProjectsForm() {
 
     return (
+        <div className="flex space-y-6 m-16">
+            <div className="flex items-center justify-center">
 
-        <>
-            <div className="hidden h-full flex-1 flex-col space-y-6 p-8 md:flex">
-                <div className="flex items-center justify-between space-y-2">
-
-                    {/* <SubHeading
+                {/* <SubHeading
                         subheading="Subheading"
                         text="tasks for this month" /> */}
 
-                </div>
-
-                {/* <div className="flex">
-                    <DataTable data={tasks} columns={columns} />
-                </div> */}
-
-                <div className="flex">
-                    <DataTableV2 data={SUB_PROJECTS} columns={subprojectColumns} />
-                </div>
+                <DataTableV2 data={SUB_PROJECTS} columns={subprojectColumns} />
 
             </div>
-        </>
+        </div>
     )
 }

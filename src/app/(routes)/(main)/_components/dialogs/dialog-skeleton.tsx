@@ -48,7 +48,7 @@ export function DialogSkeleton(props: any) {
 export function DialogElement(props: any) {
 
     return (
-        <div className="grid gap-2 ">
+        <div className="grid gap-2 mt-2">
 
             <Label className="text-lg">
                 {props.title}
