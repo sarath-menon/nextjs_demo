@@ -104,7 +104,7 @@ export function Requirements() {
 
                 <SubHeading
                     subheading="Objectives"
-                    text="tasks for this month" />
+                    text="" />
 
                 <div className="py-6">
                     {/* <DataTableV2 data={OBJECTIVES} columns={objectiveColumns} /> */}
@@ -120,7 +120,7 @@ export function Requirements() {
 
                 <SubHeading
                     subheading="Assumptions"
-                    text="tasks for this month" />
+                    text="" />
 
                 <div className="py-6">
                     <CreateAssumptionDialog />
@@ -133,7 +133,7 @@ export function Requirements() {
 
                 <SubHeading
                     subheading="Constraints"
-                    text="tasks for this month" />
+                    text="" />
 
                 <div className="py-6">
                     <CreateConstraintDialog />
