@@ -20,9 +20,10 @@ function customSection() {
                             <SelectValue placeholder="Select" />
                         </SelectTrigger>
                         <SelectContent>
-                            <SelectItem value="team">Scientific question</SelectItem>
-                            <SelectItem value="billing">Engineering goal</SelectItem>
-                            <SelectItem value="account">Mixed</SelectItem>
+                            <SelectItem value="team">Regulatory</SelectItem>
+                            <SelectItem value="billing">Budget</SelectItem>
+                            <SelectItem value="billing">Schedule</SelectItem>
+                            <SelectItem value="account">Ethical</SelectItem>
                         </SelectContent>
                     </Select>
                 </div>
@@ -30,16 +31,6 @@ function customSection() {
 
             <DialogElement
                 title="Description"
-                custom_section={TiptapEntry}
-            />
-
-            <DialogElement
-                title="Rationale"
-                custom_section={TiptapEntry}
-            />
-
-            <DialogElement
-                title="How to test"
                 custom_section={TiptapEntry}
             />
         </>
@@ -52,8 +43,8 @@ export function CreateConstraintDialog() {
 
         <DialogSkeleton
             button_text="Add new"
-            title="Add new objective"
-            description="This will save the current playground state as a preset which you can access later or share with others."
+            title="Add new constraint"
+            description="Limiting factors"
             custom_section={customSection}
         />
     )

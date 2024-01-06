@@ -20,9 +20,9 @@ function customSection() {
                             <SelectValue placeholder="Select" />
                         </SelectTrigger>
                         <SelectContent>
-                            <SelectItem value="team">Scientific question</SelectItem>
-                            <SelectItem value="billing">Engineering goal</SelectItem>
-                            <SelectItem value="account">Mixed</SelectItem>
+                            <SelectItem value="team">Modelling</SelectItem>
+                            <SelectItem value="billing">Environment</SelectItem>
+                            <SelectItem value="account">Feasibility</SelectItem>
                         </SelectContent>
                     </Select>
                 </div>
@@ -37,11 +37,6 @@ function customSection() {
                 title="Rationale"
                 custom_section={TiptapEntry}
             />
-
-            <DialogElement
-                title="How to test"
-                custom_section={TiptapEntry}
-            />
         </>
     )
 }
@@ -52,8 +47,8 @@ export function CreateAssumptionDialog() {
 
         <DialogSkeleton
             button_text="Add new"
-            title="Add new objective"
-            description="This will save the current playground state as a preset which you can access later or share with others."
+            title="Add new assumption"
+            description=""
             custom_section={customSection}
         />
     )
