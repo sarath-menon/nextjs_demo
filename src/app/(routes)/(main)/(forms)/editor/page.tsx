@@ -9,25 +9,19 @@ import { DragHandleFlow } from "@/src/app/(routes)/(main)/_components/react_flow
 import { EasyConnectExample } from "@/src/app/(routes)/(main)/_components/react_flow/EasyConnect/app"
 import { NestedFlow } from "@/src/app/(routes)/(main)/_components/react_flow/NestedFlow/app"
 import { StyledComponents } from "@/src/app/(routes)/(main)/_components/react_flow/StyledComponents/App"
+import { TopHeading } from "../../_components/headings/page-style"
 
-export const metadata: Metadata = {
-    title: "Tasks",
-    description: "A task and issue tracker build using Tanstack Table.",
-}
+
 
 export default async function TaskPage() {
     return (
         <>
-            <div className="hidden h-full flex-1 flex-col space-y-8 p-8 md:flex">
-                <div className="flex items-center justify-between space-y-2">
-                    <div>
-                        <h2 className="text-2xl font-bold tracking-tight">Welcome back!</h2>
-                        <p className="text-muted-foreground">
-                            Here&apos;s a list of your tasks for this month!
-                        </p>
-                    </div>
+            <div className="">
 
-                </div>
+                <TopHeading
+                    heading="Editor"
+                    text="Fantastic tools for analyzing robustness and reliability" />
+
 
                 {/* Datatable V1 */}
                 {/* <div className="flex">
@@ -35,7 +29,7 @@ export default async function TaskPage() {
                 </div> */}
 
                 {/* React flow demo */}
-                <div className=" h-[500px] rounded border-2 border-dark/dark-8">
+                <div className=" h-[500px] rounded border-2 border-dark/dark-8 mt-12">
                     {/* <ReactFlowDemo /> */}
                     {/* <DragHandleFlow /> */}
                     {/* <EasyConnectExample /> */}

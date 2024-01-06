@@ -154,8 +154,8 @@ export const SIDEBAR_ITEMS: SidebarItem[] = [
     href: '/roadmap',
 },
 {
-  title: "Summary",
-  href: '/summary',
+  title: "Editor",
+  href: '/editor',
 }
 ]
 
@@ -193,9 +193,9 @@ export const ICON_SIDEBAR_ITEMS: IconSidebarItem[] = [
     svg_path: '/icons/book.svg',
   },
   {
-    title: "Trash",
-    href: '/summary',
-    svg_path: '/icons/trash.svg',
+    title: "Editor",
+    href: '/editor',
+    svg_path: '/icons/code.svg',
   },
 
 ]
