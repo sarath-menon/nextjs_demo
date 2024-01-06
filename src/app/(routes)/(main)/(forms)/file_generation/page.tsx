@@ -4,7 +4,8 @@ import { Button } from "@/src/components/ui/button";
 import ReactPDF, { PDFViewer, PDFDownloadLink } from '@react-pdf/renderer';
 import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
 import pptxgen from "pptxgenjs";
-import { TopHeading } from "../../_components/headings/page-style";
+import { SubHeading, TopHeading } from "../../_components/headings/page-style";
+import { CreateObjectiveDialog } from "../../_components/dialogs/objective_creator";
 
 export const QTRS = ["Q1", "Q2", "Q3", "Q4"];
 
@@ -79,22 +80,44 @@ export default function TaskPage() {
 
                 <TopHeading
                     heading="File generator"
-                    text="Manage your account settings and set e-mail preferences" />
+                    text="Generate presentations and reports automatically" />
 
-                <div className="flex flex-col" >
 
-                    <Button variant={"outline"} onClick={generate_ppt}>
-                        Create PPT
-                    </Button>
 
-                    {/* Need to clik on the text ! */}
-                    <Button variant={"outline"} >
-                        <PDFDownloadLink document={<MyDocument />} fileName="somename.pdf">
-                            {({ blob, url, loading, error }) =>
-                                loading ? 'Loading document...' : 'Download now!'
-                            }
-                        </PDFDownloadLink>
-                    </Button>
+                <div className="mx-6 py-2">
+
+                    {/* slides*/}
+                    <div className="my-6">
+
+                        <SubHeading
+                            subheading="Slides"
+                            text="" />
+
+                        <div className="py-6">
+                            <Button variant={"secondary"} onClick={generate_ppt}>
+                                Download
+                            </Button>
+                        </div>
+                    </div>
+
+                    {/* pdf report*/}
+                    <div className="my-6">
+
+                        <SubHeading
+                            subheading="Proposal PDF"
+                            text="" />
+
+                        <div className="py-6">
+                            {/* Need to clik on the text ! */}
+                            <Button variant={"secondary"} >
+                                <PDFDownloadLink document={<MyDocument />} fileName="somename.pdf">
+                                    {({ blob, url, loading, error }) =>
+                                        loading ? 'Loading document...' : 'Download'
+                                    }
+                                </PDFDownloadLink>
+                            </Button>
+                        </div>
+                    </div>
 
                 </div>
 
