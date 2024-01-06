@@ -18,9 +18,6 @@ export default function SettingsDisplayPage() {
 
                 {/* Objectives */}
                 <div className="my-6">
-                    {/* <h3 className="text-3xl font-medium">
-                    Objectives
-                </h3> */}
 
                     <SubHeading
                         subheading="Objectives"
