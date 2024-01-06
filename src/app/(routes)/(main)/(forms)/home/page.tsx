@@ -3,7 +3,8 @@
 import { Requirements } from "./form"
 import React from "react";
 import { DashboardCard } from "@/src/app/(routes)/(main)/_components/dashboard-card";
-import { TopHeading } from "../../_components/headings/page-style";
+import { SubHeading, TopHeading } from "../../_components/headings/page-style";
+import { KanbanBoard } from "../../_components/kanban_board_v2/KanbanBoard";
 
 
 export const Page = () => {
@@ -53,7 +54,20 @@ export const Page = () => {
 
             <div className="mx-6 py-2">
                 <Requirements />
+
+                <div className="my-6">
+                    <SubHeading
+                        subheading="Progress tracker"
+                        text="" />
+                </div>
+
+
+                <div className="mx-6 py-2">
+                    <KanbanBoard />
+                </div>
             </div>
+
+
 
         </>
 
