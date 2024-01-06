@@ -14,63 +14,65 @@ export default function SettingsDisplayPage() {
                 heading="Eagle Inspired Grasping With a Fixed-Wing Drone"
                 text="Master thesis" />
 
-            {/* Objectives */}
-            <div className="my-6">
-                {/* <h3 className="text-3xl font-medium">
+            <div className="mx-6 py-2">
+
+                {/* Objectives */}
+                <div className="my-6">
+                    {/* <h3 className="text-3xl font-medium">
                     Objectives
                 </h3> */}
 
-                <SubHeading
-                    subheading="Objectives"
-                    text="" />
+                    <SubHeading
+                        subheading="Objectives"
+                        text="" />
 
-                <div className="py-6">
-                    {/* <DataTableV2 data={OBJECTIVES} columns={objectiveColumns} /> */}
-                    <CreateObjectiveDialog />
+                    <div className="py-6">
+                        {/* <DataTableV2 data={OBJECTIVES} columns={objectiveColumns} /> */}
+                        <CreateObjectiveDialog />
+                    </div>
                 </div>
-            </div>
 
 
-            {/* Assumption */}
+                {/* Assumption */}
 
-            <div className="my-6">
+                <div className="my-6">
 
-                <SubHeading
-                    subheading="Assumptions"
-                    text="" />
+                    <SubHeading
+                        subheading="Assumptions"
+                        text="" />
 
-                <div className="py-6">
-                    <CreateAssumptionDialog />
+                    <div className="py-6">
+                        <CreateAssumptionDialog />
+                    </div>
                 </div>
-            </div>
 
-            {/* Constrains */}
+                {/* Constrains */}
 
-            <div className="my-6">
+                <div className="my-6">
 
-                <SubHeading
-                    subheading="Constraints"
-                    text="" />
+                    <SubHeading
+                        subheading="Constraints"
+                        text="" />
 
-                <div className="py-6">
-                    <CreateConstraintDialog />
+                    <div className="py-6">
+                        <CreateConstraintDialog />
+                    </div>
                 </div>
+
+
+                <div className="my-6">
+                    <SubHeading
+                        subheading="Progress tracker"
+                        text="Keep track of your progress here" />
+                </div>
+
+
+                <div className="flex my-8">
+
+                    <Roadmap />
+                </div>
+
             </div>
-
-
-
-            <div className="my-6">
-                <SubHeading
-                    subheading="Progress tracker"
-                    text="Keep track of your progress here" />
-            </div>
-
-
-            <div className="flex my-8">
-
-                <Roadmap />
-            </div>
-
         </div>
     )
 }
