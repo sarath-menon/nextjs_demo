@@ -22,12 +22,6 @@ export default async function TaskPage() {
                     heading="Editor"
                     text="Fantastic tools for analyzing robustness and reliability" />
 
-
-                {/* Datatable V1 */}
-                {/* <div className="flex">
-                    <DataTableV1 data={TASKS} columns={taskColumns} />
-                </div> */}
-
                 {/* React flow demo */}
                 <div className=" h-[500px] rounded border-2 border-dark/dark-8 mt-12">
                     {/* <ReactFlowDemo /> */}
