@@ -6,7 +6,7 @@ import { CreateAssumptionDialog } from "../../_components/dialogs/assumption_cre
 import { CreateConstraintDialog } from "../../_components/dialogs/constraint_creator"
 import { DataTableV1 } from "../../_components/datatable_v1/data-table"
 import { TASKS } from "../../data/tasks"
-import { taskColumns } from "../file_generation/table-columns"
+import { taskColumns } from "../change_tracker/table-columns"
 
 export default function SettingsDisplayPage() {
     return (

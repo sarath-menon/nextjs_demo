@@ -3,7 +3,7 @@ import { Financial } from "./form"
 import { SubHeading, TopHeading } from "../../_components/headings/page-style"
 import { DataTableV1 } from "../../_components/datatable_v1/data-table"
 import { TASKS } from "../../data/tasks"
-import { taskColumns } from "../file_generation/table-columns"
+import { taskColumns } from "./table-columns"
 
 export default function FinancialPage() {
     return (
