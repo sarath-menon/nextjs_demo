@@ -20,34 +20,34 @@ export const Page = () => {
 
                 {/* Publications */}
                 <DashboardCard
-                    path="/icons/symbol-file.svg"
+                    path="/icons/scholar.svg"
                     title="Publications"
-                    metric="12"
-                    subtitle="4 last year">
+                    metric="0"
+                    subtitle="0 last year">
                 </DashboardCard>
 
                 {/* {Active projects} */}
                 <DashboardCard
-                    path="/icons/symbol-file.svg"
+                    path="/icons/folder.svg"
                     title="Active projects"
-                    metric="5"
-                    subtitle="12 total">
+                    metric="0"
+                    subtitle="0 total">
                 </DashboardCard>
 
                 {/* Current members */}
                 <DashboardCard
-                    path="/icons/symbol-file.svg"
+                    path="/icons/organization.svg"
                     title="Current members"
-                    metric="7"
-                    subtitle="18 since the start">
+                    metric="0"
+                    subtitle="0 since the start">
                 </DashboardCard>
 
                 {/* Money spent */}
                 <DashboardCard
                     path="/icons/symbol-file.svg"
                     title=" Money spent"
-                    metric="$ 10,500"
-                    subtitle=" $890 last month">
+                    metric="0"
+                    subtitle="0 last month">
                 </DashboardCard>
             </div>
 
