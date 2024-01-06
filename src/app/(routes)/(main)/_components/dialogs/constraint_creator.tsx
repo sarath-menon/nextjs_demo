@@ -15,15 +15,15 @@ function customSection() {
                         Nature
                     </Label>
 
-                    <Select defaultValue="billing">
+                    <Select defaultValue="budget">
                         <SelectTrigger id="area">
                             <SelectValue placeholder="Select" />
                         </SelectTrigger>
                         <SelectContent>
-                            <SelectItem value="team">Regulatory</SelectItem>
-                            <SelectItem value="billing">Budget</SelectItem>
-                            <SelectItem value="billing">Schedule</SelectItem>
-                            <SelectItem value="account">Ethical</SelectItem>
+                            <SelectItem value="regulatory">Regulatory</SelectItem>
+                            <SelectItem value="budget">Budget</SelectItem>
+                            <SelectItem value="schedule">Schedule</SelectItem>
+                            <SelectItem value="ethical">Ethical</SelectItem>
                         </SelectContent>
                     </Select>
                 </div>
@@ -32,6 +32,7 @@ function customSection() {
             <DialogElement
                 title="Description"
                 custom_section={TiptapEntry}
+                placeholder={"what's the limiting factor ?"}
             />
         </>
     )

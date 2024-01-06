@@ -31,11 +31,13 @@ function customSection() {
             <DialogElement
                 title="Description"
                 custom_section={TiptapEntry}
+                placeholder={"what's the assumption?"}
             />
 
             <DialogElement
                 title="Rationale"
                 custom_section={TiptapEntry}
+                placeholder={"why do you think so ?"}
             />
         </>
     )

@@ -6,9 +6,10 @@ import { TipTapToolbar } from './tiptap-toolbar'
 
 import { Heading } from '@tiptap/extension-heading'
 import { BulletList } from '@tiptap/extension-bullet-list'
+import { Placeholder } from '@tiptap/extension-placeholder'
 
 
-export function TiptapEntry() {
+export function TiptapEntry(placeholder: string) {
     const editor = useEditor({
         extensions: [
             StarterKit.configure({
@@ -29,7 +30,11 @@ export function TiptapEntry() {
                 HTMLAttributes: {
                     class: 'list-disc pl-4',
                 }
-            })
+            }),
+
+            Placeholder.configure({
+                placeholder: placeholder
+            }),
 
         ],
         content: "",

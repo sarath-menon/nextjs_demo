@@ -54,7 +54,7 @@ export function DialogElement(props: any) {
                 {props.title}
             </Label>
 
-            {props.custom_section()}
+            {props.custom_section(props.placeholder)}
 
         </div>
     )
