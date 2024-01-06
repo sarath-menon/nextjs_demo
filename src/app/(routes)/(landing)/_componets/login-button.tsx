@@ -20,7 +20,7 @@ export const LoginButton = () => {
             {isAuthenticated && !isLoading && (
                 <Button asChild variant={"secondary"}>
                     <Link href="/documents">
-                        Enter Simplicyti
+                        Enter Simplicity
                         <ArrowRight className="h-4 w-4 ml-2" />
                     </Link>
                 </Button>
@@ -28,7 +28,7 @@ export const LoginButton = () => {
             {!isAuthenticated && !isLoading && (
                 <SignInButton mode="modal">
                     <Button>
-                        Get Simplicyti free
+                        Get Simplicity free
                         <ArrowRight className="h-4 w-4 ml-2" />
                     </Button>
                 </SignInButton>

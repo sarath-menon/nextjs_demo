@@ -26,7 +26,7 @@ export const Logo = () => {
             </Image>
 
             <p className={cn("font-semibold", font.className)}>
-                Simplicyti
+                Simplicity
             </p>
         </div >
     )
