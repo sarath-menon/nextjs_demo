@@ -16,8 +16,8 @@ export const Navbar = () => {
 
     return (
         <div className={cn(
-            "bg-background fixed flex items-center w-full p-6",
-            scrolled && "border-b shadow-sm"
+            "bg-background fixed flex items-center w-full p-6 z-10",
+            scrolled && "shadow-sm bg-opacity-50 bg-black  backdrop-blur-xl rounded drop-shadow-lg"
         )}>
 
             <Logo />
