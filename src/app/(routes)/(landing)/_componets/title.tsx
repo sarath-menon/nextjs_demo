@@ -27,7 +27,7 @@ const TitleSection: React.FC<TitleSectionProps> = ({ title, subheading, pill }) 
                         <p className="dark:text-washed-purple/washed-purple-700 sm:max-w-[450px] md-text-center"></p>
 
                     </>) : (
-                    <h1 className="text-left text-4xl sm:text-6xl sm:max-w-[850px] md:text:center font-semibold">
+                    <h1 className="text-left text-4xl sm:text-6xl sm:max-w-[850px] md:text:center font-semibold mt-4">
                         {title}
                     </h1>
                 )}
