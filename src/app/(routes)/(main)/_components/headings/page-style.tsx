@@ -9,7 +9,7 @@ export function TopHeading(props: any) {
                 {props.heading}
             </h2>
 
-            <p className="brightness-50 text-lg">
+            <p className="brightness-50 text-xl">
                 {props.text}
             </p>
         </div >
@@ -30,7 +30,7 @@ export function SubHeading(props: any) {
 
             {/* If subheading is emptu, don't display */}
             {props.text != "" ? (
-                < p className="brightness-50 text-base mt-4">
+                < p className="brightness-50 text-lg mt-4">
                     {props.text}
                 </p>) : (
                 <></>
