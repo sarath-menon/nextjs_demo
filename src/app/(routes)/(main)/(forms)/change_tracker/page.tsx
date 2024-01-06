@@ -15,16 +15,19 @@ export default function FinancialPage() {
                     heading="Change tracker"
                     text="Generate presentations and reports automatically" />
 
+                <div className="mx-6 my-12">
 
-                {/* <div className="my-6">
+                    {/* <div className="my-6">
                     <SubHeading
                         subheading="Change tracker"
                         text="Keep track of all changes since project inception" />
-                </div> */}
+                    </div> */}
 
-                {/* Datatable V1 */}
-                <div className="flex my-12">
-                    <DataTableV1 data={TASKS} columns={taskColumns} />
+                    {/* Datatable V1 */}
+                    <div className="flex ">
+                        <DataTableV1 data={TASKS} columns={taskColumns} />
+                    </div>
+
                 </div>
 
 
