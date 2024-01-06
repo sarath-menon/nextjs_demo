@@ -10,7 +10,7 @@ import { KanbanBoard } from "../../_components/kanban_board_v2/KanbanBoard";
 export const Page = () => {
 
     return (
-        <>
+        <div className="mb-32">
             {/* Top heading */}
             <TopHeading
                 heading="Flying carpet"
@@ -66,9 +66,7 @@ export const Page = () => {
                 </div>
             </div>
 
-
-
-        </>
+        </div>
 
     );
 }

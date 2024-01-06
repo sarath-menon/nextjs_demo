@@ -10,7 +10,7 @@ import { taskColumns } from "../change_tracker/table-columns"
 
 export default function SettingsDisplayPage() {
     return (
-        <div className="">
+        <div className="mb-32">
 
             {/* Top heading */}
             <TopHeading

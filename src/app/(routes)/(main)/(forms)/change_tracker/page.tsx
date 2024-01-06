@@ -7,32 +7,26 @@ import { taskColumns } from "./table-columns"
 
 export default function FinancialPage() {
     return (
+
         <div className="">
 
-            <div className="">
+            <TopHeading
+                heading="Change log"
+                text="Generate presentations and reports automatically" />
 
-                <TopHeading
-                    heading="Change log"
-                    text="Generate presentations and reports automatically" />
+            <div className="mx-6 my-12">
 
-                <div className="mx-6 my-12">
-
-                    {/* <div className="my-6">
+                {/* <div className="my-6">
                     <SubHeading
                         subheading="Change tracker"
                         text="Keep track of all changes since project inception" />
                     </div> */}
 
-                    {/* Datatable V1 */}
-                    <div className="flex ">
-                        <DataTableV1 data={TASKS} columns={taskColumns} />
-                    </div>
-
+                {/* Datatable V1 */}
+                <div className="flex ">
+                    <DataTableV1 data={TASKS} columns={taskColumns} />
                 </div>
-
-
             </div>
-
         </div>
     )
 }

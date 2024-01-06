@@ -87,7 +87,7 @@ export function BoardColumn({ column, tasks, isOverlay }: BoardColumnProps) {
 
             </CardHeader>
 
-            <ScrollArea>
+            <ScrollArea className="mb-2">
                 <CardContent className="flex flex-grow flex-col gap-2 p-2">
                     <SortableContext items={tasksIds}>
                         {tasks.map((task) => (
