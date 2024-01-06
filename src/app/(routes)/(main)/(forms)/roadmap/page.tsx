@@ -15,7 +15,7 @@ export default function SettingsDisplayPage() {
             {/* Top heading */}
             <TopHeading
                 heading="Eagle Inspired Grasping With a Fixed-Wing Drone"
-                text="Master thesis" />
+                text="MT" />
 
             <div className="mx-6 py-2">
 
