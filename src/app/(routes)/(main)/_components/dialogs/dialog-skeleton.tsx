@@ -22,7 +22,7 @@ export function DialogSkeleton(props: any) {
                 </Button>
             </DialogTrigger>
 
-            <DialogContent className="sm:max-w-[475px] shadow-md shadow-slate-500">
+            <DialogContent className="sm:max-w-[475px] shadow-lg shadow-slate-800">
 
                 <DialogHeader>
                     <DialogTitle className="text-3xl">
