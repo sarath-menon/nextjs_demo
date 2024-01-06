@@ -6,7 +6,7 @@ import { TipTapToolbar } from './tiptap-toolbar'
 
 import { Heading } from '@tiptap/extension-heading'
 import { BulletList } from '@tiptap/extension-bullet-list'
-import { ListItem } from '@tiptap/extension-list-item'
+
 
 export function TiptapEntry() {
     const editor = useEditor({
