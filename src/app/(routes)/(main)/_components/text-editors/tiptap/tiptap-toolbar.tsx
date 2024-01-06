@@ -15,10 +15,6 @@ import {
     UnderlineIcon,
 } from "@radix-ui/react-icons"
 
-import {
-    ToggleGroup,
-    ToggleGroupItem,
-} from "@/src/components/ui/toggle-group"
 
 type Props = {
     editor: Editor | null
@@ -32,7 +28,7 @@ export function TipTapToolbar({ editor }: Props) {
 
     return (
 
-        <div className="border border-input bg-transparent">
+        <div className="hidden border border-input bg-transparent">
 
             {/* Heading */}
             <Toggle
