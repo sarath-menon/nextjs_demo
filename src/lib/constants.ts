@@ -178,7 +178,7 @@ export const ICON_SIDEBAR_ITEMS: IconSidebarItem[] = [
     svg_path: '/icons/organization.svg',
   },
   {
-    title: "Change tracker",
+    title: "Change log",
     href: '/change_tracker',
     svg_path: '/icons/settings.svg',
   },

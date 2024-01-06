@@ -12,7 +12,7 @@ export default function FinancialPage() {
             <div className="">
 
                 <TopHeading
-                    heading="Change tracker"
+                    heading="Change log"
                     text="Generate presentations and reports automatically" />
 
                 <div className="mx-6 my-12">
