@@ -24,7 +24,7 @@ const HomePage = () => {
 
         {/* White gradient above image */}
         <div
-          className="w-[15%] blur-[160px] rounded-full h-28 absolute bg-Primary-Purple/primary-purple-50 -z-10"
+          className="w-[15%] blur-[220px] rounded-full h-32 absolute bg-Primary-Purple/primary-purple-50 z-10"
         />
 
         <TitleSection
@@ -51,7 +51,7 @@ const HomePage = () => {
 
         {/* White gradient above image */}
         <div
-          className="w-[15%] blur-[160px] rounded-full h-28 absolute bg-Primary-Purple/primary-purple-50 -z-10"
+          className="w-[15%] blur-[220px] rounded-full h-28 absolute bg-Primary-Purple/primary-purple-50 z-10"
         />
 
         <TitleSection
@@ -75,7 +75,7 @@ const HomePage = () => {
           h-32
           absolute
           bg-brand-primaryPurple/50
-          -z-100
+          z-100
           top-56
         "
         />
@@ -159,7 +159,7 @@ const HomePage = () => {
 
         {/* White gradient above image */}
         <div
-          className="w-[20%] blur-[160px] rounded-full h-32 absolute bg-Primary-Purple/primary-purple-50 -z-50"
+          className="w-[20%] blur-[160px] rounded-full h-32 absolute bg-Primary-Purple/primary-purple-50 z-50"
         />
 
         <div
@@ -195,7 +195,7 @@ const HomePage = () => {
                         className="hidden dark:block w-full blur-[120px] rounded-full h-32
                         absolute
                         bg-brand-primaryPurple/80
-                        -z-10
+                        z-10
                         top-0
                       "
                       />
