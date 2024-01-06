@@ -172,28 +172,32 @@ export default function TeamSwitcher({ className }: TeamSwitcherProps) {
 
 
                         {/* Project type */}
-                        <div className="space-y-2">
+                        {/* <div className="space-y-2">
                             <Label htmlFor="plan">Project type</Label>
                             <Select>
                                 <SelectTrigger>
                                     <SelectValue placeholder="Select a type" />
                                 </SelectTrigger>
+
                                 <SelectContent>
+
                                     <SelectItem value="free">
-                                        <span className="font-medium">Free</span> -{" "}
-                                        <span className="text-muted-foreground">
+                                        <span className="font-medium">Theoretical</span> -{" "}
+                                        <span className="brightness-50">
                                             Trial for two weeks
                                         </span>
                                     </SelectItem>
+
                                     <SelectItem value="pro">
-                                        <span className="font-medium">Pro</span> -{" "}
-                                        <span className="text-muted-foreground">
+                                        <span className="font-medium">Applied</span> -{" "}
+                                        <span className="brightness-50">
                                             $9/month per user
                                         </span>
                                     </SelectItem>
+
                                 </SelectContent>
                             </Select>
-                        </div>
+                        </div> */}
 
                         {/* Team members list */}
                         <div className="space-y-2">
