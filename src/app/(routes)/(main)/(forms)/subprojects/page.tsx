@@ -12,7 +12,7 @@ const DocumentsPage = () => {
 
             <TopHeading
                 heading="Subprojects"
-                text=" Manage your account settings and set e-mail preferences." />
+                text=" Manage your subprojects here" />
 
             <SubProjectsForm />
 

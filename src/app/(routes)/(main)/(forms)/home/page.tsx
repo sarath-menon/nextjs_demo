@@ -13,8 +13,8 @@ export const Page = () => {
         <>
             {/* Top heading */}
             <TopHeading
-                heading="Project Home"
-                text=" Manage your account settings and set e-mail preferences." />
+                heading="Flying carpet"
+                text=" Manage your project here" />
 
             {/* Dashboard Cards row */}
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4 m-6">
@@ -58,11 +58,10 @@ export const Page = () => {
                 <div className="my-6">
                     <SubHeading
                         subheading="Progress tracker"
-                        text="" />
+                        text="Keep track of your progress here" />
                 </div>
 
-
-                <div className="mx-6 py-2">
+                <div className="mx-6 py-6">
                     <KanbanBoard />
                 </div>
             </div>

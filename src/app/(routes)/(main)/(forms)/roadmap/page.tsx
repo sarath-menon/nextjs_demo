@@ -62,7 +62,7 @@ export default function SettingsDisplayPage() {
             <div className="my-6">
                 <SubHeading
                     subheading="Progress tracker"
-                    text="" />
+                    text="Keep track of your progress here" />
             </div>
 
 

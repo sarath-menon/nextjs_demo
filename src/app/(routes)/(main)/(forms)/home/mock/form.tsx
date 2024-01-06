@@ -29,7 +29,7 @@ export function Requirements() {
 
             {/* Objectives */}
             <div className="my-6">
-                {/* <h3 className="text-3xl font-medium">
+                {/* <h3 className="text-3xl font-medi um">
                     Objectives
                 </h3> */}
 
