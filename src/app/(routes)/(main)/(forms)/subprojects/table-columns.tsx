@@ -128,9 +128,8 @@ export const subprojectColumns: ColumnDef<SubProject>[] = [
             </div> */}
 
             {/* Absract */}
-            <div className="line-clamp-2 text-base brightness-50">
+            <div className="line-clamp-2 text-base brightness-50 mt-2 leading-relaxed">
               Whenever there's an error observed in dynamically fetching helper JavaScript files known as Chunks, a ChunkLoad Error is thrown.
-              {row.getValue("title")}
             </div>
 
           </div>
