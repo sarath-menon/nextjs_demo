@@ -18,34 +18,6 @@ export function TopHeading(props: any) {
 
 };
 
-// export function SubHeading(props: any) {
-//     if (props.text) {
-
-//         return (
-//             <div>
-//                 <h2 className="text-3xl tracking-tight">
-//                     {props.subheading}
-//                 </h2>
-
-//                 <p className="brightness-50 text-base mt-4">
-//                     {props.text}
-//                 </p>
-//             </div>
-//         )
-//     }
-
-//     else {
-
-//         return (
-//             <div>
-//                 <h2 className="text-3xl tracking-tight">
-//                     {props.subheading}
-//                 </h2>
-//             </div>
-//         )
-//     }
-// };
-
 
 export function SubHeading(props: any) {
 
