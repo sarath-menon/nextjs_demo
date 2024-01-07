@@ -7,9 +7,14 @@ import { TipTapToolbar } from './tiptap-toolbar'
 import { Heading } from '@tiptap/extension-heading'
 import { BulletList } from '@tiptap/extension-bullet-list'
 import { Placeholder } from '@tiptap/extension-placeholder'
+import React from 'react'
 
+// Define the prop types for the component
+interface MyComponentProps {
+    placeholder: string
+};
 
-export function TiptapEntry(placeholder: string) {
+export const TiptapEntry: React.FC<MyComponentProps> = ({ placeholder }) => {
     const editor = useEditor({
         extensions: [
             StarterKit.configure({

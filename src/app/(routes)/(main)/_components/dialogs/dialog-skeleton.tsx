@@ -12,6 +12,7 @@ import {
 
 import { Input } from "@/src/components/ui/input"
 import { Label } from "@/src/components/ui/label"
+import { TiptapEntry } from "../text-editors/tiptap/tiptap-editor"
 
 export function DialogSkeleton(props: any) {
     return (
@@ -63,7 +64,9 @@ export const DialogElement: React.FC<MyComponentProps> = ({ custom_section, titl
                 {title}
             </Label>
 
-            {custom_section(placeholder)}
+            {/* {custom_section(placeholder)} */}
+
+            <TiptapEntry placeholder={placeholder} />
 
         </div>
     )
