@@ -32,11 +32,6 @@ export function Sidebar({ className, items, ...props }: SidebarProps) {
             <div className="space-y-4 py-4">
                 <div className="px-3 py-2">
 
-                    {/* Github user tag */}
-                    <div className="py-4">
-                        <UserItem />
-                    </div>
-
 
                     <h2 className="mb-2 px-4 text-lg font-semibold tracking-tight">
                         Discover
