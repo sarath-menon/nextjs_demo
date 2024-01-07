@@ -13,6 +13,7 @@ import { toast } from "sonner";
 import { DocumentList } from "./document-list";
 import { Button } from "@/src/components/ui/button";
 import Link from "next/link"
+import { Label } from "@radix-ui/react-dropdown-menu";
 
 interface SidebarProps extends React.HTMLAttributes<HTMLElement> {
     items: {
@@ -132,7 +133,7 @@ export const GitNavigation = ({ className, items, ...props }: SidebarProps) => {
                 ref={sidebarRef}
 
                 className={cn(
-                    "group/sidebar h-full bg-secondary overflow-y-auto relative flex w-60 flex-col z-[99999]",
+                    "group/sidebar h-full bg-secondary overflow-y-auto relative flex w-60 flex-col z-[9999]",
 
                     isResetting && "transition-all ease-in-out duration-300",
 
@@ -155,31 +156,24 @@ export const GitNavigation = ({ className, items, ...props }: SidebarProps) => {
 
                 {/* Menu items */}
                 <div>
-
-
                     <nav
                         className={cn(
-                            "flex flex-col  space-y-1",
+                            "flex flex-col",
                             className
                         )}
                         {...props}
                     >
                         {items.map((item) => (
-                            <div className="space-y-1">
+                            <div className="">
 
-                                <Button asChild variant="default" className="w-full justify-start hover:bg-transparent">
+                                <Button asChild variant="outline" className="w-full justify-start hover:bg-transparent">
 
-                                    <Link href={item.href}>{item.title}</Link>
+                                    <Label>{item.title}</Label>
 
                                 </Button>
                             </div>
                         ))}
                     </nav>
-
-                </div>
-
-                <div className="mt-4">
-                    <DocumentList />
                 </div>
 
                 {/* sidebar dragger*/}
