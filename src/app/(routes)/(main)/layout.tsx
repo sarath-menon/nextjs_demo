@@ -73,7 +73,7 @@ export default function ObjectivesLayout({ children }: ObjectivesLayoutProps) {
                 </div>
 
 
-                <div className="grid mx-[200px] my-16">
+                <div className="grid mx-[250px] mt-16">
 
                     <main className="flex-1 h-full overflow-y-auto">
                         {children}
