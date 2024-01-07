@@ -14,6 +14,7 @@ import { DocumentList } from "./document-list";
 import { Button } from "@/src/components/ui/button";
 import Link from "next/link"
 import { Label } from "@radix-ui/react-dropdown-menu";
+import { Input } from "@/src/components/ui/input";
 
 interface SidebarProps extends React.HTMLAttributes<HTMLElement> {
     items: {
@@ -143,7 +144,7 @@ export const GitNavigation = ({ className, items, ...props }: SidebarProps) => {
                 )}>
 
                 {/* Show sidebar collapse icon when hovering on navbar */}
-                <div
+                {/* <div
                     onClick={collapse}
                     role="button"
                     className={cn("h-6 w-6 text-muted-foreground rounded-sm hover:bg-neutral-300 dark:hover:bg-neutral-600 absolute top-3 right-2 opacity-0 group-hover/sidebar:opacity-100 transition",
@@ -152,10 +153,18 @@ export const GitNavigation = ({ className, items, ...props }: SidebarProps) => {
                         isMobile && "opacity-100"
                     )}>
                     <ChevronsLeft className="h-6 w-6 " />
-                </div>
+                </div> */}
 
                 {/* Menu items */}
-                <div>
+                <div className="px-[0.5px]">
+
+                    {/* To enter commit msg */}
+                    <Input type="email" placeholder="Message" />
+
+                    <Button className="w-full">
+                        Commit
+                    </Button>
+
                     <nav
                         className={cn(
                             "flex flex-col",
