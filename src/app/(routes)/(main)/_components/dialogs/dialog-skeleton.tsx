@@ -47,18 +47,24 @@ export function DialogSkeleton(props: any) {
     )
 }
 
-export function DialogElement(props: any) {
+// Define the prop types for the component
+interface MyComponentProps {
+    custom_section: Function;
+    title: string;
+    placeholder: string
+};
+
+export const DialogElement: React.FC<MyComponentProps> = ({ custom_section, title, placeholder }) => {
 
     return (
         <div className="mt-2">
 
             <Label className="text-lg">
-                {props.title}
+                {title}
             </Label>
 
-            {props.custom_section(props.placeholder)}
+            {custom_section(placeholder)}
 
         </div>
     )
-
-}
+};
