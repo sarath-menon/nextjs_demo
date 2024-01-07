@@ -13,6 +13,7 @@ import { ICON_SIDEBAR_ITEMS, SIDEBAR_ITEMS } from "@/src/lib/constants";
 import TeamSwitcher from "../../../components/navigation/sidebar/top_navbar/project-switcher";
 import { IconSidebar } from "../../../components/navigation/sidebar/icon-sidebar";
 import { UserNav } from "../../../components/navigation/sidebar/top_navbar/user-nav";
+import { GitNavigation } from "@/src/components/navigation/sidebar/notion_clone/git-navigation";
 
 
 interface ObjectivesLayoutProps {
@@ -39,7 +40,7 @@ export default function ObjectivesLayout({ children }: ObjectivesLayoutProps) {
         <div className="h-full bg-background flex">
 
             {/* Notion sidebar (complicated) */}
-            {/* <Navigation /> */}
+            {/* <GitNavigation items={SIDEBAR_ITEMS} /> */}
 
 
             {/* Shad-cn text sidebar  */}
@@ -48,7 +49,7 @@ export default function ObjectivesLayout({ children }: ObjectivesLayoutProps) {
             </div> */}
 
             {/* Shad-cn icon sidebar*/}
-            <div className="fixed h-full border-r flex">
+            <div className="relative h-full border-r flex">
                 <IconSidebar items={ICON_SIDEBAR_ITEMS} />
             </div>
 

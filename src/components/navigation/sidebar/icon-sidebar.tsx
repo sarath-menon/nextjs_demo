@@ -19,6 +19,7 @@ import {
 } from "@/src/components/ui/tooltip"
 import { Sidebar } from "./notion_clone/sidebar"
 import { SIDEBAR_ITEMS } from "@/src/lib/constants"
+import { GitNavigation } from "./notion_clone/git-navigation"
 
 
 interface IconSidebarProps extends React.HTMLAttributes<HTMLElement> {
@@ -45,9 +46,9 @@ export function IconSidebar({ className, items, ...props }: IconSidebarProps) {
 
     return (
 
-        <div className=" py-6">
+        <div className="flex py-6">
 
-            <div>
+            <div className="fixed">
                 <nav
                     className={cn(
                         "flex flex-col space-y-3",
@@ -60,18 +61,29 @@ export function IconSidebar({ className, items, ...props }: IconSidebarProps) {
                             <TooltipProvider>
                                 <Tooltip delayDuration={300}  >
                                     <TooltipTrigger asChild>
-                                        <button onClick={() => setExpanded(!isExpanded)} >
+                                        {/* <button onClick={() => setExpanded(!isExpanded)} > */}
 
-                                            <div className="flex mx-3 my-1 items-center justify-center brightness-100 hover:brightness-200">
-                                                <Link href={item.href}>
+                                        {/* If icon is change log, collapsible menu */}
+                                        {item.title == "Change log" ? (
+
+                                            <button onClick={() => setExpanded(!isExpanded)}>
+                                                <div className="flex mx-3 my-1 items-center justify-center brightness-100 hover:brightness-200">
                                                     <Image src={item.svg_path} height="25" width="25" alt="" />
-                                                </Link>
-                                            </div>
+                                                </div>
+                                            </button>
 
-                                            {/* SIdebar */}
-                                            {/* {expanded ? <ChevronFirst /> : <ChevronLast    />} */}
+                                        ) : (
 
-                                        </button>
+                                            <button>
+                                                <div className="flex mx-3 my-1 items-center justify-center brightness-100 hover:brightness-200">
+                                                    <Link href={item.href}>
+                                                        <Image src={item.svg_path} height="25" width="25" alt="" />
+                                                    </Link>
+                                                </div>
+                                            </button>
+
+                                        )}
+
 
                                     </TooltipTrigger>
                                     <TooltipContent>
@@ -85,24 +97,24 @@ export function IconSidebar({ className, items, ...props }: IconSidebarProps) {
                     ))}
 
                 </nav>
-
             </div>
 
-            <div>
+            <div className="pl-14">
                 <span>
 
                     {/* Shad-cn text sidebar  */}
 
-                    {/* <span> {isExpanded ?
-                        <div className="border-r flex pr-1 w-[240px]">
-                            <Sidebar items={SIDEBAR_ITEMS} />
-                        </div>
+                    <span> {isExpanded ?
+                        // <div className="border-r flex pr-1 w-[240px]">
+                        //     <Sidebar items={SIDEBAR_ITEMS} />
+                        // </div>
+                        <GitNavigation items={SIDEBAR_ITEMS} />
 
-                        : ""} </span> */}
+                        : ""} </span>
 
-                    <div className="border-r flex pr-1 w-[240px]">
+                    {/* <div className="border-r flex pr-1 w-[240px]">
                         <Sidebar items={SIDEBAR_ITEMS} />
-                    </div>
+                    </div> */}
 
                 </span>
             </div>
