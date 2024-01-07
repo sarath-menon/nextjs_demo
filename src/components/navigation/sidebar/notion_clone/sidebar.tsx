@@ -56,17 +56,6 @@ export function Sidebar({ className, items, ...props }: SidebarProps) {
 
                                     <Link href={item.href}>{item.title}</Link>
 
-                                    {/* <div className="pr-3">
-                                        <Image
-                                            src="/profle-dark.svg"
-                                            height="20"
-                                            width="20"
-                                            alt=""
-                                            className=""
-                                        />
-                                    </div> */}
-
-                                    {/* {item.title} */}
                                 </Button>
                             </div>
                         ))}
