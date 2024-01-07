@@ -1,9 +1,8 @@
 import { Input } from "@/src/components/ui/input"
 import { Label } from "@/src/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/src/components/ui/select"
-
-import { DialogElement, DialogSkeleton } from "./dialog-skeleton"
 import { TiptapEntry } from "../text-editors/tiptap/tiptap-editor"
+import { DialogElement, DialogSkeleton } from "./dialog-skeleton"
 
 function customSection() {
     return (
@@ -45,12 +44,12 @@ function customSection() {
 }
 
 
-export function CreateAssumptionDialog() {
+export function CreateWeeklyUpdateDialog() {
     return (
 
         <DialogSkeleton
             button_text="Add new"
-            title="Add new assumption"
+            title="Add new challenge"
             description=""
             custom_section={customSection}
         />

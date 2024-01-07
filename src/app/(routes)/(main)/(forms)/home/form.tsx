@@ -133,11 +133,11 @@ export function Requirements() {
             <div className="my-6">
 
                 <SubHeading
-                    subheading="Expected challenges"
+                    subheading="Constraints"
                     text="" />
 
                 <div className="py-6">
-                    <CreateChallengeDialog />
+                    <CreateConstraintDialog />
                 </div>
             </div>
 

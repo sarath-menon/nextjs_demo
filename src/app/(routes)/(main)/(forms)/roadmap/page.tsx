@@ -1,15 +1,12 @@
-import { Separator } from "@/src/components/ui/separator"
-import { Roadmap } from "./form"
 import { SubHeading, TopHeading } from "../../_components/headings/page-style"
 import { CreateObjectiveDialog } from "../../_components/dialogs/objective_creator"
 import { CreateAssumptionDialog } from "../../_components/dialogs/assumption_creator"
 import { CreateConstraintDialog } from "../../_components/dialogs/constraint_creator"
-import { DataTableV1 } from "../../_components/datatable_v1/data-table"
-import { TASKS } from "../../data/tasks"
-import { taskColumns } from "../change_tracker/table-columns"
 import { TableTimeline } from "../../_components/timeline.tsx/table-timeline"
+import { CreateChallengeDialog } from "../../_components/dialogs/challenge_creator"
+import { CreateWeeklyUpdateDialog } from "../../_components/dialogs/weekly_update_creator"
 
-export default function SettingsDisplayPage() {
+export const Page = () => {
     return (
         <div className="mb-32">
 
@@ -18,7 +15,20 @@ export default function SettingsDisplayPage() {
                 heading="Eagle Inspired Grasping With a Fixed-Wing Drone"
                 text="Master thesis" />
 
+
+
             <div className="mx-6 py-2">
+
+                {/* <div className="my-6">
+                    <SubHeading
+                        subheading="Timeline"
+                        text="" />
+                </div> */}
+
+
+                <div className="flex justify-center mt-4">
+                    <TableTimeline />
+                </div>
 
                 {/* Objectives */}
                 <div className="my-6">
@@ -52,37 +62,29 @@ export default function SettingsDisplayPage() {
                 <div className="my-6">
 
                     <SubHeading
-                        subheading="Constraints"
+                        subheading="Challenges"
                         text="" />
 
                     <div className="py-6">
-                        <CreateConstraintDialog />
+                        <CreateChallengeDialog />
                     </div>
                 </div>
 
 
                 <div className="my-6">
                     <SubHeading
-                        subheading="Progress tracker"
-                        text="Keep track of your progress here" />
-                </div>
-
-                <div className="flex justify-center my-8">
-                    <Roadmap />
-                </div>
-
-                <div className="my-6">
-                    <SubHeading
-                        subheading="Timeline"
+                        subheading="Weekly updates"
                         text="" />
+
+
+                    <CreateWeeklyUpdateDialog />
                 </div>
 
             </div>
 
-            <div className="flex justify-center">
-                <TableTimeline />
-            </div>
 
         </div>
     )
 }
+
+export default Page;
