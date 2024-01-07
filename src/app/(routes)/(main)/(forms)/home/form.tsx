@@ -34,6 +34,7 @@ import { CreateConstraintDialog } from "@/src/app/(routes)/(main)/_components/di
 import { OBJECTIVES } from "@/src/app/(routes)/(main)/data/objectives"
 import { objectiveColumns } from "@/src/app/(routes)/(main)/(forms)/home/table-columns"
 import { SubHeading } from "../../_components/headings/page-style"
+import { CreateChallengeDialog } from "../../_components/dialogs/challenge_creator"
 
 const profileFormSchema = z.object({
     type: z
@@ -132,11 +133,11 @@ export function Requirements() {
             <div className="my-6">
 
                 <SubHeading
-                    subheading="Constraints"
+                    subheading="Expected challenges"
                     text="" />
 
                 <div className="py-6">
-                    <CreateConstraintDialog />
+                    <CreateChallengeDialog />
                 </div>
             </div>
 
