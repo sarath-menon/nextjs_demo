@@ -7,7 +7,7 @@ import { CreateConstraintDialog } from "../../_components/dialogs/constraint_cre
 import { DataTableV1 } from "../../_components/datatable_v1/data-table"
 import { TASKS } from "../../data/tasks"
 import { taskColumns } from "../change_tracker/table-columns"
-import { TableTimeline } from "../../_components/tables/table-timeline"
+import { TableTimeline } from "../../_components/timeline.tsx/table-timeline"
 
 export default function SettingsDisplayPage() {
     return (
