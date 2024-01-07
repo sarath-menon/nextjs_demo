@@ -47,15 +47,15 @@ export function IconSidebar({ className, items, ...props }: IconSidebarProps) {
                 {...props}
             >
                 {items.map((item) => (
-                    <div className="space-y-1">
+                    <div className="">
                         <TooltipProvider>
                             <Tooltip delayDuration={300}  >
                                 <TooltipTrigger asChild>
                                     <button >
-                                        <div className="flex mx-3  items-center justify-center brightness-100 hover:brightness-200">
+                                        <div className="flex mx-3 my-1 items-center justify-center brightness-100 hover:brightness-200">
 
                                             <Link href={item.href}>
-                                                <Image src={item.svg_path} height="30" width="30" alt="" />
+                                                <Image src={item.svg_path} height="25" width="25" alt="" />
                                             </Link>
 
                                         </div>

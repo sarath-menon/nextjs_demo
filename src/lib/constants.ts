@@ -173,14 +173,9 @@ export const ICON_SIDEBAR_ITEMS: IconSidebarItem[] = [
     
   },
   {
-    title: "Team",
-    href: '/team',
-    svg_path: '/icons/organization.svg',
-  },
-  {
     title: "Change log",
     href: '/change_tracker',
-    svg_path: '/icons/settings.svg',
+    svg_path: '/icons/git-merge.svg',
   },
   {
     title: "Search",
