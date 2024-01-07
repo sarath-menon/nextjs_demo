@@ -17,9 +17,11 @@ export function DialogSkeleton(props: any) {
     return (
         <Dialog>
             <DialogTrigger asChild>
-                <Button variant="secondary">
-                    {props.button_text}
-                </Button>
+                <div className="flex flex-col items-center mt-8 mb-4">
+                    <Button variant="secondary" className="w-48">
+                        {props.button_text}
+                    </Button>
+                </div>
             </DialogTrigger>
 
             <DialogContent className="sm:max-w-[475px] shadow-lg shadow-slate-800">
@@ -48,7 +50,7 @@ export function DialogSkeleton(props: any) {
 export function DialogElement(props: any) {
 
     return (
-        <div className="grid gap-2 mt-2">
+        <div className="mt-2">
 
             <Label className="text-lg">
                 {props.title}
