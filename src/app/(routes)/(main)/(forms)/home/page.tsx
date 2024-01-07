@@ -52,7 +52,7 @@ export const Page = () => {
                 </DashboardCard>
             </div>
 
-            <div className="mx-6 py-2">
+            <div className="mx-12 py-2">
                 <Requirements />
 
                 <div className="my-6">

@@ -5,11 +5,11 @@ export function TopHeading(props: any) {
     return (
 
         < div className="" >
-            <h2 className="text-5xl my-4">
+            <h2 className="text-5xl my-4 font-semibold">
                 {props.heading}
             </h2>
 
-            <p className="brightness-50 text-xl pl-2">
+            <p className="brightness-50 text-xl mt-8">
                 {props.text}
             </p>
         </div >
@@ -24,7 +24,7 @@ export function SubHeading(props: any) {
 
     return (
         <div>
-            <h2 className="text-3xl tracking-tight">
+            <h2 className="text-4xl tracking-tight">
                 {props.subheading}
             </h2>
 
