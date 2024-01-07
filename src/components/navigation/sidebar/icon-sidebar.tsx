@@ -46,55 +46,68 @@ export function IconSidebar({ className, items, ...props }: IconSidebarProps) {
     return (
 
         <div className=" py-6">
-            <nav
-                className={cn(
-                    "flex flex-col space-y-3",
-                    className
-                )}
-                {...props}
-            >
-                {items.map((item) => (
-                    <div className="">
-                        <TooltipProvider>
-                            <Tooltip delayDuration={300}  >
-                                <TooltipTrigger asChild>
-                                    <button onClick={() => setExpanded(!isExpanded)} >
 
-                                        <div className="flex mx-3 my-1 items-center justify-center brightness-100 hover:brightness-200">
-                                            <Link href={item.href}>
-                                                <Image src={item.svg_path} height="25" width="25" alt="" />
-                                            </Link>
-                                        </div>
+            <div>
+                <nav
+                    className={cn(
+                        "flex flex-col space-y-3",
+                        className
+                    )}
+                    {...props}
+                >
+                    {items.map((item) => (
+                        <div className="">
+                            <TooltipProvider>
+                                <Tooltip delayDuration={300}  >
+                                    <TooltipTrigger asChild>
+                                        <button onClick={() => setExpanded(!isExpanded)} >
 
-                                        {/* SIdebar */}
-                                        {/* {expanded ? <ChevronFirst /> : <ChevronLast    />} */}
+                                            <div className="flex mx-3 my-1 items-center justify-center brightness-100 hover:brightness-200">
+                                                <Link href={item.href}>
+                                                    <Image src={item.svg_path} height="25" width="25" alt="" />
+                                                </Link>
+                                            </div>
 
-                                    </button>
+                                            {/* SIdebar */}
+                                            {/* {expanded ? <ChevronFirst /> : <ChevronLast    />} */}
 
-                                </TooltipTrigger>
-                                <TooltipContent>
-                                    <p>{item.title}</p>
-                                </TooltipContent>
-                            </Tooltip>
-                        </TooltipProvider>
+                                        </button>
+
+                                    </TooltipTrigger>
+                                    <TooltipContent>
+                                        <p>{item.title}</p>
+                                    </TooltipContent>
+                                </Tooltip>
+                            </TooltipProvider>
 
 
-                    </div>
-                ))}
+                        </div>
+                    ))}
 
-                {/* Shad-cn text sidebar  */}
+                </nav>
 
-                <span> {isExpanded ?
+            </div>
+
+            <div>
+                <span>
+
+                    {/* Shad-cn text sidebar  */}
+
+                    {/* <span> {isExpanded ?
+                        <div className="border-r flex pr-1 w-[240px]">
+                            <Sidebar items={SIDEBAR_ITEMS} />
+                        </div>
+
+                        : ""} </span> */}
+
                     <div className="border-r flex pr-1 w-[240px]">
                         <Sidebar items={SIDEBAR_ITEMS} />
                     </div>
 
-                    : ""} </span>
+                </span>
+            </div>
 
-
-
-            </nav>
-        </div>
+        </div >
     )
 }
 
