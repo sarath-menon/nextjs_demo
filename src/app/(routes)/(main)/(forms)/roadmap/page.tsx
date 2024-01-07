@@ -67,7 +67,7 @@ export default function SettingsDisplayPage() {
                         text="Keep track of your progress here" />
                 </div>
 
-                <div className="flex my-8">
+                <div className="flex justify-center my-8">
                     <Roadmap />
                 </div>
 
@@ -77,12 +77,12 @@ export default function SettingsDisplayPage() {
                         text="" />
                 </div>
 
-
-                <div className="flex my-8">
-                    <TableTimeline />
-                </div>
-
             </div>
+
+            <div className="flex justify-center">
+                <TableTimeline />
+            </div>
+
         </div>
     )
 }

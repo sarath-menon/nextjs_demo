@@ -11,12 +11,12 @@ import {
 export function TableTimeline() {
 
     return (
-        <div className=" text-center">
+        <div className="py-4">
             <Table>
                 <TableCaption>A list of your recent invoices.</TableCaption>
                 <TableHeader>
                     <TableRow>
-                        <TableHead className="w-[100px]">Invoice</TableHead>
+                        <TableHead className="">Invoice</TableHead>
                         <TableHead>Status</TableHead>
                         <TableHead>Method</TableHead>
                         <TableHead className="text-right">Amount</TableHead>
@@ -32,6 +32,5 @@ export function TableTimeline() {
                 </TableBody>
             </Table>
         </div>
-
     )
 }
