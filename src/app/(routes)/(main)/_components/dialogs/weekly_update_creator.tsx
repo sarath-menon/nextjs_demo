@@ -3,42 +3,35 @@ import { Label } from "@/src/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/src/components/ui/select"
 import { TiptapEntry } from "../text-editors/tiptap/tiptap-editor"
 import { DialogElement, DialogSkeleton } from "./dialog-skeleton"
+import { CalendarDateRangePicker } from "../date-range-picker"
 
 function customSection() {
     return (
         <>
-            <div className="grid grid-cols-2 gap-4">
 
-                {/* Requirement nature */}
-                <div className="grid gap-2">
-                    <Label htmlFor="area" className="text-lg">
-                        Nature
-                    </Label>
-
-                    <Select defaultValue="billing">
-                        <SelectTrigger id="area">
-                            <SelectValue placeholder="Select" />
-                        </SelectTrigger>
-                        <SelectContent>
-                            <SelectItem value="team">Modelling</SelectItem>
-                            <SelectItem value="billing">Environment</SelectItem>
-                            <SelectItem value="account">Feasibility</SelectItem>
-                        </SelectContent>
-                    </Select>
-                </div>
+            <div className="flex  ">
+                <CalendarDateRangePicker />
             </div>
 
+
             <DialogElement
-                title="Description"
+                title="Achievments"
                 custom_section={TiptapEntry}
-                placeholder={"what's the assumption?"}
+                placeholder={""}
             />
 
             <DialogElement
-                title="Rationale"
+                title="Hurdles"
                 custom_section={TiptapEntry}
-                placeholder={"why do you think so ?"}
+                placeholder={""}
             />
+
+            <DialogElement
+                title="Questions"
+                custom_section={TiptapEntry}
+                placeholder={""}
+            />
+
         </>
     )
 }
@@ -49,7 +42,7 @@ export function CreateWeeklyUpdateDialog() {
 
         <DialogSkeleton
             button_text="Add new"
-            title="Add new challenge"
+            title="Add new update"
             description=""
             custom_section={customSection}
         />
