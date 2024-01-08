@@ -19,6 +19,9 @@ import { Input } from "@/src/components/ui/input";
 import { ChevronsUpDown, Plus, X } from "lucide-react"
 import * as React from "react"
 
+import Slack from "@slack/bolt"
+import dotenv from 'dotenv'
+
 import {
     Collapsible,
     CollapsibleContent,
@@ -30,6 +33,10 @@ interface SidebarProps extends React.HTMLAttributes<HTMLElement> {
         href: string
         title: string
     }[]
+}
+
+function log_msg() {
+    console.log("selva")
 }
 
 export const GitNavigation = ({ className, items, ...props }: SidebarProps) => {
@@ -138,6 +145,17 @@ export const GitNavigation = ({ className, items, ...props }: SidebarProps) => {
         });
     };
 
+    // SLack info
+    // dotenv.config()
+
+    // const slack_app = new Slack.App({
+    //     signingSecret: process.env.SLACK_SIGNING_SECRET,
+    //     token: process.env.SLACK_BOT_TOKEN,
+    // });
+
+    // console.log({ slack_app })
+
+
     return (
         <>
 
@@ -169,7 +187,7 @@ export const GitNavigation = ({ className, items, ...props }: SidebarProps) => {
                     <Input placeholder="Message" />
 
 
-                    <Button className="w-full text">
+                    <Button className="w-full text" onClick={() => log_msg()} >
                         Commit
                     </Button>
 
