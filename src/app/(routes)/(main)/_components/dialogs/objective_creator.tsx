@@ -43,7 +43,7 @@ function customSection() {
             <DialogElement
                 title="Testing"
                 custom_section={TiptapEntry}
-                placeholder={"how do you test it ?"}
+                placeholder={"how do you know if the objective has been achieved ?"}
             />
         </>
     )
