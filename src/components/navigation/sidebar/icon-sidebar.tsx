@@ -100,15 +100,16 @@ export function IconSidebar({ className, items, ...props }: IconSidebarProps) {
             </div>
 
             <div className="pl-14 ">
-                <span>
 
-                    {/* Shad-cn text sidebar  */}
+                {/* Shad-cn text sidebar  */}
 
-                    <span> {isExpanded ?
+                {isExpanded ?
+                    <span >
                         <GitNavigation
                             items={SIDEBAR_ITEMS} />
-                        : ""} </span>
-                </span>
+                    </span>
+                    : ""}
+
             </div>
 
         </div >
