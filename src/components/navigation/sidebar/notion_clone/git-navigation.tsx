@@ -140,42 +140,36 @@ export const GitNavigation = ({ className, items, ...props }: SidebarProps) => {
 
     return (
         <>
+
+            <div className="mx-2 mb-2">
+                Source Control
+            </div>
+
             {/* Width: width of sidebar */}
             <aside
 
                 ref={sidebarRef}
 
                 className={cn(
-                    "group/sidebar h-full bg-secondary overflow-y-auto relative flex w-60 flex-col z-[9999]",
+                    "group/sidebar h-full bg-dark/dark-11 overflow-y-auto relative flex w-60 flex-col z-[9999]",
 
                     isResetting && "transition-all ease-in-out duration-300",
 
                     // Set sidebar width to 0 if mobile
                     isMobile && "w-0"
-
                 )}>
 
-                {/* Show sidebar collapse icon when hovering on navbar */}
-                {/* <div
-                    onClick={collapse}
-                    role="button"
-                    className={cn("h-6 w-6 text-muted-foreground rounded-sm hover:bg-neutral-300 dark:hover:bg-neutral-600 absolute top-3 right-2 opacity-0 group-hover/sidebar:opacity-100 transition",
 
-                        // always show collapse icon on mobile
-                        isMobile && "opacity-100"
-                    )}>
-                    <ChevronsLeft className="h-6 w-6 " />
-                </div> */}
 
                 {/* Menu items */}
                 <div className="space-y-2">
 
 
                     {/* To enter commit msg */}
-                    <Input type="email" placeholder="Message" />
+                    <Input placeholder="Message" />
 
 
-                    <Button className="w-full">
+                    <Button className="w-full text">
                         Commit
                     </Button>
 
@@ -193,11 +187,9 @@ export const GitNavigation = ({ className, items, ...props }: SidebarProps) => {
                                 </Button>
                             </CollapsibleTrigger>
 
-                            <label htmlFor="">
+                            <div className="text-sm">
                                 Changes
-                            </label>
-
-
+                            </div>
 
                         </div>
 
