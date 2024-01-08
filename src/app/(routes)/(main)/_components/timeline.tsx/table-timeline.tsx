@@ -13,7 +13,7 @@ import { Checkbox } from "@/src/components/ui/checkbox"
 export function TableTimeline() {
 
     return (
-        <div className="py-4 w-[500px]">
+        <div className="py-4 w-[600px]">
             <Table className="text-base">
                 <TableCaption>Timeline</TableCaption>
                 <TableHeader className="text-lg">
@@ -29,34 +29,34 @@ export function TableTimeline() {
                     <TableRow>
                         <TableCell>June</TableCell>
                         <TableCell>2024</TableCell>
-                        <TableCell>Eagle Inspired Grasping</TableCell>
+                        <TableCell>Preliminary study</TableCell>
                         <TableCell className="text-center">
                             <Checkbox id="terms" />
                         </TableCell>
                     </TableRow>
 
                     <TableRow>
-                        <TableCell>June</TableCell>
+                        <TableCell>July-Aug</TableCell>
                         <TableCell>2024</TableCell>
-                        <TableCell>Eagle Inspired Grasping</TableCell>
+                        <TableCell>Testing in Simulation</TableCell>
                         <TableCell className="text-center">
                             <Checkbox id="terms" />
                         </TableCell>
                     </TableRow>
 
                     <TableRow>
-                        <TableCell>June</TableCell>
+                        <TableCell>Sept-Oct</TableCell>
                         <TableCell>2024</TableCell>
-                        <TableCell>Eagle Inspired Grasping</TableCell>
+                        <TableCell>Real world testing</TableCell>
                         <TableCell className="text-center">
                             <Checkbox id="terms" />
                         </TableCell>
                     </TableRow>
 
                     <TableRow>
-                        <TableCell>June</TableCell>
+                        <TableCell>Nov</TableCell>
                         <TableCell>2024</TableCell>
-                        <TableCell>Eagle Inspired Grasping</TableCell>
+                        <TableCell>Iterative improvement</TableCell>
                         <TableCell className="text-center">
                             <Checkbox id="terms" />
                         </TableCell>
