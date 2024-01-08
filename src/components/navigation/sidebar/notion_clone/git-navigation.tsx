@@ -16,6 +16,15 @@ import Link from "next/link"
 import { Label } from "@radix-ui/react-dropdown-menu";
 import { Input } from "@/src/components/ui/input";
 
+import { ChevronsUpDown, Plus, X } from "lucide-react"
+import * as React from "react"
+
+import {
+    Collapsible,
+    CollapsibleContent,
+    CollapsibleTrigger,
+} from "@/src/components/ui/collapsible"
+
 interface SidebarProps extends React.HTMLAttributes<HTMLElement> {
     items: {
         href: string
@@ -34,6 +43,9 @@ export const GitNavigation = ({ className, items, ...props }: SidebarProps) => {
     const navbarRef = useRef<ElementRef<"div">>(null);
     const [isResetting, setIsResetting] = useState(false);
     const [isCollapsed, setIsCollapsed] = useState(isMobile);
+
+    // changes menu
+    const [isOpen, setIsOpen] = React.useState(false)
 
     useEffect(() => {
         if (isMobile) {
@@ -156,33 +168,52 @@ export const GitNavigation = ({ className, items, ...props }: SidebarProps) => {
                 </div> */}
 
                 {/* Menu items */}
-                <div className="px-[0.5px]">
+                <div className="space-y-2">
+
 
                     {/* To enter commit msg */}
                     <Input type="email" placeholder="Message" />
+
 
                     <Button className="w-full">
                         Commit
                     </Button>
 
-                    <nav
-                        className={cn(
-                            "flex flex-col",
-                            className
-                        )}
-                        {...props}
+                    <Collapsible
+                        open={isOpen}
+                        onOpenChange={setIsOpen}
+                        className=""
                     >
-                        {items.map((item) => (
-                            <div className="">
+                        <div className="flex items-center justify-start">
 
-                                <Button asChild variant="outline" className="w-full justify-start hover:bg-transparent">
-
-                                    <Label>{item.title}</Label>
-
+                            <CollapsibleTrigger asChild>
+                                <Button variant="ghost" size="sm" className="w-9 p-0">
+                                    <ChevronsUpDown className="h-4 w-4" />
+                                    <span className="sr-only">Toggle</span>
                                 </Button>
+                            </CollapsibleTrigger>
+
+                            <label htmlFor="">
+                                Changes
+                            </label>
+
+
+
+                        </div>
+
+                        <CollapsibleContent className="space-y-2 pl-8 pb-2">
+
+                            <div className="rounded-md border px-2 text-sm">
+                                objectives
                             </div>
-                        ))}
-                    </nav>
+
+                            <div className="rounded-md border px-2 text-sm">
+                                assumptions
+                            </div>
+
+                        </CollapsibleContent>
+                    </Collapsible>
+
                 </div>
 
                 {/* sidebar dragger*/}
