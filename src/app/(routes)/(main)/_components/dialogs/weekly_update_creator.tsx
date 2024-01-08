@@ -15,7 +15,7 @@ function customSection() {
 
 
             <DialogElement
-                title="Achievments"
+                title="Achievements"
                 custom_section={TiptapEntry}
                 placeholder={""}
             />
