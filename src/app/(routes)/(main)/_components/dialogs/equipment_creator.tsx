@@ -20,9 +20,9 @@ function customSection() {
                             <SelectValue placeholder="Select" />
                         </SelectTrigger>
                         <SelectContent>
-                            <SelectItem value="fabrication">Fabrication</SelectItem>
-                            <SelectItem value="testing">Real world testing</SelectItem>
-                            <SelectItem value="logistics">Logistics</SelectItem>
+                            <SelectItem value="team">Fabrication</SelectItem>
+                            <SelectItem value="billing">Real world testing</SelectItem>
+                            <SelectItem value="account">Logistics</SelectItem>
                         </SelectContent>
                     </Select>
                 </div>
@@ -44,12 +44,12 @@ function customSection() {
 }
 
 
-export function CreateChallengeDialog() {
+export function CreateEquipmentDialog() {
     return (
 
         <DialogSkeleton
             button_text="Add new"
-            title="Add new challenge"
+            title="Add new equipment"
             description=""
             custom_section={customSection}
         />

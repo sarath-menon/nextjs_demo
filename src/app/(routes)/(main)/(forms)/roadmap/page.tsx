@@ -5,6 +5,7 @@ import { CreateConstraintDialog } from "../../_components/dialogs/constraint_cre
 import { TableTimeline } from "../../_components/timeline.tsx/table-timeline"
 import { CreateChallengeDialog } from "../../_components/dialogs/challenge_creator"
 import { CreateWeeklyUpdateDialog } from "../../_components/dialogs/weekly_update_creator"
+import { CreateEquipmentDialog } from "../../_components/dialogs/equipment_creator"
 
 export const Page = () => {
     return (
@@ -57,16 +58,27 @@ export const Page = () => {
                     </div>
                 </div>
 
-                {/* Constrains */}
-
+                {/* Challenges */}
                 <div className="my-6">
 
                     <SubHeading
-                        subheading="Challenges"
+                        subheading="Challenges expected"
                         text="" />
 
                     <div className="py-6">
                         <CreateChallengeDialog />
+                    </div>
+                </div>
+
+                {/* Challenges */}
+                <div className="my-6">
+
+                    <SubHeading
+                        subheading="Equipment required"
+                        text="" />
+
+                    <div className="py-6">
+                        <CreateEquipmentDialog />
                     </div>
                 </div>
 
